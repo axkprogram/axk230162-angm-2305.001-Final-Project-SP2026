@@ -48,5 +48,26 @@ def animate_roll():
 
     return temp_roll
 
+# main loop
+running = True
+current_roll = None
+outcome = ""
+
+while running:
+    draw(current_roll, outcome)
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                # animation first
+                current_roll = animate_roll()
+
+                # final logic roll (from your system)
+                current_roll, outcome = story_roll()
+    
+    clock.tick(60)
 
 pygame.quit()
