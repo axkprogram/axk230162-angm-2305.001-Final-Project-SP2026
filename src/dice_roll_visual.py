@@ -34,6 +34,19 @@ def draw(roll, outcome):
     
     pygame.display.flip()
 
+# 2 second animation
+def animate_roll():
+    start_time = time.time()
+    duration = 2 # seconds
+
+    temp_roll = 1
+
+    while time.time() - start_time < duration:
+        temp_roll = random.randint(1,20)
+        draw(temp_roll, "")
+        pygame.time.delay(50)
+
+    return temp_roll
 
 
 pygame.quit()
