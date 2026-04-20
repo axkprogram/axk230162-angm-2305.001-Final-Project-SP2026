@@ -16,7 +16,14 @@ small_font = pygame.font.Font(None, 40)
 clock = pygame.time.Clock()
 
 # Drawing time
+def draw(roll, outcome):
+    screen.fill((30,30,30))
 
+    # Outcome text
+    if outcome:
+        text = small_font.render(outcome.upper(), True, (255,255,255))
+        screen.blit(text, (width//2 - text.get_width()//2,50))
+    
 
 
 pygame.quit()
