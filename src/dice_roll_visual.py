@@ -1,6 +1,7 @@
 import pygame
 import random
 import time
+from roll_for_luck_dice import story_roll
 
 pygame.init()
 
@@ -12,10 +13,10 @@ pygame.display.set_caption("Roll for Fate")
 font = pygame.font.Font(None, 60)
 small_font = pygame.font.Font(None, 40)
 
-def roll_d20():
-    return random.randint(1,20)
+clock = pygame.time.Clock()
 
-def get_outcome(roll):
-    
+# Drawing time
+
+
 
 pygame.quit()
