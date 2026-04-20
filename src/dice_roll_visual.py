@@ -24,6 +24,16 @@ def draw(roll, outcome):
         text = small_font.render(outcome.upper(), True, (255,255,255))
         screen.blit(text, (width//2 - text.get_width()//2,50))
     
+    # Dice box
+    pygame.draw.rect(screen, (220, 220, 220), (200,150,100,100))
+
+    # Number
+    if roll:
+        num = font.render(str(roll), True, (0,0,0))
+        screen.blit(num, (250 - num.get_width()//2, 200 - num.get_height()//2))
+    
+    pygame.display.flip()
+
 
 
 pygame.quit()
