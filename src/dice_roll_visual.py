@@ -22,6 +22,15 @@ def update_dice():
         canvas.itemconfig(dice_text, text=str(fake_roll))
         root.after(50, update_dice)
 
+def stop_roll():
+    global rolling
+    rolling = False
+
+    roll, outcome = roll_for_luck_dice.story_roll()
+
+    canvas.itemconfig(dice_text, text=str(roll))
+    canvas.itemconfig(outcome_text, text=outcome.capitalize())
+
 def roll_animation():
     """Start rolling animation, then settle on the final result"""
     global rolling
@@ -34,17 +43,10 @@ def roll_animation():
     # stop after 1.5 seconds
     root.after(1500, stop_roll)
 
-    def stop_roll():
-        global rolling
-        rolling = False
 
-        roll, outcome = stop_roll()
-
-        canvas.itemconfig(dice_text, text+str(roll))
-        canvas.itemconfig(outcome_text, text=outcome.capitalize())
 
 # button
 btn = tk.Button(root, text="Roll D20", command= roll_animation, font=("Arial", 14))
-btn.pacl(pady=10)
+btn.pack(pady=10)
 
 root.mainloop()
