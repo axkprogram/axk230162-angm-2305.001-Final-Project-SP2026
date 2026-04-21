@@ -63,7 +63,7 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 # animation first
-                current_roll = animate_roll()
+                animate_roll()
 
                 # final logic roll (from your system)
                 current_roll, outcome = story_roll()
