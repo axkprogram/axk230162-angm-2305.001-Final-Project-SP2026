@@ -14,3 +14,10 @@ outcome_text = canvas.create_text(150, 30, text="", font=("Arial", 16, "bold"))
 dice_text = canvas.create_text(150, 150, text="20", font=("Arial", 48, "bold"))
 
 rolling = False
+
+def update_dice():
+    """Animation loop: keeps changing while rolling"""
+    if rolling:
+        fake_roll = random.randint(1,20)
+        canvas.itemconfig(dice_text, text=str(fake_roll))
+        root.after(50, update_dice)
