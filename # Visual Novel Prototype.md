@@ -30,7 +30,7 @@ Ideal Outcome:
 - refined sketches of the npcs and the players
 
 Minimal Viable Outcome:
-- working visual novel alpha with a story, buttons with choices, working dice roll, and rpg battle. Not the full game, probably just an episode.
+- Rpg battle system
 
 ## Milestones
 
