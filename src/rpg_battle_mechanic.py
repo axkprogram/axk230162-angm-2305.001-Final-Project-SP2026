@@ -36,3 +36,12 @@ def player_turn(player, enemy):
     print(f"Damage roll: {dmg_roll} {damage} damage")
 
     enemy.take_damage(damage)
+
+def enemy_turn(enemy, player):
+    print("\n--- Enemy Turn ---")
+
+    # Enemy skips luck roll
+    dmg_roll, damage = roll_damage()
+    print(f"Enemy rolls {dmg_roll} {damage} damage")
+
+    player.take_damage(damage)
