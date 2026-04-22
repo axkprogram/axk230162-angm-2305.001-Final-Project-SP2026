@@ -13,3 +13,20 @@ class Character:
 
     def is_alive(self):
         return self.hp > 0
+    
+def player_turn(player, enemy):
+    print("\n--- Player Turn---")
+
+    input("Press Enter to roll for luck...")
+
+    # Luck Roll
+    roll, outcome = story_roll
+    print(f"You rolled {roll} ({outcome})")
+
+    if roll < 8:
+        print ("You hesitate...")
+        return
+    
+    print("You attack!")
+
+    input("Press Enter to roll for damage")
