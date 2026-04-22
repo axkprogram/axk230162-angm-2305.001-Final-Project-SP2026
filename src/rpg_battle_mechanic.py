@@ -60,7 +60,7 @@ def battle():
 
     if player.is_alive():
         print("\n You win!")
-        break
+        return
 
     else:
         print("\n You lost..")
