@@ -20,7 +20,7 @@ def player_turn(player, enemy):
     input("Press Enter to roll for luck...")
 
     # Luck Roll
-    roll, outcome = story_roll
+    roll, outcome = story_roll()
     print(f"You rolled {roll} ({outcome})")
 
     if roll < 8:
@@ -30,3 +30,9 @@ def player_turn(player, enemy):
     print("You attack!")
 
     input("Press Enter to roll for damage")
+
+    # Damage roll
+    dmg_roll, damage = roll_damage()
+    print(f"Damage roll: {dmg_roll} {damage} damage")
+
+    enemy.take_damage(damage)
