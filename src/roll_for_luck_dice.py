@@ -19,4 +19,3 @@ def story_roll():
 
     return roll, outcome
 
-print(story_roll())
