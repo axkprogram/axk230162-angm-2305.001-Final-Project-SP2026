@@ -45,3 +45,40 @@ def enemy_turn(enemy, player):
     print(f"Enemy rolls {dmg_roll} {damage} damage")
 
     player.take_damage(damage)
+
+def battle():
+    player = Character("Player", 30)
+    enemy = Character("Enemy", 25)
+
+    while player.is_alive() and enemy.is_alive():
+        player_turn(player, enemy)
+
+        if enemy.is_alive():
+            enemy_turn(enemy, player)
+
+    # outcome
+
+    if player.is_alive():
+        print("\n You win!")
+        break
+
+    else:
+        print("\n You lost..")
+
+        # try again only after loss
+        while True:
+            choice = input ("Try again? (yes/no): ").lower()
+
+            if choice in  ["yes", "y"]:
+                print("Restarting battle...")
+                break
+
+            elif choice in ["no", "n"]:
+                print("Game over.")
+                return
+            
+            else:
+                print("Please enter 'yes' or 'no'.")
+
+
+battle()
