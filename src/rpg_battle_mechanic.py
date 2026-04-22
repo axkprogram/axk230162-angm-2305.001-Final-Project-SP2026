@@ -1,6 +1,7 @@
 import random
 from roll_for_luck_dice import story_roll
 from combat_roll import roll_damage
+from save_function import save_game, load_game
 
 class Character:
     def __init__(self, name, hp):
@@ -47,36 +48,59 @@ def enemy_turn(enemy, player):
     player.take_damage(damage)
 
 def battle():
-    player = Character("Player", 30)
-    enemy = Character("Enemy", 25)
+    save_data = load_game()
 
-    while player.is_alive() and enemy.is_alive():
-        player_turn(player, enemy)
-
-        if enemy.is_alive():
-            enemy_turn(enemy, player)
-
-    # outcome
-
-    if player.is_alive():
-        print("\n You win!")
-        return
-
+    if save_data and save_data.get("state") == "battle":
+        player_hp = save_data.get("player_hp", 30)
+        enemy_hp = save_data.get("enemy_hp")
+        print("Resuming battle...")
     else:
-        print("\n You lost..")
+        player_hp = 30
+        enemy_hp = 25
 
-        # try again only after loss
-        while True:
+    player = Character("Player", player_hp)
+    enemy = Character("Enemy", enemy_hp)
+
+    while True:
+        while player.is_alive() and enemy.is_alive():
+
+            # save game every turn
+            save_game({
+                "state": "battle",
+                "player_hp": player.hp,
+                "enemy_hp": enemy.hp
+            })
+
+            player_turn(player, enemy)
+
+            if enemy.is_alive():
+                enemy_turn(enemy, player)
+
+        # outcome
+
+        if player.is_alive():
+            print("\n You win!")
+            save_game({"state": "story"})
+            return "win"
+
+        else:
+            print("\n You lost..")
+
+            # try again only after loss
+            
             choice = input ("Try again? (yes/no): ").lower()
 
             if choice in  ["yes", "y"]:
                 print("Restarting battle...")
-                break
+                player.hp = 30
+                enemy.hp = 25
+                continue
 
             elif choice in ["no", "n"]:
                 print("Game over.")
-                return
-            
+                save_game({"state": "battle"})
+                return "quit"
+                
             else:
                 print("Please enter 'yes' or 'no'.")
 

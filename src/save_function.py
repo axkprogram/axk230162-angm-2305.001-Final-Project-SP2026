@@ -1,14 +1,15 @@
 import json
+import os
 
 SAVE_FILE = "save.json"
 
 def save_game(data):
     with open(SAVE_FILE, "w") as f:
-        json.dump(data, f)
+        json.dump(data, f, indent=4)
 
 def load_game():
-    try:
-        with open(SAVE_FILE, "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
+    if not os.path.exists(SAVE_FILE):
         return None
+    
+    with open(SAVE_FILE, "r") as f:
+        return json.load(f)
