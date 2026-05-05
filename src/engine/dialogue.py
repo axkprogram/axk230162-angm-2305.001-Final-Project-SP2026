@@ -21,4 +21,6 @@ class DialogueManager:
             if self.index >= len(self.text):
                 self.done = True
 
-    
+    def draw(self, screen):
+        text_surface = self.font.render(self.displayed, True, (255, 255, 255))
+        screen.blit(text_surface, (50,600))
