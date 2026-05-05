@@ -1,0 +1,12 @@
+# configuration settings
+
+WIDTH = 1280
+HEIGHT = 720
+
+FPS = 60
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GRAY = (50,50, 50)
+
+TEXT_SPEED = 2
