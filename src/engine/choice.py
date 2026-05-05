@@ -11,4 +11,7 @@ class ChoiceManager:
         for text, action, in choices :
             self. buttons.append(Button((100, y, 400, 50), text, action))
             y += 70
-            
+
+    def draw(self, screen):
+        for b in self.buttons:
+            b.draw(screen, self.font)
