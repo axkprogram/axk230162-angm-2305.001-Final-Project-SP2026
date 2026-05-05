@@ -15,3 +15,10 @@ class ChoiceManager:
     def draw(self, screen):
         for b in self.buttons:
             b.draw(screen, self.font)
+
+    def handle_event(self, event):
+        for b in self.buttons:
+            result = b.handle_event(event)
+            if result:
+                return result
+            
