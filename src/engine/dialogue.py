@@ -7,4 +7,9 @@ class DialogueManager:
         self.displayed = ""
         self.index = 0
         self.done = True
-        
+
+    def start(self, text):
+        self.text = text
+        self.displayed = ""
+        self.index = 0
+        self.done = False
