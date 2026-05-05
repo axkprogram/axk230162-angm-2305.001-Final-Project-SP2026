@@ -11,4 +11,8 @@ class GameState:
 
         self.inventory = []
 
-    
+    def modify_favor(self, character, amount):
+        if character == "fighter":
+            self.fighter_favor += amount
+        elif character == "mage":
+            self.mage_favor += amount
