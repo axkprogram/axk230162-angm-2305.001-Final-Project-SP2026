@@ -27,3 +27,10 @@ class Combat:
         
         return "continue"
     
+    def enemy_attack(self):
+        return random.randint(5,15)
+
+    def check_annihiliation(self):
+        if self.turn >= 4:
+            return True
+        return False
