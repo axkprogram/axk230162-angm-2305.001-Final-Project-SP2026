@@ -1,51 +1,52 @@
 import random
 import tkinter as tk
-import combat_roll
+import mechanic_Tests.roll_for_luck_dice as roll_for_luck_dice
 
 # GUI set up
 root = tk.Tk()
-root.title("Roll for Strength")
+root.title("Roll for Fortune")
 
 canvas = tk.Canvas(root, width=300, height=300)
 canvas.pack()
 
-# UI elements
+# text elements
 outcome_text = canvas.create_text(150, 30, text="", font=("Arial", 16, "bold"))
 dice_text = canvas.create_text(150, 150, text="20", font=("Arial", 48, "bold"))
 
 rolling = False
 
-# animation loop
 def update_dice():
+    """Animation loop: keeps changing while rolling"""
     if rolling:
         fake_roll = random.randint(1,20)
         canvas.itemconfig(dice_text, text=str(fake_roll))
         root.after(50, update_dice)
 
-#stop animation
 def stop_roll():
     global rolling
     rolling = False
 
-    roll, damage = combat_roll.roll_damage()
+    roll, outcome = roll_for_luck_dice.story_roll()
 
     canvas.itemconfig(dice_text, text=str(roll))
-    canvas.itemconfig(outcome_text, text=f"Damage: {damage}")
+    canvas.itemconfig(outcome_text, text=outcome.capitalize())
 
-
-# start animation
 def roll_animation():
+    """Start rolling animation, then settle on the final result"""
     global rolling
     rolling = True
 
-    canvas.itemconfig(outcome_text, text="Rolling damage...")
+    canvas.itemconfig(outcome_text, text="Rolling...")
 
     update_dice()
 
+    # stop after 1.5 seconds
     root.after(1500, stop_roll)
 
+
+
 # button
-btn = tk.Button(root, text="Attack!", command=roll_animation, font=("Arial", 14))
+btn = tk.Button(root, text="Roll D20", command= roll_animation, font=("Arial", 14))
 btn.pack(pady=10)
 
 root.mainloop()

@@ -1,7 +1,7 @@
 import random
-from roll_for_luck_dice import story_roll
-from combat_roll import roll_damage
-from save_function import save_game, load_game
+from mechanic_Tests.roll_for_luck_dice import story_roll
+from mechanic_Tests.combat_roll import roll_damage
+from mechanic_Tests.save_function import save_game, load_game
 
 class Character:
     def __init__(self, name, hp):
