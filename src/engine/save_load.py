@@ -1,9 +1,15 @@
 import pickle
 
-def save_game(state, filename="save.dat"):
-    with open(filename, "wb") as f:
-        pickle.dump(state, f)
+def save(state):
+    with open("save.dat", "wb") as f:
+        pickle.dump(state.__dict__, f)
 
-def load_game(filename="save.dat"):
-    with open(filename, "rb") as f:
-        return pickle.load(f)
+def load(state):
+    try:
+        with open("save.dat", "rb") as f:
+            data = pickle.load(f)
+            state.__dict__.update(data)
+
+    except:
+        pass
+    
