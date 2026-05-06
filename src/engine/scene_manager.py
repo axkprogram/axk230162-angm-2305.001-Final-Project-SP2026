@@ -40,3 +40,9 @@ def to_fork(self):
 
 # Fork Scene
 
+def fork_scene(self):
+    self.dialogue.start([
+        "Three paths stretch forward.",
+        "One gravel. One stone. One dark."
+    ])
+
