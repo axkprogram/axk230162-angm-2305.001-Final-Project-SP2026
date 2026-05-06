@@ -46,3 +46,38 @@ def fork_scene(self):
         "One gravel. One stone. One dark."
     ])
 
+    self.choice.set_choice([
+        ("Fighter Path", self.to_fighter),
+        ("Mage Path", self.to_mage),
+        ("Dark Path", self.to_dark)
+    ])
+
+def to_fighter(self):
+    self.current.scene = "fighter_path"
+
+def to_mage(self):
+    self.current.scene = "combat"
+
+def to_dark(self):
+    self.current_scene = "combat"
+
+# Combat Entry
+
+def combat_scene(self): 
+    if not self.state.in_combat:
+        self.state.in_combat = True
+        self.combat.start_enemy("hound")
+
+    result = self.combat.update()
+
+    if result == "WIN":
+        self.state.in_combat = False
+        self.current_scene = "fighter_reward"
+
+    elif result == "LOSE":
+        self.state.in_combat = False
+        self.current_scene = "game_over"
+
+    elif result == "ANNIHILATION":
+        self.state.in_combat = False
+        self.current_scene = "bell_event"
