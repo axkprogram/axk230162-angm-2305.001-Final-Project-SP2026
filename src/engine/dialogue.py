@@ -1,26 +1,23 @@
 import pygame
 
 class DialogueManager:
-    def __init__(self, font):
-        self.font = font
-        self.text = ""
-        self.displayed = ""
+    def __init__(self):
+        self.lines = []
         self.index = 0
-        self.done = True
+        self.active = False
 
-    def start(self, text):
-        self.text = text
-        self.displayed = ""
+    def start(self, lines):
+        self.lines = lines
         self.index = 0
-        self.done = False
+        self.active = True
 
-    def update(self):
-        if not self.done:
+    def advance(self):
+        if self.active:
             self.index += 1
-            self.displayed = self.text[:self.index]
-            if self.index >= len(self.text):
-                self.done = True
+            if self.index >= len(self.lines):
+                self.active = False
 
-    def draw(self, screen):
-        text_surface = self.font.render(self.displayed, True, (255, 255, 255))
-        screen.blit(text_surface, (50,600))
+    def get_current(self):
+        if self.active:
+            return self.lines[self.index]
+        return ""
