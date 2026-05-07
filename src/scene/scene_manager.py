@@ -62,3 +62,10 @@ class SceneManager:
             return {
                 "choice": self.current_choices
             }
+        
+        # Event Trigger node
+        elif node_type == "event":
+            self.node_index += 1
+            return {
+                "trigger_event": node.get("event_id")
+            }
