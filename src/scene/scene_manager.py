@@ -33,3 +33,7 @@ class SceneManager:
         """
         if not self.scene_data:
             return None
+        
+        # if waiting for player choice, do not advance
+        if self.waiting_for_choice:
+            return self._handle_choice_input(input_data, game_state)
