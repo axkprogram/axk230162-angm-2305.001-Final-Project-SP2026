@@ -54,3 +54,9 @@ class EngineController:
             if self.scene_system:
                 result = self.scene_system.update(input_data, self.game_state)
                 self._handle_result(result)
+
+        # Event mode
+        def _update_event(self, input_data):
+            if self.event_system:
+                result = self.event_system.update(input_data, self.game_state)
+                self._handle_result(result)
