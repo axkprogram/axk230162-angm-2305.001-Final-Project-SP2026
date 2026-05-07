@@ -24,3 +24,12 @@ class SceneManager:
         self.node_index = 0
         self.waiting_for_choice = False
         self.current_choices = []
+
+    # Main update Loop
+    def update(self, input_data, game_state):
+        """
+        Advances the scene step-by-step.
+        Returns actions for controller.
+        """
+        if not self.scene_data:
+            return None
