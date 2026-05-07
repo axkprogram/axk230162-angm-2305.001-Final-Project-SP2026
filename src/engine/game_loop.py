@@ -45,3 +45,8 @@ class GameLoop:
                 input_data["keys"].append(event.key)
 
         return input_data
+    
+    # Main loop
+    def run(self):
+        while self.running and self.controller.running:
+            
