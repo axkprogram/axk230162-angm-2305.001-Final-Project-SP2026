@@ -54,3 +54,11 @@ class SceneManager:
                 "speaker": node.get("speaker")
             }
         
+        # Choice node
+        elif node_type == "choice":
+            self.waiting_for_choice = True
+            self.current_choices = node.get("options", [])
+
+            return {
+                "choice": self.current_choices
+            }
