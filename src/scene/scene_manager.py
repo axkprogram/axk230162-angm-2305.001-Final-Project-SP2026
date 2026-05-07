@@ -11,4 +11,8 @@ class SceneManager:
         self.scene_data = None
         self.node_index = 0
 
+        # temp runtime state
+        self.waiting_for_choice = False
+        self.current_choice = []
+
         
