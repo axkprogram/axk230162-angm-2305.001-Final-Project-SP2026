@@ -105,7 +105,14 @@ class SceneManager:
             else:
                 branch = node.get("false", [])
             
-            # Inject the branch
+            # Inject the branch into scene flow
+            self.scene_data = (
+                self.scene_data[:self.node_index + 1]
+                + branch+self.scene_data[self.node_index + 1:]
+            )
+
+            self.node_index += 1
+            return None
 
 
     # Choice handling
