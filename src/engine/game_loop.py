@@ -36,3 +36,12 @@ class GameLoop:
             "quit": False,
             "keys": []
         }
+
+        for event in events:
+            if event.type == pygame.QUIT:
+                input_data["quit"] = True
+
+            if event.type == pygame.KEYDOWN:
+                input_data["keys"].append(event.key)
+
+        return input_data
