@@ -68,3 +68,10 @@ class GameState:
 
     def has_item(self, item_name: str) -> bool:
         return self.inventory.get(item_name, False)
+    
+    def reset_battle_state(self):
+        self.active_battle_id = None
+        self.in_combat = False
+        self.battle_result = None
+
+        
