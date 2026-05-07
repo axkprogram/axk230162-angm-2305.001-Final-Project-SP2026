@@ -74,4 +74,6 @@ class GameState:
         self.in_combat = False
         self.battle_result = None
 
-        
+    def reset_event_state(self):
+        self.active_event_id = None
+        self.in_event = False
