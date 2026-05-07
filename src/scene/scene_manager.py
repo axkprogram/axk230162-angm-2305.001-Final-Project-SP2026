@@ -1,19 +1,20 @@
 class SceneManager:
     """
-    Handles scene execution (dialogue, choices, transitions).
-    
-    SceneManager does NOT control game flow.
-    It returns "results" to the EngineController.
+    Full VN Script Interpreter
+
+    Executes node-based scenes:
+    dialogue, choice, event, battle, state, conditional.
     """
 
     def __init__(self):
-        self.current_scene = None
         self.scene_data = None
         self.node_index = 0
 
         # temp runtime state
         self.waiting_for_choice = False
         self.current_choices = []
+
+        self.active_branch = None # used for conditionals
 
     # Load scene
     def load_scene(self, scene_data):
@@ -36,7 +37,7 @@ class SceneManager:
         
         # if waiting for player choice, do not advance
         if self.waiting_for_choice:
-            return self._handle_choice_input(input_data, game_state)
+            return self._handle_choice(input_data, game_state)
         
         # Get current node
         if self.node_index >= len(self.scene_data):
@@ -50,8 +51,9 @@ class SceneManager:
         if node_type == "dialogue":
             self.node_index += 1
             return {
-                "dialogue": node.get("text"),
-                "speaker": node.get("speaker")
+                "action": "dialogue",
+                "speaker": node.get("speaker"),
+                "text": node.get("text")
             }
         
         # Choice node
@@ -60,14 +62,16 @@ class SceneManager:
             self.current_choices = node.get("options", [])
 
             return {
-                "choice": self.current_choices
+                "action": "choice",
+                "options": self.current_choices
             }
         
         # Event Trigger node
         elif node_type == "event":
             self.node_index += 1
             return {
-                "trigger_event": node.get("event_id")
+                "action": "event",
+                "event_id": node.get("event_id")
             }
         
         # Scene switch node
