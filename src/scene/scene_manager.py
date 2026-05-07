@@ -13,6 +13,14 @@ class SceneManager:
 
         # temp runtime state
         self.waiting_for_choice = False
-        self.current_choice = []
+        self.current_choices = []
 
-        
+    # Load scene
+    def load_scene(self, scene_data):
+        """
+        scene_data will alter come from eitehr JSON or structure format.
+        """
+        self.scene_data = scene_data
+        self.node_index = 0
+        self.waiting_for_choice = False
+        self.current_choices = []
