@@ -56,4 +56,11 @@ class GameState:
     active_event_id: str | None = None
     in_event: bool = False
 
+    # Core Utility methods
+    def set_flag(self, key: str, value=True):
+        self.flags[key] = value
+
+    def get_flag(self, key: str, default=None):
+        return self.flags.get(key, default)
+    
     
