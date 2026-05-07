@@ -9,4 +9,14 @@ class GameLoop:
     Runs the Pygame loop and connects input to controller to systems.
     """
 
-    
+    def __init__(self):
+        pygame.init()
+
+        # Basic window
+        self.screen = pygame.display.set_mode((800,600))
+        pygame.display.set_caption("VN RPG Engine")
+
+        self.clock = pygame.time.Clock()
+        self.fps = 60
+
+        
