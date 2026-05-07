@@ -37,3 +37,11 @@ class SceneManager:
         # if waiting for player choice, do not advance
         if self.waiting_for_choice:
             return self._handle_choice_input(input_data, game_state)
+        
+        # Get current node
+        if self.node_index >= len(self.scene_data):
+            return {"end_scene": True}
+        
+        node = self.scene_data[self.node_index]
+
+        node_type = node.get("type")
