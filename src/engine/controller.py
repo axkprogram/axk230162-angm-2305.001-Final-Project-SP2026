@@ -60,3 +60,11 @@ class EngineController:
             if self.event_system:
                 result = self.event_system.update(input_data, self.game_state)
                 self._handle_result(result)
+
+        # Combat Mode
+        def _update_combat(self, input_data):
+            if self.combat_system:
+                result = self.combat_system.update(input_data, self.game_state)
+                self._handle_result(result)
+
+        # Result handler
