@@ -67,4 +67,4 @@ class GameLoop:
 
             self.clock.tick(self.fps)
 
-            
+        pygame.quit()
