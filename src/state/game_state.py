@@ -65,3 +65,6 @@ class GameState:
     
     def add_item(self, item_name: str, value=True):
         self.iventory[item_name] = value
+
+    def has_item(self, item_name: str) -> bool:
+        return self.inventory.get(item_name, False)
