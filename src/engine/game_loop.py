@@ -57,3 +57,8 @@ class GameLoop:
                 self.running = False
                 self.controller.stop()
                 break
+
+            # Engine update (Core link)
+            self.controller.update(input_data)
+
+            
