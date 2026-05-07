@@ -68,3 +68,29 @@ class EngineController:
                 self._handle_result(result)
 
         # Result handler
+        def _handle_result(self, result):
+            """
+            Systems do NOT control the flow directly.
+            They return results and the controller then decides the next step.
+            """
+
+            if not result:
+                return
+            
+            # Scene requests combat start
+            if result.get("start_combat"):
+                self.active_mode = "COMBAT"
+
+            # Scene requests event
+            elif result.get("trigger_event"):
+                self.active_mode = "EVENT"
+
+            # Combat ends return to scene
+            elif result.get("end_combat"):
+                self.game_state.reset_event_state()
+                self.active_mode = "SCENE"
+
+            # Scene transition
+            elif result.get("change_scene"):
+                self.games_state.current_scene_id = result["change_scene"]
+                self.active_mode = "SCENE"
