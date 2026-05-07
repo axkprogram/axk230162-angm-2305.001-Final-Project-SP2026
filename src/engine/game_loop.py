@@ -25,4 +25,14 @@ class GameLoop:
 
         self.running = True
 
-    
+    # Input handling
+    def get_input(self):
+        """
+        Collects raw input events.
+        Later this will be expanded into a full input system.
+        """
+        event = pygame.event.get()
+        input_data = {
+            "quit": False,
+            "keys": []
+        }
