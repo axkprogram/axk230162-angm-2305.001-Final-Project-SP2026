@@ -22,4 +22,9 @@ class EngineController:
         self.combat_system = None
 
         self.running = True
+
+        # System registration
+        def register_scene_system(self, scene_system):
+            self.scene_system = scene_system
+
         
