@@ -37,7 +37,7 @@ class GameLoop:
             "keys": []
         }
 
-        for event in events:
+        for event in event:
             if event.type == pygame.QUIT:
                 input_data["quit"] = True
 
