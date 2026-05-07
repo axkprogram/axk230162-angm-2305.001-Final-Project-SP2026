@@ -46,3 +46,14 @@ class GameState:
         "rio": {"hp": 150},
         "yohan": {"hp": 125}
     })
+
+    # Combat State
+    active_battle_id: str | None = None
+    in_combat: bool = False
+    battle_result: str | None = None # "win", "loss", None
+
+    # Event State
+    active_event_id: str | None = None
+    in_event: bool = False
+
+    
