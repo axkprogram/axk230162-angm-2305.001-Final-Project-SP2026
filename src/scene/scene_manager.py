@@ -74,16 +74,30 @@ class SceneManager:
                 "event_id": node.get("event_id")
             }
         
-        # Scene switch node
-        elif node_type == "goto":
+        # Battle
+        elif node_type == "battle":
+            self.node_index += 1
             return {
-                "change_scene": node.get("target")
+                "action": "battle",
+                "battle_id": node.get("battle_id")
             }
         
-        return None
-    
+        # State Change
+        elif node_type == "state":
+            self.node_index += 1
+
+            changes = node.get("set", {})
+            for key, value in changes.items():
+                setattr(game_state, key, value)
+
+            return {
+                "action": "state_change",
+                "changes": changes
+            }
+
+
     # Choice handling
-    def _handle_choice_input(self, input_data, game_state):
+    def _handle_choice(self, input_data, game_state):
         """
         Handles player selection from choices.
         minimum logic for now
