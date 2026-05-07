@@ -19,4 +19,10 @@ class GameLoop:
         self.clock = pygame.time.Clock()
         self.fps = 60
 
-        
+        # Core game objects
+        self.game_state = GameState()
+        self.controller = EngineController(self.game_state)
+
+        self.running = True
+
+    
