@@ -27,4 +27,6 @@ class EngineController:
         def register_scene_system(self, scene_system):
             self.scene_system = scene_system
 
-        
+        def register_event_system(self, event_system):
+            self.event_system = event_system
+            
