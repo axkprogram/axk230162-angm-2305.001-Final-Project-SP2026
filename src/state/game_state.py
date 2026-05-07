@@ -37,3 +37,6 @@ class GameState:
     """
 
     # Player State
+    player_hp: int = 100
+    player_max_hp: int = 100
+    
