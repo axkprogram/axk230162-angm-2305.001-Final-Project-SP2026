@@ -77,3 +77,23 @@ class SceneManager:
             }
         
         return None
+    
+    # Choice handling
+    def _handle_choice_input(self, input_data, game_state):
+        """
+        Handles player selection from choices.
+        minimum logic for now
+        """
+
+        if "choice_select" in input_data:
+            choice_index = input_data["choice_select"]
+
+            if 0 <= choice_index < len(self.current_choices):
+                chosen = self.current_choices[choice_index]
+
+                self.waiting_for_choice = False
+                self.node_index += 1
+
+                return chosen.get("result")
+            
+            return None
