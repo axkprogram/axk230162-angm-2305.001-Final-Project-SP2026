@@ -29,4 +29,6 @@ class EngineController:
 
         def register_event_system(self, event_system):
             self.event_system = event_system
-            
+
+        def register_combat_system(self, combat_system):
+            self.combat_system = combat_system
