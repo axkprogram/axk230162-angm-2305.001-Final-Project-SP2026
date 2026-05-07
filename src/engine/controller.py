@@ -94,3 +94,7 @@ class EngineController:
             elif result.get("change_scene"):
                 self.games_state.current_scene_id = result["change_scene"]
                 self.active_mode = "SCENE"
+
+        # Stop the Engine
+        def stop(self):
+            self.running = False
