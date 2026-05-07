@@ -45,3 +45,12 @@ class SceneManager:
         node = self.scene_data[self.node_index]
 
         node_type = node.get("type")
+
+        # Dialogue node
+        if node_type == "dialogue":
+            self.node_index += 1
+            return {
+                "dialogue": node.get("text"),
+                "speaker": node.get("speaker")
+            }
+        
