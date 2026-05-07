@@ -32,3 +32,19 @@ class EngineController:
 
         def register_combat_system(self, combat_system):
             self.combat_system = combat_system
+
+        # Main update loop
+        def update(self, input_data):
+            """
+            Called every frame by the game loop.
+            Routes control to the active system.
+            """
+
+            if self.active_mode == "SCENE":
+                self._update_scene(input_data)
+
+            elif self.active_mode == "EVENT":
+                self._update_event(input_data)
+
+            elif self.active_mode == "COMBAT":
+                self._update_combat(input_data)
