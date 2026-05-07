@@ -63,4 +63,5 @@ class GameState:
     def get_flag(self, key: str, default=None):
         return self.flags.get(key, default)
     
-    
+    def add_item(self, item_name: str, value=True):
+        self.iventory[item_name] = value
