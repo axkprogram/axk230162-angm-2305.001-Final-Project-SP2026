@@ -94,6 +94,18 @@ class SceneManager:
                 "action": "state_change",
                 "changes": changes
             }
+        
+        # Conditional
+        elif node_type == "conditional":
+            condition = node.get("if", {})
+            result = self._evaluate_condition(condition, game_state)
+
+            if result:
+                branch = node.get("true", [])
+            else:
+                branch = node.get("false", [])
+            
+            # Inject the branch
 
 
     # Choice handling
