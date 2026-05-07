@@ -61,4 +61,10 @@ class GameLoop:
             # Engine update (Core link)
             self.controller.update(input_data)
 
+            # TEMP Visual debug (no assets yet)
+            self.screen.fill((20,20,20))
+            pygame.display.flip()
+
+            self.clock.tick(self.fps)
+
             
