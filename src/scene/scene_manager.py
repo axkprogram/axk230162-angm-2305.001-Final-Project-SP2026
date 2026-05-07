@@ -69,3 +69,11 @@ class SceneManager:
             return {
                 "trigger_event": node.get("event_id")
             }
+        
+        # Scene switch node
+        elif node_type == "goto":
+            return {
+                "change_scene": node.get("target")
+            }
+        
+        return None
