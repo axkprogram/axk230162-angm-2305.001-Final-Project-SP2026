@@ -48,3 +48,9 @@ class EngineController:
 
             elif self.active_mode == "COMBAT":
                 self._update_combat(input_data)
+
+        # Scene mode
+        def _update_scene(self, input_data):
+            if self.scene_system:
+                result = self.scene_system.update(input_data, self.game_state)
+                self._handle_result(result)
