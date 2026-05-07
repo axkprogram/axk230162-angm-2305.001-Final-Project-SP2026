@@ -39,4 +39,10 @@ class GameState:
     # Player State
     player_hp: int = 100
     player_max_hp: int = 100
-    
+
+    # Party Context
+    part_state: dict = field(default_factory=lambda: { 
+        "carmen": {"hp": 100},
+        "rio": {"hp": 150},
+        "yohan": {"hp": 125}
+    })
