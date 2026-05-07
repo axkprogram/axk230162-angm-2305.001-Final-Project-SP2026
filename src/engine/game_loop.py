@@ -49,4 +49,11 @@ class GameLoop:
     # Main loop
     def run(self):
         while self.running and self.controller.running:
-            
+
+            # Input
+            input_data = self.get_input()
+
+            if input_data["quit"]:
+                self.running = False
+                self.controller.stop()
+                break
