@@ -567,5 +567,9 @@ forest_bell_scene = [
         ]
     },
 
-    
+    # Transition
+    {
+        "type": "transition",
+        "target_scene" : "cave_fall_scene"
+    }
 ]
