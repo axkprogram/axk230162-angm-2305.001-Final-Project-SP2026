@@ -244,6 +244,15 @@ forest_bell_scene = [
                         "speaker": "Rio",
                         "text": "You're sure it wasn't your bell?",
                         "emotion": "concerned"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Carmen shakes her head and takes her bell, and shakes it a little bit. No sound came out.",
+                        "emotion": "netural"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "It's missing it's clapper, it can't make a sound."
                     }
                 ]
             }
@@ -300,6 +309,15 @@ forest_bell_scene = [
                         "speaker": "Yohan",
                         "text": "Are you sure it wasn't a noise you made yourself?",
                         "emotion": "serious"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Carmen shakes her head and takes her bell, and shakes it a little bit. No sound came out.",
+                        "emotion": "netural"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "It's missing it's clapper, it can't make a sound."
                     }
                 ]
             }
@@ -342,4 +360,13 @@ forest_bell_scene = [
     },
 
     # Creature appears
+    {
+        "type": "dialogue",
+        "lines": [
+            {
+                "speaker": "Narration",
+                "text": "Carmen finally turns back towards the others."
+            }
+        ]
+    }
 ]
