@@ -104,6 +104,38 @@ forest_bell_scene = [
 
     # The Bell
     {
-        
+        "type": "dialogue",
+        "lines": [
+            {
+                "speaker": "Narration",
+                "text": "Whatever the case was, the three of them continued to search for any signs of a Temple besides just magic.",
+                "emotion": "neutral"
+            },
+            {
+                "speaker": "Narration",
+                "text": "But Carmen freezes in place.",
+                "emotion": "sudden"
+            },
+            {
+                "speaker": "Narration",
+                "text": "The sound is faint and maybe Carmen didn't even hear it at all. But the sound is unmistakable.",
+                "emotion": "serious"
+            },
+            {
+                "speaker": "Narration", 
+                "text": "It was a bell.",
+                "emotion": "shocked"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Their fingers tighten around their own bell. It couldn't have been theirs. There was no clapper, and Carmen hadn't touched it at all. But Carmen couldn't be sure.",
+                "emotion": "tense"
+            },
+            {
+                "speaker": "Narration", 
+                "text": "All of a sudden, the forest around them felt like it didn't exist at all.",
+                "emotion": "distant"
+            },
+        ]
     }
 ]
