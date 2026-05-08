@@ -1,5 +1,6 @@
 deep_tunnel_scene = [
-     # Moving through the Tunnel
+
+       # Moving through the Tunnel
     {
         "type": "dialogue",
         "lines": [
@@ -198,6 +199,53 @@ deep_tunnel_scene = [
                "speaker": "Narration",
                "text": "The silence feels like an answer Carmen doesn't want.",
                "emotion": "uneasy"
+           }
+       ]
+   },
+
+   # Carmen touches the wall
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Narration",
+               "text": "Carmen runs their fingers carefully along the wall.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Faint engravings stretch across the stone surface.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The markings stop and start abruptly, incomplete in strange places.",
+               "emotion": "unsettling"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Like something forgotten was trying desperately to remember itself.",
+               "emotion": "disturbing"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The wall hums softly beneath Carmen's fingertips. Acknowledging them.",
+               "emotion": "unnatural"
+           },
+           {
+               "speaker" : "Carmen",
+               "text":"-!",
+               "emotion": "startled"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Carmen jerks their hand away immediately.",
+               "emotion": "panic"
+           },
+           {
+               "speaker": "Rio",
+               "text": "You alright there Carmen?",
+               "emotion": "concern"
            }
        ]
    }
