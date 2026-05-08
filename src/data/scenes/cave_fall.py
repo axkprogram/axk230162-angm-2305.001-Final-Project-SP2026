@@ -457,6 +457,12 @@ cave_fall_scene = [
                "emotion": "disturbing"
            }
        ]
+   },
+
+   # Transition to next Scene
+   {
+       "type": "transition",
+       "target_scene": "deep_tunnel_scene"
    }
 
 ]
