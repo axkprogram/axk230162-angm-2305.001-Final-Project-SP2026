@@ -87,4 +87,82 @@ cave_fall_scene = [
     },
 
     # Reassure response
+    {
+        "type": "conditional",
+        "if": {
+            "fall_response": "reassure"
+        },
+
+        "true": [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Rio",
+                        "text": "Good. I'm glad. Would've been awkward if my rescue failed.",
+                        "emotion": "playful"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Rio sounds almost disappointed that the situation wasn't more dangerous.",
+                        "emotion": "neutral"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Complain response
+   {
+       "type": "conditional",
+       "if": {
+           "fall_response": "complain"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                       "text": "That means you're alive enough to complain. That's a good.",
+                       "emotion": "amused"
+                   },
+                   {
+                       "speaker": "Narration",
+                       "text": "Rio laughs while brushing dust from her shoulder.",
+                       "emotion": "neutral"
+                   }
+               ]
+           }
+       ]
+   },
+
+   # Ask about Rio
+   {
+       "type": "conditional",
+       "if": {
+           "fall_response": "rio_check"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                       "text": "Aw, worried about me?",
+                       "emotion": "smug"
+                   },
+                   {
+                       "speaker": "Rio",
+                       "text": "Don't worry. I've survived worse than jumping into mystery holes.",
+                       "emotion": "confident"
+                   }
+               ]
+           }
+       ]
+   },
+
+   # Yohan Arrives
 ]
