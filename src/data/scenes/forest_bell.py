@@ -500,4 +500,30 @@ forest_bell_scene = [
     },
 
     # Silent Result
+    {
+        "type": "conditional",
+        "if": {
+            "creature_reaction": "silent"
+        },
+
+        "true": [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Narration",
+                        "text": "Carmen freezes from the suddeness, unable to do anything.",
+                        "emotion": "shock"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "The creature twists through and around Carmen's feet, causing them to lose balance. The creature darts off into the forest before Carmen can even see it properly.",
+                        "emotion": "shock"
+                    }
+                ]
+            }
+        ]
+    },
+
+    
 ]
