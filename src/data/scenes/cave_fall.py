@@ -314,4 +314,29 @@ cave_fall_scene = [
    },
 
    # Carmen Side Response
+   {
+       "type": "conditional",
+       "if": {
+           "cave_argument": "carmne"
+       },
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                       "text": "...Fair point.",
+                       "emotion": "accepting"
+                   },
+                   {
+                       "speaker": "Yohan",
+                       "text": "That would be reasonable, yes.",
+                       "emotion": "agreeing"
+                   }
+               ]
+           }
+       ]
+   },
+
+   
 ]
