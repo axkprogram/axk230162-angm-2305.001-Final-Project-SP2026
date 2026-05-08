@@ -275,5 +275,67 @@ deep_tunnel_scene = [
                }
            }
        ]
+   },
+
+   # Lie Response
+   {
+       "type": "conditonal",
+       "if": {
+           "wall_response": "lie"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                       "text": "A spider scared you that badly?",
+                       "emotion": "teasing"
+                   },
+                   {
+                       "speaker": "Yohan",
+                       "text": "... Must've been a big spider.",
+                       "emotion": "skeptical"
+                   },
+                   {
+                       "speaker": "Narration",
+                       "text": "Yohan studies the wall more carefully afterward.",
+                       "emotion": "neutral"
+                   }
+               ]
+           }
+       ]
+   },
+
+   # Truth Response
+   {
+       "type": "conditional",
+       "if": {
+           "wall_response": "truth"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                       "text": "...The wall?",
+                       "emotion": "uneasy"
+                   },
+                   {
+                       "speaker": "Carmen",
+                       "text": "like it reacted when I touched it.",
+                       "emotion": "concerned"
+                   },
+                   {
+                       "speaker": "Narration",
+                       "text": "Yohan's expression darkens slightly.",
+                       "emotion": "uneasy"
+                   }
+               ]
+           }
+       ]
    }
 ]
