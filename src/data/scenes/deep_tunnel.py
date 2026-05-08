@@ -371,5 +371,66 @@ deep_tunnel_scene = [
    },
 
    # The Cave Responds
-   
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Narration",
+               "text": "The cave suddenly shifts around them.",
+               "emotion": "shock"
+           },
+           {
+               "speaker": "Narration",
+               "text": "But not physically.",
+               "emotion": "unnatural"
+           },
+           {
+               "speaker": "Narration",
+               "text": "It's like something in the cave rushes past the three of them at impossible speed. Making itself known.",
+               "emotion": "disturbing"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Although there was no one else but the three of them in the cave, Carmen feels something snickering. But they say nothing about it.",
+               "emotion": "disturbing"
+           }
+       ]
+   },
+
+   # The Group Acknowledges it
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Rio",
+               "text": "...Okay. Tell me I'm not the only one who felt that.",
+               "emotion": "uneasy"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "Unfortunately not.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Carmen",
+               "text": "I felt it too.",
+               "emotion": "quietly"
+           },
+           {
+               "speaker": "Rio",
+               "text": "I really don't like when we both agree on something.",
+               "emotion": "uneasy humor"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "Consistency is comforting.",
+               "emotion": "matter-of-fact"
+           },
+           {
+               "speaker": "Rio",
+               "text": "That's exactly what I don't like.",
+               "emotion": "dry"
+           }
+       ]
+   },
 ]
