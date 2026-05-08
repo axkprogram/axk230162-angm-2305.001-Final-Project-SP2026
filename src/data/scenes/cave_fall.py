@@ -338,5 +338,125 @@ cave_fall_scene = [
        ]
    },
 
-   
+   # Discussing the Hole
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Rio",
+               "text": "The hole definitely wasn't there before, right?",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Carmen",
+               "text": "I didn't see it when I turned around. I was distracted, by the creature so, but still.",
+               "emotion": "uneasy"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "Because it wasn't naturally formed.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Yohan walks toward the cave wall, brushing his fingres against the stone surface carefully.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Yohan", 
+               "text": "This opening was intentionally created.",
+               "emotion": "anaytical"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "After you fell in Carmen, the hole began to close up. I don't think you noticed Rio.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Yohan", 
+               "text": "I barely managed to follow before the passage sealed itself.",
+               "emotion": "excited"
+           },
+           {
+               "speaker": "Rio",
+               "text": "So the cave wanted us down here?",
+               "emotion": "excited"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "I deeply dislike the way you said it, but it's... something like that.",
+               "emotion": "disturbed"
+           }
+       ]
+   },
+
+   # The Cave
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Narration",
+               "text": "The cave feels wrong in ways Carmen struggles to describe.",
+               "emotion": "uneasy"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The walls resemble natural stone, but not consistently.",
+               "emotion": "unsettling"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Stone sections curve too smoothly. Others look deliberately uneven, as though something attempted to imitate natural formation from memory alone.",
+               "emotion": "disturbing"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The cave does not feel constructured.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Narration",
+               "text": "But it does not feel natural either.",
+               "emotion": "serious"
+           }
+       ]
+   },
+
+   # Decision to move forward
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Rio",
+               "text": "Well. Staying here won't help us much.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "With the original entrance completely sealed, the only way is forward.",
+               "emotion": "analytical"
+           },
+           {
+               "speaker": "Carmen",
+               "text": "Then we move carefully.",
+               "emotion": "determined"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The three turn toward the singular tunnel stretching deeper ahead.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Narration",
+               "text": "It resembles a natural cave passage at first glance.",
+               "emotion": "uneasy"
+           },
+           {
+               "speaker": "Narration",
+               "text": "But the longer Carmen stares at it, the more it feels staged. As though something tried to recreate the laws of nature without full understanding them.",
+               "emotion": "disturbing"
+           }
+       ]
+   }
+
 ]
