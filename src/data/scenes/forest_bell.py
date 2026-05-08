@@ -381,5 +381,44 @@ forest_bell_scene = [
         ]
     },
 
-    # Creature Reactio Choice
+    # Creature Reaction Choice
+    {
+        {
+            "type": "choice",
+            "options": [
+
+                # Punch
+                {
+                    "text": "Punch the creature",
+                    "result": {
+                        "set": {
+                            "creature_reaction": "punch"
+                        }
+                    }
+                },
+
+                # Scream
+                {
+                    "text": "Scream.",
+                    "result": {
+                        "set": {
+                            "creature_reaction": "scream"
+                        }
+                    }
+                },
+
+                # Stay Silent
+                {
+                    "text": "Stay silent.",
+                    "result": {
+                        "set":{
+                            "creature_reaction": "silent"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+
+    
 ]
