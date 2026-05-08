@@ -204,5 +204,142 @@ forest_bell_scene = [
         ]
     },
 
-    
+    # Truth Response
+    {
+        "type": "conditional",
+        "if": {
+            "bell_response": "truth"
+        },
+
+        "true": [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Rio",
+                        "text": "A bell? Like a temple bell?",
+                        "emotion": "skeptical"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "If it was a temple bell I doubt we wouldn't have heard it ourselves, Rio.",
+                        "emotion": "serious"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Yohan's eyes narrow slightly, studying the surroundings.",
+                        "emotion": "neutral"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "No it was too quiet to be a temple bell, but I swear it was a bell.",
+                        "emotion": "persuasvie"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "There's nothing around us that could even mimic the sound of a bell.",
+                        "emotion": "neutral"
+                    },
+                    {
+                        "speaker": "Rio",
+                        "text": "You're sure it wasn't your bell?",
+                        "emotion": "concerned"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Lie Response
+    {
+        "type": "conditional",
+        "if": {
+            "bell_reponse": "lie"
+        },
+
+        "true" : [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Narration",
+                        "text": "Rio grips the hilt of her sword.",
+                        "emotion": "neutral"
+                    },
+                    {
+                        "speaker": "Rio",
+                        "text": "Something following us?",
+                        "emotion": "alert"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "Calm down, I haven't sensed anything nearby.",
+                        "emotion": "analytical"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "It was pretty faint sounding, whatever it was I don't think it's dangerous.",
+                        "emotion": "reassuring"
+                    },
+                    {
+                        "speaker": "Rio",
+                        "text": "Better safe than sorry.",
+                        "emotion": "serious"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "How ironic for you of all people to say.",
+                        "emotion": "sarcastic"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Yohan points to Carmen's bell that was resting on their hip.",
+                        "emotion": "neutral"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "Are you sure it wasn't a noise you made yourself?",
+                        "emotion": "serious"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Silent Response
+    {
+        "type": "conditional",
+        "if": {
+            "bell_response": "silent"
+        },
+        "true": [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Rio",
+                        "text": "You sure?",
+                        "emotion": "concern"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "Yeah. I'm fine. Just... paranoid.",
+                        "emotion": "forced calm"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "If something feels wrong, tell us immediately.",
+                        "emotion": "serious"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Carmen nods, though the sound of the bell still lingers unpleasantly in their mind. There was something vaguely familiar about it.",
+                        "emotion": "uneasy"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Creature appears
 ]
