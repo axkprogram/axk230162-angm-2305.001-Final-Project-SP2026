@@ -453,7 +453,7 @@ cave_fall_scene = [
            },
            {
                "speaker": "Narration",
-               "text": "But the longer Carmen stares at it, the more it feels staged. As though something tried to recreate the laws of nature without full understanding them.",
+               "text": "But the longer Carmen stares at it, the more it feels staged. As though something tried to recreate the laws of nature without full understanding them. Or had its own standards for how reality should behave.",
                "emotion": "disturbing"
            }
        ]
