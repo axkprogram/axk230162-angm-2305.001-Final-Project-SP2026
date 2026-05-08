@@ -1,5 +1,4 @@
 deep_tunnel_scene = [
-
        # Moving through the Tunnel
     {
         "type": "dialogue",
@@ -337,5 +336,40 @@ deep_tunnel_scene = [
                ]
            }
        ]
-   }
+   },
+
+   # Engravings
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Yohan",
+               "text": "These engravings aren't random.",
+               "emotion": "focused"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "They're methodical. There's a purpose to each of them, even if they end abruptly.",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Rio",
+               "text": "Soooooo, what does that mean for us?",
+               "emotion": "direct"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "It means someone- or something- was doing something here. Not just living here",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Carmen",
+               "text": "That's not reassuring.",
+               "emotion": "uneasy"
+           }
+       ]
+   },
+
+   # The Cave Responds
+   
 ]
