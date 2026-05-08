@@ -1,6 +1,5 @@
 deep_tunnel_scene = [
-
-    # Moving through the Tunnel
+     # Moving through the Tunnel
     {
         "type": "dialogue",
         "lines": [
@@ -75,4 +74,89 @@ deep_tunnel_scene = [
            }
        ]
    },
+
+   # Rio Alignment
+   {
+       "type": "conditional",
+       "if": {
+           "tunnel_alignment":"rio"
+       },
+       
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                       "text": "See? Carmen gets what I'm saying.",
+                       "emotion": "approving",
+                   },
+                   {
+                       "speaker": "Yohan",
+                       "text": "I didn't say she was wrong.",
+                       "emotion": "dry"
+                   },
+               ]
+           }
+       ]
+   },
+
+   # Yohan Alignment
+   {
+      "type": "conditional",
+      "if": {
+          "tunnel_alignment": "yohan"
+      },
+
+      "true": [
+          {
+              "type": "dialogue",
+              "lines": [
+                  {
+                      "speaker": "Yohan",
+                      "text": "Exactly, there's a distinction.",
+                      "emotion": "approving"
+                  },
+                  {
+                      "speaker": "Rio",
+                      "text": "Only to people who like to make things more complicated.",
+                      "emotion": "challenging"
+                  }
+              ]
+          }
+      ] 
+   }
+
+   # Carmen alignment
+   {
+       "type": "conditional",
+       "if": {
+           "tunnel_alignment": "carmen"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Yohan",
+                       "text": "Not entirely. Construction obeys intention from the beginning.",
+                       "emotion": "serious"
+                   },
+                   {
+                       "speaker": "Yohan",
+                       "text" : "This place feel slike something natural was altered.",
+                       "emotion": "uneasy"
+                   },
+                   {
+                       "speaker": "Rio",
+                       "text": "Still sounds like building something to me.",
+                       "emotion": "skeptical"
+                   }
+               ]
+           }
+       ]
+   },
+
+   
 ]
