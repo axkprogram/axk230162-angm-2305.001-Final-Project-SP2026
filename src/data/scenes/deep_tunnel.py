@@ -158,5 +158,47 @@ deep_tunnel_scene = [
        ]
    },
 
-   
+   # Yohan staying calm
+   {
+       "type": "dialogue",
+       "lines":[
+           {
+               "speaker": "Rio",
+               "text": "Honestly, it sounds like you're juust trying to stay calm.",
+               "emotion": "observant"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Yohan doesn't respond.",
+               "emotion": "observant"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Not disagreement, but not confirmation either.",
+               "emotion": "neutral"
+           }
+       ]
+   },
+
+   # Someone was here
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Rio",
+               "text": "Either way, it means that someone was here before us, right?",
+               "emotion": "serious"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Yohan doesn't answer immediately.",
+               "emotion": "tense"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The silence feels like an answer Carmen doesn't want.",
+               "emotion": "uneasy"
+           }
+       ]
+   }
 ]
