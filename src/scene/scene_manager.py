@@ -144,3 +144,24 @@ class SceneManager:
             return chosen.get("result", {})
         
         return None
+    
+    # Condition Evaulator
+    def _evaluate_condition(self, condition, game_state):
+        """
+        Simple evaluator for now
+        can be expanded later into full expression system
+        """
+
+        # {"has item": "talisman"}
+        if "has_item" in condition:
+            return game_state.has_item(condition["has_item"])
+        
+        # {"flag": "bell_heard_truth"}
+        if "flag" in condition:
+            return game_state.get_flag(condition["flag"])
+        
+        # {"route": "dark"}
+        if "route" in condition:
+            return game_state.route_state == condition["route"]
+        
+        return False
