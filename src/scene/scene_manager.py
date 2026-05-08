@@ -113,7 +113,15 @@ class SceneManager:
 
             self.node_index += 1
             return None
-
+        
+        # Transition
+        elif node_type == "transition":
+            return {
+                "action": "change_scene",
+                "target": node.get("target_scene")
+            }
+        return None
+    
 
     # Choice handling
     def _handle_choice(self, input_data, game_state):
@@ -122,15 +130,17 @@ class SceneManager:
         minimum logic for now
         """
 
-        if "choice_select" in input_data:
-            choice_index = input_data["choice_select"]
-
-            if 0 <= choice_index < len(self.current_choices):
-                chosen = self.current_choices[choice_index]
-
-                self.waiting_for_choice = False
-                self.node_index += 1
-
-                return chosen.get("result")
-            
+        if "choice_select" not in input_data:
             return None
+        
+        index = input_data["choice_select"]
+
+        if 0 <= index < len(self.current_choices):
+            chosen = self.current_choices[index]
+
+            self.waiting_for_choice = False
+            self.node_index += 1
+
+            return chosen.get("result", {})
+        
+        return None
