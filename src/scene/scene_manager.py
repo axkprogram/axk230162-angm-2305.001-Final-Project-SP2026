@@ -164,4 +164,11 @@ class SceneManager:
         if "route" in condition:
             return game_state.route_state == condition["route"]
         
+        # {"party_alignment": "rio"}
+        if "party_alignment" in condition:
+            return (
+                game_state.party_alignment
+                == condition["party_alignment"]
+            )
+        
         return False
