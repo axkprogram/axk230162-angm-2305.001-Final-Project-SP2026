@@ -16,7 +16,7 @@ class GameState:
 
     # Narrative/ Flow State
     current_scene_id: str = "forest_intro"
-    route_state: str = "netural" # can become fighter / mage / dark / neutral
+    route_state: str = "neutral" # can become fighter / mage / dark / neutral
 
     flags: dict = field(default_factory=dict)
     """
@@ -41,7 +41,7 @@ class GameState:
     player_max_hp: int = 100
 
     # Party Context
-    part_state: dict = field(default_factory=lambda: { 
+    party_state: dict = field(default_factory=lambda: { 
         "carmen": {"hp": 100},
         "rio": {"hp": 150},
         "yohan": {"hp": 125}
@@ -64,7 +64,7 @@ class GameState:
         return self.flags.get(key, default)
     
     def add_item(self, item_name: str, value=True):
-        self.iventory[item_name] = value
+        self.inventory[item_name] = value
 
     def has_item(self, item_name: str) -> bool:
         return self.inventory.get(item_name, False)
