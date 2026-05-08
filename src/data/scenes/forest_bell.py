@@ -525,5 +525,47 @@ forest_bell_scene = [
         ]
     },
 
+    # The Fall
+    {
+        "type": "dialogue",
+        "lines": [
+            {
+                "speaker": "Narration",
+                "text": "Carmen loses their balance and starts to fall backwards.",
+                "emotion": "panic"
+            },
+            {
+                "speaker": "Carmen",
+                "text": "Wha-?!",
+                "emotion": "panic"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Carmen braces for the ground to hit their back.",
+                "emotion": "tense"
+            },
+            {
+                "speaker": "Narration",
+                "text": "But the ground doesn't come. Instead it disappears beneath them.",
+                "emotion": "shock"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Carmen continues to fall back into the hole. Panicked and tense.",
+                "emotion": "fear"
+            },
+            {
+                "speaker": "Rio",
+                "text": "CARMEN!",
+                "emotion": "panic"
+            },
+            {
+                "speaker": "Yohan",
+                "text": "Carmen, hold on!",
+                "emotion": "alarm"
+            }
+        ]
+    },
+
     
 ]
