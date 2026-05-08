@@ -33,4 +33,58 @@ cave_fall_scene = [
     },
 
     # Rio checks on Carmen
+    {
+        "type": "dialogue",
+        "lines": [
+            {
+                "speaker": "Rio",
+                "text": "You alive down there, Carmen?",
+                "emotion": "teasing concern"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Rio grins despite the rough landing, clearly more energized by the situation than bothered by it.",
+                "emotion": "neutral"
+            }
+        ]
+    },
+
+    # Carmen Response Choice
+    {
+        "type": "choice",
+        "options": [
+            
+            # Reassure
+            {
+                "text": "I'm okay, thanks to you.",
+                "result": {
+                    "set": {
+                        "fall_response": "reassure"
+                    }
+                }
+            },
+
+            # Complain
+            {
+                "text": "Yeah... That's going to bruise tomorrow.",
+                "result": {
+                    "set": {
+                        "fall_response": "complain"
+                    }
+                }
+            },
+
+            # Ask about Rio
+            {
+                "text": "What about you? You took most of the impact.",
+                "result": {
+                    "set": {
+                        "fall_response": "rio_check"
+                    }
+                }
+            }
+        ]
+    },
+
+    # Reassure response
 ]
