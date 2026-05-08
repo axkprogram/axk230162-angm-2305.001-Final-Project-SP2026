@@ -248,5 +248,32 @@ deep_tunnel_scene = [
                "emotion": "concern"
            }
        ]
+   },
+
+   # Wall Response
+   {
+       "type": "choice",
+       "option": [
+           
+           # Lie
+           {
+               "text": "Nothing. Just a spider.",
+               "result": {
+                   "set": {
+                       "wall_response": "lie"
+                   }
+               }
+           },
+
+           # Truth
+           {
+               "text": "I thought I felt something from the wall.",
+               "result": {
+                   "set": {
+                       "wall_response": "truth"
+                   }
+               }
+           }
+       ]
    }
 ]
