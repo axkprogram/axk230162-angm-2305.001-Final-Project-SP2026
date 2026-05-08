@@ -420,5 +420,47 @@ forest_bell_scene = [
         }
     },
 
-    
+    # Punch Result
+    {
+        "type": "conditional",
+        "if": {
+            "creature_reaction": "punch"
+        },
+
+        "true": [
+            {
+                "type": "state",
+                "set": {
+                    "player_hp": -20
+                }
+            },
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Narration",
+                        "text": "Carmen swings on instinct.",
+                        "emotion": "panic"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Their fist collides with the creature for just a second before claws dig into their shoulder.",
+                        "emotion": "pain"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "Ack-!",
+                        "emotion": "hurt"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "The creature pushes off of Carmen and disappears somewhere into the forest.",
+                        "emotion": "neutral"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Scream result
 ]
