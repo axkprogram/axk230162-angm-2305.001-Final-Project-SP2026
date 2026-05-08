@@ -137,5 +137,72 @@ forest_bell_scene = [
                 "emotion": "distant"
             },
         ]
-    }
+    },
+
+    # Carmen falls behind
+    {
+        "type": "dialogue",
+        "lines": [
+            {
+                "speaker": "Narration",
+                "text": "Rio and Yohan continue ahead before noticing Carmen had disappeared from their side.",
+                "emotion": "netural"
+            },
+            {
+                "speaker": "Rio",
+                "text": "Carmen?",
+                "emotion": "confused"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Rio turns back down the path to where Carmen had stopped. Carmen was facing away from them. Yohan scans the area around them carefully.",
+                "emotion": "neutral"
+            },
+            {
+                "speaker": "Yohan",
+                "text": "Did you find something?",
+                "emotion": "concerned?"
+            }
+
+        ]
+    },
+
+    # Bell Choice
+    {
+        "type": "choice",
+        "options":[
+
+            # Tell the truth
+            {
+                "text": "I heard a bell...",
+                "result": {
+                    "set": {
+                        "bell_response": "truth"
+                    }
+                }
+            },
+
+            # Lie to the others
+            {
+                "text": "I...thought I heard something behind us.",
+                "result": {
+                    "set": {
+                        "bell response": "lie"
+                    }
+                }
+            },
+
+            # Stay silent
+            {
+                "text": "It... it's nothing. Don't worry about it. I'll catch up.",
+                "result": {
+                    "set": {
+                        "bell response": "silent"
+                    }
+                }
+            }
+        ]
+    },
+
+    
 ]
