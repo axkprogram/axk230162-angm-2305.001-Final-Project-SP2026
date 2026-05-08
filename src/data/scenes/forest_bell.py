@@ -449,7 +449,7 @@ forest_bell_scene = [
                     },
                     {
                         "speaker": "Carmen",
-                        "text": "Ack-!",
+                        "text": "Ah-!",
                         "emotion": "hurt"
                     },
                     {
@@ -463,4 +463,41 @@ forest_bell_scene = [
     },
 
     # Scream result
+    {
+        "type": "conditional",
+        "if": {
+            "creature_reaction": "scream",
+        },
+
+        "true":[
+            {
+                "type": "state",
+                "set": {
+                    "player_hp": -10
+                }
+            },
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker" : "Narration",
+                        "text": "Carmen lets out a scream from the shock.",
+                        "emotion": "panic"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "The creature recoils mid-lunge before kicking violently against Carmen's chest to push away.",
+                        "emotion": "impact"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "Ack-!",
+                        "emotion": "hurt"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Silent Result
 ]
