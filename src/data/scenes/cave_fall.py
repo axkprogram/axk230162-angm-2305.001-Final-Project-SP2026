@@ -165,4 +165,101 @@ cave_fall_scene = [
    },
 
    # Yohan Arrives
+   {
+       
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Narration",
+               "text": "Loose stone shifts above Carmen and Rio.",
+               "emotion": "netural"
+           },
+           {
+               "speaker" :"Narration",
+               "text": "Yohan carefully slides down the slope after them with considerably less grace than his dignity would like. Carmen goes over to offer Yohan a ahnd, but he refuses. Rio stifles a laugh.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "Neither of you saw a thing.",
+               "emotion": "irritated"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Yohan immediately adjusts his clothes and regains composure before assessing Carmen.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "You look alive at least. That's all that matters.",
+               "emotion": "hidden relief"
+           },
+           {
+               "speaker": "Rio",
+               "text": "Not even a 'Carmen, thank goodness you're safe?'. What about me?",
+               "emotions": "teasing"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "You've been dramatic enough about their well being. And you've handled throws harder than that.",
+               "emotion": "flat"
+           }
+       ]
+   },
+
+   # Argument starts
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Rio",
+               "text": "You really don't care for anyone other than yourself, do you?",
+               "emotion": "challenging"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "And you throw yourself into strange holes before thinking. We all have flaws",
+               "emotion": "challenging"
+           },
+       ]
+   },
+
+   # Party Choice
+   {
+       "type": "choice",
+       "options": [
+           
+           # Side with Rio
+           {
+               "text": "You could sound a bit more concerned Yohan...",
+               "result": {
+                   "set": {
+                       "cave_argument": "rio"
+                   }
+               }
+           },
+
+           # Side with Yohan
+           {
+               "text": "While I'm thankful, jumping into the hole after me wasn't safe either.",
+               "result": {
+                   "set": {
+                       "cave_argument": "yohan"
+                   }
+               }
+           },
+
+           # Neutral
+           {
+               "text": "Can we survive the strange cave first before arguing again?",
+               "result":{
+                   "set":{
+                       "cave_argument": "carmen"
+                   }
+               }
+           }
+       ]
+   },
+
+   # Rio Side Response
 ]
