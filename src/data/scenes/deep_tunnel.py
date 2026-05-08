@@ -125,7 +125,7 @@ deep_tunnel_scene = [
               ]
           }
       ] 
-   }
+   },
 
    # Carmen alignment
    {
@@ -145,7 +145,7 @@ deep_tunnel_scene = [
                    },
                    {
                        "speaker": "Yohan",
-                       "text" : "This place feel slike something natural was altered.",
+                       "text" : "This place feels like something natural was altered.",
                        "emotion": "uneasy"
                    },
                    {
@@ -233,7 +233,7 @@ deep_tunnel_scene = [
            },
            {
                "speaker" : "Carmen",
-               "text":"-!",
+               "text": "-!",
                "emotion": "startled"
            },
            {
@@ -252,7 +252,7 @@ deep_tunnel_scene = [
    # Wall Response
    {
        "type": "choice",
-       "option": [
+       "options": [
            
            # Lie
            {
@@ -278,7 +278,7 @@ deep_tunnel_scene = [
 
    # Lie Response
    {
-       "type": "conditonal",
+       "type": "conditional",
        "if": {
            "wall_response": "lie"
        },
@@ -433,4 +433,89 @@ deep_tunnel_scene = [
            }
        ]
    },
+
+   # Carmen Prevents Argument
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Carmen",
+               "text": "Let's just keep moving you two. Before you start arguing again.",
+               "emotion": "tired amusement"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Rio and Yohan glare at each other briefly.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Rio",
+               "text": "...Fine",
+               "emotion": "accepting"
+           },
+           {
+               "speaker": "Yohan",
+               "text": "Agreed.",
+               "emotion": "accepting"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Carmen exhales quietly in relief and steps forward.",
+               "emotion": "neutral"
+           }
+       ]
+   },
+
+   # Second Bell
+   {
+       "type": "dialogue",
+       "lines": [
+           {
+               "speaker": "Narration",
+               "text": "The tunnel stretches forward in a way that makes distance feel uncertain.",
+               "emotion": "unease"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Steps echo too cleanly. Too evenly.",
+               "emotion": "disturbing"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Like something is replaying them.",
+               "emotion": "unsettling"
+           },
+           {
+               "speaker": "Narration",
+               "text": "Then-",
+               "emotion": "tense"
+           },
+           {
+               "speaker": "Narration",
+               "text": "A bell rings somewhere deeper within the cave.",
+               "emotion": "shock"
+           },
+           {
+               "speaker": "Narration",
+               "text": "So perfectly out of place.",
+               "emotion": "neutral"
+           },
+           {
+               "speaker": "Narration",
+               "text": "The sound cuts through the tunnel with impossible clarity for how faint it was.",
+               "emotion": "unnatural"
+           },
+           {
+               "speaker": "Narration",
+               "text": "All three of them immediately freeze in place.",
+               "emotion": "tense"
+           }
+       ]
+   },
+
+   # Transition
+   {
+       "type": "transition",
+       "target_scene": "bell_chamber_scene"
+   }
 ]
