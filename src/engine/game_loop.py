@@ -2,6 +2,8 @@ import pygame
 
 from engine.controller import EngineController
 from state.game_state import GameState
+# for system test
+from scene.scene_manager import SceneManager
 
 
 class GameLoop:
@@ -24,6 +26,13 @@ class GameLoop:
         self.controller = EngineController(self.game_state)
 
         self.running = True
+
+        # for system test
+        self.scene_manager = SceneManager()
+
+        self.controller.register_scene_system(
+            self.scene_manager
+        )
 
     # Input handling
     def get_input(self):
