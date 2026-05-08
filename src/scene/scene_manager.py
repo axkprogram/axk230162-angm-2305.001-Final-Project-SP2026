@@ -28,7 +28,99 @@ class SceneManager:
 
     # Main update Loop
     def update(self, input_data, game_state):
-        print("Scene Manager running")
+        """
+        Advances the scene step-by-step.
+        Returns actions for controller.
+        """
+        if not self.scene_data:
+                return None
+        
+        # if waiting for player choice, do not advance
+        if self.waiting_for_choice:
+                return self._handle_choice(input_data, game_state)
+        
+        # Get current node
+        if self.node_index >= len(self.scene_data):
+            return {"end_scene": True}
+        
+        node = self.scene_data[self.node_index]
+
+        node_type = node.get("type")
+
+        # Dialogue node
+        if node_type == "dialogue":
+            self.node_index += 1
+            return {
+                "action": "dialogue",
+                "speaker": node.get("speaker"),
+                "text": node.get("text")
+            }
+        
+        # Choice node
+        elif node_type == "choice":
+            self.waiting_for_choice = True
+            self.current_choices = node.get("options", [])
+
+            return {
+                "action": "choice",
+                "options": self.current_choices
+            }
+        
+        # Event Trigger node
+        elif node_type == "event":
+            self.node_index += 1
+            return {
+                "action": "event",
+                "event_id": node.get("event_id")
+            }
+        
+        # Battle
+        elif node_type == "battle":
+            self.node_index += 1
+            return {
+                "action": "battle",
+                "battle_id": node.get("battle_id")
+            }
+        
+        # State Change
+        elif node_type == "state":
+            self.node_index += 1
+
+            changes = node.get("set", {})
+            for key, value in changes.items():
+                setattr(game_state, key, value)
+
+            return {
+                "action": "state_change",
+                "changes": changes
+            }
+        
+        # Conditional
+        elif node_type == "conditional":
+            condition = node.get("if", {})
+            result = self._evaluate_condition(condition, game_state)
+
+            if result:
+                branch = node.get("true", [])
+            else:
+                branch = node.get("false", [])
+            
+            # Inject the branch into scene flow
+            self.scene_data = (
+                self.scene_data[:self.node_index + 1]
+                + branch+self.scene_data[self.node_index + 1:]
+            )
+
+            self.node_index += 1
+            return None
+        
+        # Transition
+        elif node_type == "transition":
+            return {
+                "action": "change_scene",
+                "target": node.get("target_scene")
+            }
+    
         return None
     
 
