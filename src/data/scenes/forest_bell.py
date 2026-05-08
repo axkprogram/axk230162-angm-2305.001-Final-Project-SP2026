@@ -365,8 +365,21 @@ forest_bell_scene = [
         "lines": [
             {
                 "speaker": "Narration",
-                "text": "Carmen finally turns back towards the others."
+                "text": "Carmen finally turns back towards the others.",
+                "emotion": "neutral"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Something suddenly drops from the trees above.",
+                "emotion": "shock"
+            },
+            {
+                "speaker": "Narration",
+                "text": "A blur of claws and dark fur lunges towards Carmen. They barely have time to react.",
+                "emotion": "panic"
             }
         ]
-    }
+    },
+
+    # Creature Reactio Choice
 ]
