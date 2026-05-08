@@ -1,4 +1,5 @@
 import pygame
+from scene.scene_manager import SceneManager
 
 class EngineController:
     """
@@ -22,6 +23,8 @@ class EngineController:
         self.combat_system = None
 
         self.running = True
+
+        self.scene_system = SceneManager()
 
     # System registration
     def register_scene_system(self, scene_system):
