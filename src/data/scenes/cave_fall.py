@@ -262,4 +262,56 @@ cave_fall_scene = [
    },
 
    # Rio Side Response
+   {
+       "type": "conditional",
+       "if":{
+           "cave_argument": "rio"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Rio",
+                        "text": "A little concern never hurt anyone, right Carmen?",
+                        "emotion": "smug"
+                   },
+                   {
+                       "speaker": "Yohan",
+                       "text": "Excessive concern wouldn't have changed anything.",
+                       "emotion": "annoyed"
+                   }
+               ]
+           }
+       ]
+   },
+
+   # Yohan side response
+   {
+       "type": "conditional",
+       "if": {
+           "cave_argument": "yohan"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Yohan",
+                       "text": "Exactly my point, thank you Carmen.",
+                       "emotion": "approving"
+                   },
+                   {
+                       "speaker": "Rio",
+                       "text": "And yet my irrational actions saved Carmen.",
+                       "emotion": "Challenging"
+                   }
+               ]
+           }
+       ]
+   },
+
+   # Carmen Side Response
 ]
