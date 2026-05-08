@@ -64,7 +64,7 @@ forest_intro_scene = [
         ]
     },
 
-    #Party intro
+    # Party intro
     {
         "type": "dialogue",
         "lines": [
@@ -100,7 +100,7 @@ forest_intro_scene = [
             },
             {
                 "speaker": "Yohan",
-                "text": "And you don't think enough. Leaping with fists flying doesn't necessarily lead to success",
+                "text": "And you don't think enough. Leaping with fists flying doesn't necessarily lead to success.",
                 "emotion": "calm rebuttal"
             },
             {
@@ -118,7 +118,165 @@ forest_intro_scene = [
                 "text": "W-what is it? Why are you looking at me like that?",
                 "emotion": "nervous"
             },
-            {}
+            {
+                "speaker": "Narration",
+                "text": "Rio rests a hand on the hilt of her sword. Tilting her head, and flashing Carmen a charming smile, full of hidden intentions. Carmen grew more nervous."
+            },
+            {
+                "speaker": "Rio",
+                "text": "Who do you think is right?",
+                "emotion": "curious"
+            },
+            {
+                "speaker": "Narration",
+                "text": "Yohan scoffs and folds his arms across his chest. Eyes pressed closed and brows furrowed. Carmen already knew where this was going.",
+                "emotion": "neutral"
+            },
+            {
+                "speaker": "Yohan",
+                "text": "It's not a matter of who's right. It's obvious that it's better to take a safer approach.",
+                "emotion": "frustrated"
+            },
+            {
+                "speaker": "Narration",
+                "text": "And because petty arguments like these became common, Carmen had become the designated peacekeeper. Against their will, but for the sake of the mission.",
+                "emotion": "neutral"
+            }
+        ]
+    },
+
+    # Player Choice
+    {
+        "type": "choice", 
+        "options": [
+            {
+                "text": "If we were in danger, standing around would only make things worse. It's better to keep moving even if you're stuck.",
+                "result": {
+                    "set": {
+                        "party_alignment": "Rio"
+                    }
+                }
+            },
+
+            {
+                "text": "Acting without thinking can lead to things that could've been avoided...It's better to think before you act.",
+                "result": {
+                    "set": {
+                        "party_alignment": "Yohan"
+                    }
+                }
+            },
+
+            {
+                "text": "Rushing in blind is reckless and leads to dangerous situations, but overthinking can also slow down our progress.",
+                "result": {
+                    "set": {
+                        "party_alignment": "Carmen"
+                    }
+                }
+            }
+        ]
+    },
+
+    # Rio Response
+    {
+        "type": "conditional",
+        "if": {
+            "party_alignment": "Rio"
+        },
+
+        "true": [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Narration",
+                        "text": "Rio flashes a brighter, genuine smile. It's almost blinding.",
+                        "emotion": "neutral"
+                    },
+                    {
+                        "speaker": "Rio",
+                        "text": "Sound answer, Carmen. Logical enough for you Mr. Tower mage?",
+                        "emotion": "approving"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Yohan's face relaxes but his mouth is curled into a scowl. Or maybe a pout? Carmen couldn't really tell with his tone.",
+                        "emotion":"neutral"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "It's the same as pushing a boulder up a mountain...but if you say so.",
+                        "emotion": "disapproving"
+                    }
+                ]
+            }
+        ]
+    },
+
+    # Yohan Response
+    {
+       "type": "conditional",
+       "if": {
+           "party_alignment": "Yohan"
+       },
+
+       "true": [
+           {
+               "type": "dialogue",
+               "lines": [
+                   {
+                       "speaker": "Narration",
+                       "text": "Yohan puts a hand up to his mouth. Carmen knows he's hiding a smirk.",
+                       "emotion": "neutral"
+                   },
+                   {
+                       "speaker": "Yohan",
+                       "text": "Exactly my point. Thanks for seeing reason, Carmen.",
+                       "emotion": "approving"
+                   },
+                   {
+                       "speaker": "Narrator",
+                       "text": "Rio's smile didn't fade, but it did fall flat on her face.",
+                       "emotion": "neutral"
+                   },
+                   {
+                       "speaker": "Rio",
+                       "text": "You can't think your way through an enemy...but I guess you're right in a way.",
+                       "emotion": "disapproving."
+                   }
+               ]
+           }
+       ]
+    },
+    
+    # Carmen response
+    {
+        "type": "conditional",
+        "if": {
+            "party_alignment": "Carmen"
+        },
+
+        "true": [
+            {
+                "type": "dialogue",
+                "lines": [
+                    {
+                        "speaker": "Narration",
+                        "text": "The two look thoughtful at Carmen's words. Rio bobbing her head side to side, agreable. Yohan slowly nods his head."
+                    },
+                    {
+                        "speaker": "Rio",
+                        "text": "...Fair enough. I'll trust you on this Carmen.",
+                        "emotion": "accepting"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "Your reasoning is hard to argue with. Very well.",
+                        "emotion": "accepting"
+                    }
+                ]
+            }
         ]
     }
 ]
