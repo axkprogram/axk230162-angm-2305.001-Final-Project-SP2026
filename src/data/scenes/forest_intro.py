@@ -278,5 +278,32 @@ forest_intro_scene = [
                 ]
             }
         ]
+    },
+
+    # Ending the Scene
+    {
+        "type": "dialogue",
+        "lines": [
+            {
+                "speaker": "Carmen",
+                "text": "No matter who's right and who's not, we're here by request remember? We should keep looking for that Temple.",
+                "emotion": "determined"
+            },
+            {
+                "speaker": "Rio",
+                "text": "I feel like we've already circled the entire place though.",
+                "emotion": "lost"
+            },
+            {
+                "speaker": "Yohan",
+                "text": "I'm inclined to agree with Rio, for once.",
+                "emotion": "accepting"
+            },
+            {
+                "speaker": "Narration",
+                "text": "The group continues deeper into the forest, regardless.",
+                "emotion": "neutral"
+            }
+        ]
     }
 ]
