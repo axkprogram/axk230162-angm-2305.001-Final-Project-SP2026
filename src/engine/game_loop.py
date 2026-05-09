@@ -90,15 +90,6 @@ class GameLoop:
 
         ui = self.controller.ui_state
 
-        # dialogue
-        # if ui["mode"] == "dialogue":
-           # speaker = self.font.render(
-               # ui["speaker"], True, (255,255,255)
-           # )
-           # self.screen.blit(speaker, (50, 400))
-
-          #  wrapped = self.wrap_text(ui["text"], 700)
-
         # dialogue box
         pygame.draw.rect(
             self.screen,
@@ -108,18 +99,17 @@ class GameLoop:
 
         if ui["mode"] == "dialogue":
             speaker = self.font.render(
-                ui["speaker"],
-                True,
-                (255, 220, 100)
+                ui["speaker"], True, (255, 255, 0)
             )
-            text = self.small_font.render(
-                ui["text"],
-                True,
-                (255, 255, 255)
-            )
+            self.screen.blit(speaker, (50, 420))
 
-            self.screen.blit(speaker, (70, 420))
-            self.screen.blit(text, (70, 470))
+            wrapped = self.wrap_text(ui["text"], 700) or []
+
+            y = 470
+            for line in wrapped:
+                text = self.small_font.render(line, True, (255,255,255))
+                self.screen.blit(text_surface, (50, y))
+                y += 30
 
         elif ui["mode"] == "choice":
             y = 350
@@ -143,17 +133,6 @@ class GameLoop:
         )
 
         self.screen.blit(hp_text, (20, 20))
-
-        wrapped = self.wrap_text(
-            ui["text"],
-            700
-        ) or []
-
-        y = 450
-        for line in wrapped:
-            text_surface = self.small_font.render(line, True, (255,255,255))
-            self.screen.blit(text_surface, (20, y))
-            y += 30
 
         pygame.display.flip()
 
