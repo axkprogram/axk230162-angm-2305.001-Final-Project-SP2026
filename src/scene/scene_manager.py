@@ -112,7 +112,7 @@ class SceneManager:
             }
         
         # transition
-        elif self.node_index == "transition":
+        elif node_type == "transition":
             self.node_index += 1
 
             return{
