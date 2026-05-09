@@ -58,6 +58,10 @@ class GameLoop:
                 if event.key == pygame.K_SPACE:
                     input_data["advance"] = True
 
+                #esc key
+                elif event.key == pygame.K_ESCAPE:
+                    self.controller.stop()
+
                 #choices 1/2/3
                 elif event.key == pygame.K_1:
                     input_data["choice_select"] = 0

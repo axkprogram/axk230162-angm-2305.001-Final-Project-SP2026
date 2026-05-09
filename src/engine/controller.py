@@ -146,8 +146,10 @@ class EngineController:
                 self.game_state.current_scene_id = target
 
         # Scene End
-        if result.get("end_scene"):
-            self.running = False
+        elif result.get("end_scene"):
+            self.ui_state["mode"] = "dialogue"
+            self.ui_state["speaker"] = "System"
+            self.ui_state["text"] = "End of current playable build. Pres ESC to quit"
 
     # Stop Engine
     def stop(self):
