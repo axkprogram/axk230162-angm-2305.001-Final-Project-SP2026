@@ -133,17 +133,25 @@ class SceneManager:
         index = input_data["choice_select"]
 
         if 0 <= index < len(self.current_choices):
-
             chosen = self.current_choices[index]
-
             result = chosen.get("result",{})
 
+            #dice mechanic
+            if result.get("dice_roll"):
+                rolled = random.randint(0, 2)
+
+                chosen = self.current_choices[rolled]
+                result = chosen.get("result", {})
+
+                print(f"Dice rolled: {rolled +1}")
+
+            #other set
             if "set" in result:
                 for k, v, in result["set"].items():
                     setattr(game_state, k, v)
 
             self.waiting_for_choice = False
-            self.current_choices = []
+            # self.current_choices = []
             self.node_index += 1
 
             return result
