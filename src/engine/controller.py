@@ -37,7 +37,7 @@ class EngineController:
             result = self.pending_result
             self.pending_result = None
             self._handle_result(result)
-            input_data = {}
+            return
 
         if not self.scene_system:
             return
