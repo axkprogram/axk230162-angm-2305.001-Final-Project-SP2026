@@ -56,4 +56,10 @@ class GameLoop:
 
         return input_data
     
-    
+    # Render
+    def render(self):
+        self.screen.fill((20, 20, 30))
+
+        ui = self.controller.ui_state
+
+        
