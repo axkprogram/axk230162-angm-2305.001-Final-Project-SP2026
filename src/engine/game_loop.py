@@ -146,7 +146,6 @@ class GameLoop:
 
         wrapped = self.wrap_text(
             ui["text"],
-            self.small_font,
             700
         ) or []
 
