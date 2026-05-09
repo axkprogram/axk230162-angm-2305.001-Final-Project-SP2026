@@ -156,22 +156,21 @@ class SceneManager:
                 return{
                     "action": "dialogue",
                     "speaker": "Narration",
-                    "text": f"The die rolls... {rolled + 1}. Carmen decides to take the {path_names[rolled]}",
+                    "text": (
+                        f"The dice rolls... {rolled + 1}."
+                        f"Carmen decides to take the {path_names[rolled]}"
+                    ),
                     "followup_result": result
                 }
-
-            #other set
-            if "set" in result:
-                for k, v, in result["set"].items():
-                    setattr(game_state, k, v)
-
+            
+            # normal choice
             self.waiting_for_choice = False
-            # self.current_choices = []
             self.node_index += 1
 
             return result
         
         return None
+
     
     # condition evaluator
     def _evaluate_condition(self, condition, game_state):
