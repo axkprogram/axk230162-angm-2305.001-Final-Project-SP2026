@@ -197,14 +197,6 @@ fork_in_tunnel_scene = [
                     }
                 }
             },
-
-            # Roll the Dice
-            {
-                "text": "Roll the dice.",
-                "result": {
-                    "dice_roll": True
-                }
-            }
         ]
     },
 

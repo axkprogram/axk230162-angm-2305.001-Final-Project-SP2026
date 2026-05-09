@@ -72,9 +72,6 @@ class GameLoop:
                 elif event.key == pygame.K_3:
                     input_data["choice_select"] = 2
 
-                elif event.key == pygame.K_4:
-                    input_data["choice_select"] = 3
-
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     input_data["advance"] = True

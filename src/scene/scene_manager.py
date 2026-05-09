@@ -1,4 +1,3 @@
-import random
 
 class SceneManager:
     """
@@ -136,34 +135,6 @@ class SceneManager:
             chosen = self.current_choices[index]
             result = chosen.get("result",{})
 
-            #dice mechanic
-            if result.get("dice_roll"):
-                rolled = random.randint(0, 2)
-
-                chosen = self.current_choices[rolled]
-                result = chosen.get("result", {})
-
-                path_names = {
-                    0: "right path.",
-                    1: "left path.",
-                    2: "center path."
-                }
-
-                # move past the choice node
-                self.waiting_for_choice = False
-                self.current_choices = []
-                self.node_index += 1
-                
-                return{
-                    "action": "dialogue",
-                    "speaker": "Narration",
-                    "text": (
-                        f"The dice rolls... {rolled + 1}."
-                        f"Carmen decides to take the {path_names[rolled]}"
-                    ),
-                    "followup_result": result
-                }
-            
             # normal choice
             if "set" in result:
                 for k, v in result["set"].items():
@@ -175,7 +146,6 @@ class SceneManager:
             self.node_index += 1
 
             return result
-        print("NOW LOADED:", self.game_state.current_scene_id)
         
         return None
 
