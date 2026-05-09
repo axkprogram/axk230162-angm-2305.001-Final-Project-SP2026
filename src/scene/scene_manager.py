@@ -30,15 +30,17 @@ class SceneManager:
         if self.scene_data is None:
             return None        
         
+        #end of scene protection
+        if self.node_index >= len(self.scene_data):
+            return {"end_scene": True}
+
         #waiting on player choice
         if self.waiting_for_choice:
             return self._handle_choice(input_data, game_state)
         
-        #scene finished
-        if self.node_index >= len(self.scene_data):
-            return {"end_scene": True}
-        
         node = self.scene_data[self.node_index]
+
+        print("NODE:", self.node_index, self.scene_data[self.node_index])
         node_type = node["type"]
 
         # Dialogue
