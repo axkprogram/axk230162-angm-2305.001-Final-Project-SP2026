@@ -54,16 +54,16 @@ class SceneManager:
             # If multiple lines, reinsert rest
             if len(lines) > 1:
                 extra = []
-                for 1 in lines [1:]:
+                for line_obj in lines[1:]:
                     extra.append({
                         "type": "dialogue",
-                        "lines": [1]
+                        "lines": [line_obj]
                     })
 
                 self.scene_data = (
                     self.scene_data[:self.node_index]
                     + extra
-                    + self.scene_data[self.node_index]
+                    + self.scene_data[self.node_index:]
                 )
 
             return {
@@ -108,13 +108,14 @@ class SceneManager:
             self.scene_data = (
                 self.scene_data[:self.node_index]
                 + branch
-                +self.scene_data[self.node_index + 1:]
+                + self.scene_data[self.node_index + 1:]
             )
 
             return None
         
         # Transition
         elif node_type == "transition":
+            self.node_index += 1
             target = node.get("target_scene")
 
             return {
@@ -140,9 +141,13 @@ class SceneManager:
             self.waiting_for_choice = False
             self.node_index += 1
 
-            return chosen.get("result", {})
+            result = chosen.get("result", {})
+
+            if "set" in result:
+                for k, v in result["set"].items():
+                    setattr(game_state, k, v)
         
-        return None
+        return result
     
     # Condition
     def _evaluate_condition(self, condition, game_state):
