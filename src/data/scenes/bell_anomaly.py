@@ -120,7 +120,8 @@ bell_anomaly_scene = [
                     },
                     {
                         "speaker": "Rio",
-                        "text": "Hey, hey it's okay. We trust you. We know you wouldn't lie to us."
+                        "text": "Hey, hey it's okay. We trust you. We know you wouldn't lie to us.",
+                        "emotion": "gentle"
                     },
                     {
                         "speaker": "Yohan",
@@ -195,7 +196,7 @@ bell_anomaly_scene = [
             {
                 "speaker": "Rio",
                 "text": "Don't apologize for that.",
-                "emotion": "gemtle"
+                "emotion": "gentle"
             },
             {
                 "speaker": "Yohan",
