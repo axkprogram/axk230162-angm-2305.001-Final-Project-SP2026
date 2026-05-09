@@ -43,20 +43,30 @@ class GameLoop:
         input_data = {}
 
         for event in pygame.event.get():
+
+            # close window
             if event.type == pygame.QUIT:
                 self.controller.stop()
 
-            if event.type == pygame.KEYDOWN:
+            # advance dialogue
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    input_data["advance"] = True
 
-               # advance dialogue
-                if event.key in (pygame.K_SPACE, pygame.K_RETURN):
-                   input_data["advance"] = True
-                # choices 1-9
-                if pygame.K_1 <= event.key <= pygame.K_9:
-                   index = event.key - pygame.K_1
-                   input_data["choice_select"] = index
+                # choice selection: 1, 2, 3 keys
+                elif event.key == pygame.K_1:
+                    input_data["choice"] = 0
+                elif event.key == pygame.K_2:
+                    input_data["choice"] = 1
+                elif event.key == pygame.K_3:
+                    input_data["choice"] = 2
+
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == 1:
+                    input_data["advance"] = True
 
         return input_data
+        
     
     def wrap_text(self, text, font, max_width):
         words = text.split()
