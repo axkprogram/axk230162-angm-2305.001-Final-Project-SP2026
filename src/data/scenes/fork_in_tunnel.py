@@ -169,7 +169,8 @@ fork_in_tunnel_scene = [
             {
                 "text": "Take the right path.",
                 "result": {
-                    "set": {
+                    "action": "state_change",
+                    "changes": {
                         "route_state": "fighter"
                     }
                 }
@@ -179,7 +180,8 @@ fork_in_tunnel_scene = [
             {
                 "text": "Take the left path.",
                 "result": {
-                    "set": {
+                    "action": "state_change",
+                    "changes": {
                         "route_state": "mage"
                     }
                 }
@@ -189,7 +191,8 @@ fork_in_tunnel_scene = [
             {
                 "text": "Take the center path.",
                 "result": {
-                    "set": {
+                    "action": "state_change",
+                     "changes": {
                         "route_state": "dark"
                     }
                 }
