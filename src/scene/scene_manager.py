@@ -168,3 +168,9 @@ class SceneManager:
             return getattr(game_state, key, None) == value
         
         return False
+    
+    # Reset / Stop scene
+    def stop(self):
+        self.scene_data = None
+        self.node_index = 0
+        self.waiting_for_choice = False
