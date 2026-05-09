@@ -1,4 +1,5 @@
 from data.scenes.registry import SCENE_REGISTRY
+from data.battle import *
 
 class EngineController:
     """
@@ -15,6 +16,7 @@ class EngineController:
         self.game_state = game_state
         self.scene_system = None
         self.running = True
+        self.battle_system = None
 
         # what renderer reads
         self.ui_state = {
@@ -23,10 +25,14 @@ class EngineController:
             "text": "",
             "choices": []
         }
-    
+
     #Register Scene Manager
     def register_scene_system(self, scene_system):
         self.scene_system = scene_system
+
+    # Register battle manager
+    def register_battle_system(self, battle_system):
+        self.battle_system = battle_system
 
     #Main update
     def update(self, input_data):
@@ -110,6 +116,28 @@ class EngineController:
             # debug
             print("Route:", self.game_state.route_state)
         
+        # Start battle
+        elif action == "start_battle":
+
+            players = {
+                "RIO": RIO,
+                "YOHAN": YOHAN,
+                "CARMEN": CARMEN
+            }
+
+            enemies = {
+                "HOUND": HOUND,
+                "SPECTER": SPECTER,
+                "MONSTER": MONSTER
+            }
+
+            self.battle_system.start_battle(
+                players[result["player"]],
+                enemies[result["enemy"]]
+            )
+
+            self.ui_state["mode"] = "battle"
+
         # Scene Change
         elif action == "change_scene":
             target = result.get("target")
@@ -142,6 +170,7 @@ class EngineController:
             self.ui_state["mode"] = "dialogue"
             self.ui_state["speaker"] = "System"
             self.ui_state["text"] = "End of current playable build. Pres ESC to quit"
+
 
     # Stop Engine
     def stop(self):

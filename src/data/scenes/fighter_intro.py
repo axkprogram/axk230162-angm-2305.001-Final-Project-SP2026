@@ -9,3 +9,9 @@ fighter_intro_scene = [
         ]
     }
 ]
+
+{
+    "type": "battle",
+    "player": "RIO",
+    "enemy": "HOUND"
+}

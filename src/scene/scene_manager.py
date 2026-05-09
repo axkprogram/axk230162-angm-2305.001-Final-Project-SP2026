@@ -121,6 +121,16 @@ class SceneManager:
                 "action": "change_scene",
                 "target": node["target_scene"]
             }
+        
+        # battle
+        elif node_type == "battle":
+            self.node_index += 1
+
+            return {
+                "action": "start_battle",
+                "player": node["player"],
+                "enemy": node["enemy"]
+            }
         return None
     
     # choice handler

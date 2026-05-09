@@ -9,3 +9,9 @@ mage_intro_scene = [
         ]
     }
 ]
+
+{
+    "type": "battle",
+    "player": "YOHAN",
+    "enemy": "SPECTER"
+}

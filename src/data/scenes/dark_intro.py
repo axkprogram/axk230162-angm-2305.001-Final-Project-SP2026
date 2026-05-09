@@ -9,3 +9,9 @@ dark_intro_scene = [
         ]
     }
 ]
+
+{
+    "type": "battle",
+    "player": "CARMEN",
+    "enemy": "MONSTER"
+}

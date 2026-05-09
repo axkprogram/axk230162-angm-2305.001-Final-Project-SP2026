@@ -4,6 +4,7 @@ from engine.controller import EngineController
 from state.game_state import GameState
 from scene.scene_manager import SceneManager
 from data.scenes.registry import SCENE_REGISTRY
+from src.battle.battle_manager import BattleManager
 
 # screen constants
 WIDTH = 1280
@@ -42,6 +43,10 @@ class GameLoop:
        
         # load first dialogue immediately
         self.controller.update({})
+
+        #battle registration
+        self.battle = BattleManager()
+        self.controller.register_battle_system(self.battle)
 
     # Input
     def handle_input(self):
