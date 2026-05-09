@@ -68,4 +68,16 @@ class EngineController:
             for key, value in changes.items():
                 setattr(self.game_state, key, value)
 
+        # Scene Change
+        elif action == "change_scene":
+            target = result.get("target")
+
+            if target:
+                # assume scene manager handles it
+                # or replace later with registry system
+                pass
+
+        # End Scene 
+        elif result.get("end_scene"):
+            self.running = False
         
