@@ -28,7 +28,10 @@ class GameLoop:
         self.controller = EngineController(self.game_state)
 
         # System set up
-        self.scene_manager = SceneManager()
+        scene_system = SceneManager()
+
+        #register system
+        self.controller.register_scene_system(scene_system)
 
         # Load first scene
         self.controller.scene_system.load_scene(forest_intro_scene)
