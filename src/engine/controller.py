@@ -145,6 +145,12 @@ class EngineController:
 
                 self.game_state.current_scene_id = target
 
+                # immediately fetch first line of new scene
+                first_result = self.scene_system.update({}, self.game_state)
+
+                if first_result:
+                    self._handle_result(first_result)
+
         # Scene End
         elif result.get("end_scene"):
             self.ui_state["mode"] = "dialogue"
