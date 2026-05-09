@@ -104,6 +104,9 @@ class EngineController:
                     if isinstance(value, int)
                     else value
                 )
+            
+            # debug
+            print("Route:", self.game_state.route_state)
         
         # Scene Change
         elif action == "change_scene":

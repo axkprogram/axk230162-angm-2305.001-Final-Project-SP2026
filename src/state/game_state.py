@@ -9,6 +9,7 @@ class GameState:
 
         # scene tracking
         self.current_scene_id = "forest_intro"
+        self.route_state = None
 
         # Player stats
         self.player_hp = 100
