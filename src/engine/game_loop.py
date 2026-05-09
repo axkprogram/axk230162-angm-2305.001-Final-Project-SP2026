@@ -62,4 +62,24 @@ class GameLoop:
 
         ui = self.controller.ui_state
 
-        
+        # dialogue box
+        pygame.draw.rect(
+            self.screen,
+            (40, 40, 60),
+            (50, 400, 700, 170)
+        )
+
+        if ui["mode"] == "dialogue":
+            speaker = self.font.render(
+                ui["speaker"],
+                True,
+                (255, 220, 100)
+            )
+            text = self.small_font.rander(
+                ui["text"],
+                True,
+                (255, 255, 255)
+            )
+
+            self.screen.blit(speaker, (70, 420))
+            self.screen.blit(text, (70, 470))
