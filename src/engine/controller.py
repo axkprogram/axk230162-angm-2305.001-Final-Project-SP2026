@@ -103,7 +103,7 @@ class EngineController:
 
         # fix
         elif "set" in result:
-            for k, v in result["set"].item():
+            for k, v in result["set"].items():
                 setattr(self.game_state, k, v)
 
         action = result.get("action")
