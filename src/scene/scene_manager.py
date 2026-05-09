@@ -143,7 +143,20 @@ class SceneManager:
                 chosen = self.current_choices[rolled]
                 result = chosen.get("result", {})
 
-                print(f"Dice rolled: {rolled +1}")
+                path_names = {
+                    0: "right path.",
+                    1: "left path.",
+                    2: "center path."
+                }
+
+                self.waiting_for_choice = False
+                
+                return{
+                    "action": "dialogue",
+                    "speaker": "Narration",
+                    "text": f"The die rolls... {rolled + 1}. Carmen decides to take the {path_names[rolled]}",
+                    "followup_result": result
+                }
 
             #other set
             if "set" in result:

@@ -15,6 +15,7 @@ class EngineController:
         self.game_state = game_state
         self.scene_system = None
         self.running = True
+        self.pending_result = None
 
         # what renderer reads
         self.ui_state = {
@@ -31,6 +32,12 @@ class EngineController:
     #Main update
     def update(self, input_data):
         
+        if input_data.get("advance") and self.pending_result:
+            result = self.pending_result
+            self.pending_result = None
+            self._handle_result(result)
+            return
+
         if not self.scene_system:
             return
         
@@ -72,6 +79,9 @@ class EngineController:
             self.ui_state["text"] = result.get(
                 "text", ""
             )
+            if "followup_result" in result:
+                self.pending_result = result["followup_result"]
+
             self.ui_state["choices"] = []
 
         # Choice
