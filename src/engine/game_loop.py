@@ -24,4 +24,13 @@ class GameLoop:
         self.font = pygame.font.SysFont("arial", 28)
         self.small_font = pygame.font.SysFont("arial", 22)
 
+        # core systems
+        self.game_state = GameState()
+
+        self.scene_manager = SceneManager()
+        self.scene_manager.load_scene(forest_intro_scene)
+
+        self.controller = EngineController(self.game_state)
+        self.controller.register_scene_system(self.scene_manager)
+
         
