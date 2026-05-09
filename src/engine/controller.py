@@ -24,7 +24,13 @@ class EngineController:
 
         self.running = True
 
-        self.scene_system = SceneManager()
+        # UI
+        self.ui_state = {
+            "mode": None,
+            "speaker": "",
+            "text": "",
+            "choices": []
+        }
 
     # System registration
     def register_scene_system(self, scene_system):
@@ -54,21 +60,27 @@ class EngineController:
 
     # Scene mode
     def _update_scene(self, input_data):
-        if self.scene_system:
-            result = self.scene_system.update(input_data, self.game_state)
-            self._handle_result(result)
+        if not self.scene_system:
+            return
+        
+        result = self.scene_system.update(input_data, self.game_state)
+        self._handle_result(result)
 
     # Event mode
     def _update_event(self, input_data):
-        if self.event_system:
-            result = self.event_system.update(input_data, self.game_state)
-            self._handle_result(result)
+        if  not self.event_system:
+            return
+        
+        result = self.event_system.update(input_data, self.game_state)
+        self._handle_result(result)
 
     # Combat Mode
     def _update_combat(self, input_data):
-        if self.combat_system:
-            result = self.combat_system.update(input_data, self.game_state)
-            self._handle_result(result)
+        if not self.combat_system:
+            return
+        
+        result = self.combat_system.update(input_data, self.game_state)
+        self._handle_result(result)
 
     # Result handler
     def _handle_result(self, result):
@@ -79,23 +91,36 @@ class EngineController:
 
         if not result:
             return
-            
-        # Scene requests combat start
-        if result.get("start_combat"):
-            self.active_mode = "COMBAT"
+        
+        action = result.get("action")
 
-        # Scene requests event
-        elif result.get("trigger_event"):
+        # Dialogue output
+        if action == "dialogue":
+            self.ui_state["mode"] = "dialogue"
+            self.ui_state["speaker"] = result.get("speaker", "")
+            self.ui_state["text"] = result.get("text", "")
+            self.ui_state["choices"] = []
+
+        # Choice output
+        elif action == "choice":
+            self.game_state_.active_event_id = result.get("event_id")
+            self.game_state.in_event = True
             self.active_mode = "EVENT"
 
-        # Combat ends return to scene
-        elif result.get("end_combat"):
-            self.game_state.reset_event_state()
-            self.active_mode = "SCENE"
+        # Combat trigger
+        elif action == "battle":
+            self.game_state.active_battle_id = result.get("battle_id")
+            self.game_state.in_combat = True
+            self.active_mode = "COMBAT"
 
         # Scene transition
-        elif result.get("change_scene"):
-            self.game_state.current_scene_id = result["change_scene"]
+        elif action == "change_scene":
+            self.game_state.current_scene_id = result.get("target")
+            self.active_mode = "SCENE"
+
+        # Scene finished
+        elif result.get("end_scene"):
+            # for now in scene mode
             self.active_mode = "SCENE"
 
         # Stop the Engine
