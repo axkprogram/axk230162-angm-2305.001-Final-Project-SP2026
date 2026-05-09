@@ -163,4 +163,8 @@ class SceneManager:
         if "party_alignment" in condition:
             return game_state.party_alignment == condition["party_alignment"]
         
+        # generic key-value check
+        for key, value in condition.items():
+            return getattr(game_state, key, None) == value
         
+        return False
