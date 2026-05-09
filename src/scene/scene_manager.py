@@ -151,6 +151,7 @@ class SceneManager:
 
                 # move past the choice node
                 self.waiting_for_choice = False
+                self.current_choices = []
                 self.node_index += 1
                 
                 return{
@@ -164,10 +165,17 @@ class SceneManager:
                 }
             
             # normal choice
+            if "set" in result:
+                for k, v in result["set"].items():
+                    setattr(game_state, k, v)
+
+            
             self.waiting_for_choice = False
+            self.current_choices = []
             self.node_index += 1
 
             return result
+        print("NOW LOADED:", self.game_state.current_scene_id)
         
         return None
 
