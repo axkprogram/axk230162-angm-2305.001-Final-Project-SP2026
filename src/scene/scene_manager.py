@@ -32,7 +32,7 @@ class SceneManager:
         
         #waiting on player choice
         if self.waiting_for_choice:
-            return self._handle_choicec(input_data, game_state)
+            return self._handle_choice(input_data, game_state)
         
         #scene finished
         if self.node_index >= len(self.scene_data):
