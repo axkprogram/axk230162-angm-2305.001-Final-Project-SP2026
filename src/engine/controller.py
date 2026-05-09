@@ -15,3 +15,12 @@ class EngineController:
         self.scene_system = None
 
         self.running = True
+
+        # UI state (only what renderer needs)
+        self.ui_state = {
+            "mode": "dialogue",
+            "speaker": "",
+            "text": "",
+            "choices": []
+        }
+        
