@@ -11,6 +11,9 @@ from data.scenes.cave_fall import cave_fall_scene
 from data.scenes.deep_tunnel import  deep_tunnel_scene
 from data.scenes.bell_anomaly import bell_anomaly_scene
 from data.scenes.fork_in_tunnel import fork_in_tunnel_scene
+from data.scenes.fighter_intro import fighter_intro_scene
+from data.scenes.mage_intro import mage_intro_scene
+from data.scenes.dark_intro import dark_intro_scene
 
 SCENE_REGISTRY = {
     "forest_intro": forest_intro_scene,
@@ -18,5 +21,9 @@ SCENE_REGISTRY = {
     "cave_fall": cave_fall_scene,
     "deep_tunnel": deep_tunnel_scene,
     "bell_anomaly": bell_anomaly_scene,
-    "fork_in_tunnel": fork_in_tunnel_scene
+    "fork_in_tunnel": fork_in_tunnel_scene,
+
+    "fighter_intro": fighter_intro_scene,
+    "mage_intro": mage_intro_scene,
+    "dark_intro": dark_intro_scene
 }
