@@ -35,3 +35,15 @@ class GameLoop:
 
         # boot first line
         self.controller.update({})
+    
+    # Input
+    def handle_input(self):
+        input_data = {}
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.controller.stop()
+
+            if event.type == pygame.KEYDOWN:
+
+                
