@@ -113,4 +113,36 @@ class SceneManager:
 
             return None
         
+        # Transition
+        elif node_type == "transition":
+            target = node.get("target_scene")
+
+            return {
+                "action": "change scene",
+                "target": target
+            }
         
+        # unknown node
+        self.node_index += 1
+        return None
+    
+    # Choice Handling
+    def _handle_choice(self, input_data, game_state):
+
+        if "choice_select" not in input_data:
+            return None
+        
+        index = input_data["choice_select"]
+
+        if 0 <= index < len(self.current_choices):
+            chosen = self.current_choices[index]
+
+            self.waiting_for_choice = False
+            self.node_index += 1
+
+            return chosen.get("result", {})
+        
+        return None
+    
+    # Condition
+    
