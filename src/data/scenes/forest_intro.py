@@ -236,7 +236,7 @@ forest_intro_scene = [
                        "emotion": "approving"
                    },
                    {
-                       "speaker": "Narrator",
+                       "speaker": "Narration",
                        "text": "Rio's smile didn't fade, but it did fall flat on her face.",
                        "emotion": "neutral"
                    },
