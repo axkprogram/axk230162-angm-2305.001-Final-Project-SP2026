@@ -18,4 +18,14 @@ class BattleManager:
         self.turn = "player"
         self.message = f"{enemy['name']} appeared!"
 
+    def use_player_move(self, move):
+        if self.player_skip:
+            self.player_skip = False
+            self.turn = "enemy"
+            self.message = f"{self.player['name']} loses a turn!"
+            return
+        
+        self._apply_move(move, self.player, self.enemy)
+        self.turn = "enemy"
+
     
