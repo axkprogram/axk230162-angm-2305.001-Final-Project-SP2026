@@ -18,6 +18,8 @@ class GameState:
     current_scene_id: str = "forest_intro"
     route_state: str = "neutral" # can become fighter / mage / dark / neutral
 
+    party_alignment: str | None = None
+
     flags: dict = field(default_factory=dict)
     """
     Example flags:
