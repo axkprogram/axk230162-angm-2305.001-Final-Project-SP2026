@@ -69,7 +69,10 @@ class GameLoop:
                 current = test
             else:
                 lines.append(current)
-                return lines
+                current = word + " "
+
+        lines.append(current)
+        return lines
 
     # Render
     def render(self):
