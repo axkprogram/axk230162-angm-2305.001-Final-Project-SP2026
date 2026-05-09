@@ -74,7 +74,7 @@ class GameLoop:
         return input_data
     
     # text wrapping
-    def wrap_text(self, text, max_width):
+    def wrap_text(self, text, font, max_width):
 
         words = text.split()
         lines = []
@@ -83,13 +83,15 @@ class GameLoop:
         for word in words:
             test = current + word + " "
 
-            if self.small_font.size(test)[0] <= max_width:
+            if font.size(test)[0] <= max_width:
                 current = test
             else:
                 lines.append(current)
                 current = word + " "
 
-        lines.append(current)
+        if current:
+            lines.append(current)
+
         return lines
     
     #render
