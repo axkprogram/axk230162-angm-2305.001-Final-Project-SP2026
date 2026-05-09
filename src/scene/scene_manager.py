@@ -40,7 +40,6 @@ class SceneManager:
         
         node = self.scene_data[self.node_index]
 
-        print("NODE:", self.node_index, self.scene_data[self.node_index])
         node_type = node["type"]
 
         # Dialogue
