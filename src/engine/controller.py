@@ -110,9 +110,20 @@ class EngineController:
         
         # Scene Change
         elif action == "change_scene":
-            
             target = result["target"]
             print("loading scene:", target)
+
+            #special branch handler
+            if target == "route_intro":
+
+                if self.game_state.route_state == "fighter":
+                    target = "fighter_intro"
+
+                elif self.game_state.route_state == "mage":
+                    target = "mage_intro"
+
+                elif self.game_state.route_state == "dark":
+                    target = "dark_intro"
 
             if target in SCENE_REGISTRY:
 
