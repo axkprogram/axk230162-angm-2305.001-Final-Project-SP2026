@@ -83,3 +83,20 @@ class GameLoop:
 
             self.screen.blit(speaker, (70, 420))
             self.screen.blit(text, (70, 470))
+
+        elif ui["mode"] == "choice":
+            y = 40
+
+            for i, choice in enumerate(ui["choices"]):
+                label = f"{i+1}, {choice['text']}"
+
+                text = self.small_font.render(
+                    label,
+                    True,
+                    (200, 255, 200)
+                )
+
+                self.screen.blit(text, (70, y))
+                y += 40
+
+        pygame.display.flip()
