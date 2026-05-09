@@ -23,4 +23,9 @@ class EngineController:
             "text": "",
             "choices": []
         }
-        
+
+    # System registration
+    def register_scene_system(self, scene_system):
+        self.scene_system = scene_system
+
+    
