@@ -121,10 +121,11 @@ class GameLoop:
             wrapped = self.wrap_text(
                 ui["text"],
                 self.small_font,
-                700
+                1100
             )
 
-            y = 460
+            y = 560
+
             for line in wrapped:
                 text_surface = self.small_font.render(
                     line,
