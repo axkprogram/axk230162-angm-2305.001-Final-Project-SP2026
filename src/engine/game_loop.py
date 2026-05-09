@@ -139,7 +139,7 @@ class GameLoop:
 
             y = 440
 
-            for i, choice in enumerate(ui["choice"]):
+            for i, choice in enumerate(ui["choices"]):
                 label = f"{i+1}. {choice['text']}"
 
                 wrapped_choices = self.wrap_text(
