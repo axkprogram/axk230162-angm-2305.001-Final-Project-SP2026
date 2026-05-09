@@ -86,9 +86,18 @@ class GameLoop:
 
     # Render
     def render(self):
-        self.screen.fill((20, 20, 30))
+        self.screen.fill((0, 0, 0))
 
         ui = self.controller.ui_state
+
+        # dialogue
+        if ui["mode"] == "dialogue":
+            speaker = self.font.render(
+                ui["speaker"], True, (255,255,255)
+            )
+            self.screen.blit(speaker, (50, 400))
+
+            wrapped = self.wrap_text(ui["text"], 700)
 
         # dialogue box
         pygame.draw.rect(
@@ -141,7 +150,7 @@ class GameLoop:
             760
         ) or []
 
-        y = 420
+        y = 450
         for line in wrapped:
             text_surface = self.small_font.render(line, True, (255,255,255))
             self.screen.blit(text_surface, (20, y))
