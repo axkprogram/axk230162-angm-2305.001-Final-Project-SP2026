@@ -68,14 +68,14 @@ class GameLoop:
         return input_data
         
     
-    def wrap_text(self, text, font, max_width):
+    def wrap_text(self, text, max_width):
         words = text.split()
         lines = []
         current = ""
 
         for word in words:
             test = current + word + " "
-            if font.size(test)[0] <= max_width:
+            if self.small_font.size(test)[0] <= max_width:
                 current = test
             else:
                 lines.append(current)
@@ -124,8 +124,8 @@ class GameLoop:
         elif ui["mode"] == "choice":
             y = 350
 
-            for i, choice in enumerate(ui["choice"]):
-                label = f"{i+1}, {choice}"
+            for i, choice in enumerate(ui["choices"]):
+                label = f"{i+1}, {choice['text']}"
 
                 text_surface = self.small_font.render(
                     label,
