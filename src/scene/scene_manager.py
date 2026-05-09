@@ -22,7 +22,7 @@ class SceneManager:
     def load_scene(self, scene_data):
         self.scene_data = scene_data
         self.node_index = 0
-        self. dialogue_index = 0
+        self.dialogue_index = 0
         self.waiting_for_choice = False
         self.current_choices = []
 
