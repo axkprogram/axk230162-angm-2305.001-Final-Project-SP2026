@@ -47,5 +47,13 @@ class GameLoop:
             if event.type == pygame.KEYDOWN:
 
                # advance dialogue
-               if event.key in (pygame.K_SPACE, pygame.K_RETURN):
+                if event.key in (pygame.K_SPACE, pygame.K_RETURN):
                    input_data["advance"] = True
+                # choices 1-9
+                if pygame.K_1 <= event.key <= pygame.K_9:
+                   index = event.key - pygame.K_1
+                   input_data["choice_select"] = index
+
+        return input_data
+    
+    
