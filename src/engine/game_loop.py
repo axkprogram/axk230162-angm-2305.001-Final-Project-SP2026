@@ -164,6 +164,8 @@ class GameLoop:
 
                 y += 10 # extra spacing between choices
 
+        pygame.display.flip()
+
     # Main Loop
     def run(self):
 
