@@ -34,3 +34,7 @@ class BattleManager:
             self.turn = "player"
             self.message = f"{self.enemy['name']} loses a turn!"
             return
+        
+        move = random.choice(self.enemy["moves"])
+        self._apply_move(move, self.enemy, self.player)
+        self.turn = "player"
