@@ -1,3 +1,5 @@
+import random
+
 class SceneManager:
     """
     Minimal VN scene runner.
