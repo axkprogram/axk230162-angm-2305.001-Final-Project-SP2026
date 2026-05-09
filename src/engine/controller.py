@@ -57,7 +57,8 @@ class EngineController:
             # stop so player can read dialogue or make a choice
             if result.get("action") in (
                 "dialogue", 
-                "choice"
+                "choice",
+                "change_scene"
             ):
                 break
 
@@ -142,6 +143,9 @@ class EngineController:
                 )
 
                 self.game_state.current_scene_id = target
+
+                #stop and let next frame render new scene
+                return
 
         # Scene End
         elif result.get("end_scene"):
