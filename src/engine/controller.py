@@ -39,3 +39,10 @@ class EngineController:
             return
         
         self._handle_result(result)
+
+    # Result Handler
+    def _handle_result(self, result):
+
+        action = result.get("action")
+
+        
