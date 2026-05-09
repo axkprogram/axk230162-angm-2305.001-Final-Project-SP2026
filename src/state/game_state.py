@@ -9,6 +9,8 @@ class GameState:
 
         # scene tracking
         self.current_scene_id = "forest_intro"
+        
+        # branching route
         self.route_state = None
 
         # Player stats
