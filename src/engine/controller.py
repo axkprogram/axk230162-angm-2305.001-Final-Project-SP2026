@@ -103,9 +103,8 @@ class EngineController:
 
         # Choice output
         elif action == "choice":
-            self.game_state_.active_event_id = result.get("event_id")
-            self.game_state.in_event = True
-            self.active_mode = "EVENT"
+            self.ui_state["mode"] = "choice"
+            self.ui_state["choices"] = result.get("options", [])
 
         # Combat trigger
         elif action == "battle":

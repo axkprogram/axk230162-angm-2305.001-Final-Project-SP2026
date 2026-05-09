@@ -49,10 +49,11 @@ class GameLoop:
         input_data = {
             "quit": False,
             "keys": [],
-            "choice_select": None
+            "choice_select": None,
+            "advance": False
         }
 
-        for event in pygame.event.get():
+        for event in events:
 
             if event.type == pygame.QUIT:
                 input_data["quit"] = True
@@ -112,7 +113,6 @@ class GameLoop:
             y += 30
 
             text = ui.get("text") or ""
-
             for line in ui["text"].split("\n"):
                 rendered = font.render(line, True, (230, 230, 230))
                 self.screen.blit(rendered, (50, y))

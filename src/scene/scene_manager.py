@@ -70,16 +70,14 @@ class SceneManager:
         elif node_type == "event":
             self.node_index += 1
             return {
-                "action": "event",
-                "event_id": node.get("event_id")
+                "trigger_event": node.get("event_id")
             }
         
         # Battle
         elif node_type == "battle":
             self.node_index += 1
             return {
-                "action": "battle",
-                "battle_id": node.get("battle_id")
+                "start_combat": node.get("battle_id")
             }
         
         # State Change
@@ -108,7 +106,8 @@ class SceneManager:
             # Inject the branch into scene flow
             self.scene_data = (
                 self.scene_data[:self.node_index + 1]
-                + branch+self.scene_data[self.node_index + 1:]
+                + branch
+                + self.scene_data[self.node_index + 1:]
             )
 
             self.node_index += 1
