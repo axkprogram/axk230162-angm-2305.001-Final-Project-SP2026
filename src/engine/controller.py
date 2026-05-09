@@ -26,7 +26,7 @@ class EngineController:
 
         # UI
         self.ui_state = {
-            "mode": None,
+            "mode": "dialogue",
             "speaker": "",
             "text": "",
             "choices": []
