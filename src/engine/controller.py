@@ -1,3 +1,5 @@
+from data.scenes.registry import SCENE_REGISTRY
+
 class EngineController:
     """
     Minimal game controller for VN MVP.
@@ -85,10 +87,13 @@ class EngineController:
         elif action == "change_scene":
             target = result.get("target")
 
-            if target:
-                # assume scene manager handles it
-                # or replace later with registry system
-                pass
+            if target in SCENE_REGISTRY:
+                self.scene_system.load_scene(
+                    SCENE_REGISTRY[target]
+                )
+
+                self.game_state.current_scene_id = target
+
 
         # End Scene 
         elif result.get("end_scene"):
