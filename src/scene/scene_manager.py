@@ -154,3 +154,9 @@ class SceneManager:
         # flag check
         if "flag" in condition:
             return game_state.get_flag(condition["flag"])
+        
+        # route check
+        if "route" in condition:
+            return game_state.route_state == condition["route"]
+        
+        
