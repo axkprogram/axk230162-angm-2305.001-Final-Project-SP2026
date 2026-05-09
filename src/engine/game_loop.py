@@ -56,6 +56,19 @@ class GameLoop:
 
         return input_data
     
+    def wrap_text(self, text, font, max_width):
+        words = text.split()
+        lines = []
+        current = ""
+
+        for word in words:
+            test = current + word + " "
+            if font.size(test)[0] <= max_width:
+                current = test
+            else:
+                lines.append(current)
+                return lines
+
     # Render
     def render(self):
         self.screen.fill((20, 20, 30))
