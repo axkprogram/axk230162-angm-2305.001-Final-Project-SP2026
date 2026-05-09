@@ -108,7 +108,8 @@ class EngineController:
         # Scene Change
         elif action == "change_scene":
             
-            target = result.get("target")
+            target = result["target"]
+            print("loading scene:", target)
 
             if target in SCENE_REGISTRY:
 
