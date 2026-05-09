@@ -104,8 +104,8 @@ class GameLoop:
         #dialogue box
         pygame.draw.rect(
             self.screen,
-            (40, 40, 40),
-            (20, 400, 760, 180)
+            (20, 20, 20),
+            (20, 500, 1240, 200)
         )
 
         # dialogue
@@ -116,7 +116,7 @@ class GameLoop:
                 True,
                 (255, 255, 0)
             )
-            self.screen.blit(speaker, (40, 420))
+            self.screen.blit(speaker, (40, 520))
 
             wrapped = self.wrap_text(
                 ui["text"],
