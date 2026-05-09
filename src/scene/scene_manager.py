@@ -38,7 +38,7 @@ class SceneManager:
         if self.node_index >= len(self.scene_data):
             return {"end_scene": True}
         
-        node = self.scene-self.scene_data[self.node_index]
+        node = self.scene_data[self.node_index]
         node_type = node["type"]
 
         # Dialogue
