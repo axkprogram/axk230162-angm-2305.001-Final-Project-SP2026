@@ -45,4 +45,11 @@ class EngineController:
 
         action = result.get("action")
 
+        # Dialogue
+        if action == "dialogue":
+            self.ui_state["mode"] = "dialogue"
+            self.ui_state["speaker"] = result.get("speaker", "")
+            self.ui_state["text"] = result.get("text", "")
+            self.ui_state["choices"] = []
+
         
