@@ -33,12 +33,25 @@ class EngineController:
         if not self.scene_system:
             return
         
-        result = self.scene_system.update(input_data, self.game_state)
+        # keep processing untiil visible ui
+        while True:
 
-        if not result:
-            return
-        
-        self._handle_result(result)
+            result = self.scene_system.update(
+                input_data,
+                self.game_state
+            )
+
+            if not result:
+                break
+
+            self._handle_result(result)
+
+            # stop loop when player interaction needed
+            if result.get("action") in ("dialogue", "choice"):
+                break
+
+            # prevent repeated inputs
+            input_data = {}
 
     # Result Handler
     def _handle_result(self, result):
