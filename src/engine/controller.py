@@ -31,7 +31,8 @@ class EngineController:
 
     #Main update
     def update(self, input_data):
-        
+
+        # handle delayed dice result
         if input_data.get("advance") and self.pending_result:
             result = self.pending_result
             self.pending_result = None
@@ -53,16 +54,16 @@ class EngineController:
 
             self._handle_result(result)
 
-            # stop when player needs to read / choose
-
+            # stop so player can read dialogue or make a choice
             if result.get("action") in (
-                "dialogue",
+                "dialogue", 
                 "choice"
             ):
                 break
 
-            # prevent repeated inputs
+            # prevent held key repeating
             input_data = {}
+
 
     # result handler
     def _handle_result(self, result):
@@ -135,21 +136,12 @@ class EngineController:
                 elif self.game_state.route_state == "dark":
                     target = "dark_intro"
 
-            print("loading scene:", target)
-
             if target in SCENE_REGISTRY:
-
                 self.scene_system.load_scene(
                     SCENE_REGISTRY[target]
                 )
 
                 self.game_state.current_scene_id = target
-
-                # immediately fetch first line of new scene
-                first_result = self.scene_system.update({}, self.game_state)
-
-                if first_result:
-                    self._handle_result(first_result)
 
         # Scene End
         elif result.get("end_scene"):
