@@ -129,7 +129,7 @@ class GameLoop:
             self.controller.ui_state["text"],
             self.small_font,
             760
-        )
+        ) or []
 
         y = 420
         for line in wrapped:
