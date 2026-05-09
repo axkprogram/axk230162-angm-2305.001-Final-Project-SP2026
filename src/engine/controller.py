@@ -80,6 +80,13 @@ class EngineController:
         # End Scene 
         elif result.get("end_scene"):
             self.running = False
+
+        # fix choices
+        elif "set" in result:
+            for k, v in result["set"].item():
+                setattr(self.game_state, k, v)
+
+        action = result.get("action")
         
     # Stop Engine
     def stop(self):
