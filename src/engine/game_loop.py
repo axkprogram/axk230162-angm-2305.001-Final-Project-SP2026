@@ -139,23 +139,30 @@ class GameLoop:
 
             y = 440
 
-            for i, choice in enumerate(ui["choices"]):
+            for i, choice in enumerate(ui["choice"]):
                 label = f"{i+1}. {choice['text']}"
 
-                text_surface = self.small_font.render(
+                wrapped_choices = self.wrap_text(
                     label,
-                    True,
-                    (255, 255, 255)
+                    self.small_font,
+                    700
                 )
 
-                self.screen.blit(
-                    text_surface,
-                    (40, y)
-                )
+                for line in wrapped_choices:
+                    text_surface = self.small_font.render(
+                        line,
+                        True,
+                        (255, 255, 255)
+                    )
 
-                y += 40
+                    self.screen.blit(
+                        text_surface,
+                        (40, y)
+                    )
 
-        pygame.display.flip()
+                    y += 30 # line spacing
+
+                y += 10 # extra spacing between choices
 
     # Main Loop
     def run(self):
