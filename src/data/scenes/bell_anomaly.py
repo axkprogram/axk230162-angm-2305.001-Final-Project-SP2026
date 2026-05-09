@@ -144,36 +144,42 @@ bell_anomaly_scene = [
             "bell_response": "lie"
         },
         "true": [
-            {
-                "speaker": "Rio",
-                "text": "It didn't look like nothing.",
-                "emotion": "concern"
-            },
-            {
-                "speaker": "Yohan",
-                "text": "You don't need to hide it if something happened.",
-                "emotion": "serious"
-            },
-            {
-                "speaker": "Carmen",
-                "text": "Its nothing. It was nothing at all. I swear it was.",
-                "emotion": "desperate"
-            },
-            {
-                "speaker": "Narration",
-                "text": "Yohan and Rio both exchange a look and give each other a small nod.",
-                "emotion": "neutral"
-            },
-            {
-                "speaker": "Rio",
-                "text": "...Alright. But tell us if anything's wrong.",
-                "emotion": "concern"
-            },
-            {
-                "speaker": "Yohan",
-                "text": "Right now we're on this mission together, so we need to work together.",
-                "emotion": "concern"
+            { 
+                "type": "dialogue",
+                "lines" :[
+                    {
+                        "speaker": "Rio",
+                        "text": "It didn't look like nothing.",
+                        "emotion": "concern"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "You don't need to hide it if something happened.",
+                        "emotion": "serious"
+                    },
+                    {
+                        "speaker": "Carmen",
+                        "text": "Its nothing. It was nothing at all. I swear it was.",
+                        "emotion": "desperate"
+                    },
+                    {
+                        "speaker": "Narration",
+                        "text": "Yohan and Rio both exchange a look and give each other a small nod.",
+                        "emotion": "neutral"
+                    },
+                    {
+                        "speaker": "Rio",
+                        "text": "...Alright. But tell us if anything's wrong.",
+                        "emotion": "concern"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "Right now we're on this mission together, so we need to work together.",
+                        "emotion": "concern"
+                    }
+                ]
             }
+           
         ]
     },
 
