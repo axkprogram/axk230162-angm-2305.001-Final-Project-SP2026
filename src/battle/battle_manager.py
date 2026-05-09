@@ -38,3 +38,20 @@ class BattleManager:
         move = random.choice(self.enemy["moves"])
         self._apply_move(move, self.enemy, self.player)
         self.turn = "player"
+
+    def _apply_move(self, move, attacker, defender):
+        damage = move.get("damage", 0)
+
+        defender["hp"] -= damage
+        
+        if move.get("player_skip"):
+            self.player_skip = True
+
+        if move.get("enemy_skip"):
+            self.enemy_skip = True
+
+        self.message = f"{attacker['name']} used {move['name']}!"
+
+        if defender["hp" <= 0]:
+            self.active = False
+            self.message = f"{defender['name']} defeated!"
