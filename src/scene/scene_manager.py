@@ -27,7 +27,7 @@ class SceneManager:
     # Main Update
     def update(self, input_data, game_state):
 
-        if self.scene_data in None:
+        if self.scene_data is None:
             return None        
         
         #waiting on player choice
