@@ -81,3 +81,6 @@ class EngineController:
         elif result.get("end_scene"):
             self.running = False
         
+    # Stop Engine
+    def stop(self):
+        self.running = False
