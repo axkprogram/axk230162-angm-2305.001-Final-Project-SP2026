@@ -111,7 +111,7 @@ class GameLoop:
         # dialogue
         if ui["mode"] == "dialogue":
 
-            speaker = self.font.render(
+            speaker = self.small_font.render(
                 ui["speaker"],
                 True,
                 (255, 255, 0)
@@ -123,7 +123,7 @@ class GameLoop:
                 700
             )
 
-            y = 470
+            y = 460
             for line in wrapped:
                 text_surface = self.small_font.render(
                     line,
