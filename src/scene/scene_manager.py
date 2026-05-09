@@ -149,7 +149,9 @@ class SceneManager:
                     2: "center path."
                 }
 
+                # move past the choice node
                 self.waiting_for_choice = False
+                self.node_index += 1
                 
                 return{
                     "action": "dialogue",
