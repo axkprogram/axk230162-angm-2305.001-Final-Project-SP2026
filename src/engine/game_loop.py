@@ -149,7 +149,7 @@ class GameLoop:
                 wrapped_choices = self.wrap_text(
                     label,
                     self.small_font,
-                    1100
+                    1200
                 )
 
                 for line in wrapped_choices:
