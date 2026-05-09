@@ -28,4 +28,14 @@ class EngineController:
     def register_scene_system(self, scene_system):
         self.scene_system = scene_system
 
-    
+    # main update loop
+    def update(self, input_data):
+        if not self.scene_system:
+            return
+        
+        result = self.scene_system.update(input_data, self.game_state)
+
+        if not result:
+            return
+        
+        self._handle_result(result)
