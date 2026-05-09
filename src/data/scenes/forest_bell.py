@@ -62,7 +62,7 @@ forest_bell_scene = [
             {
                 "speaker": "Narration",
                 "text": "Yohan shifts uncomfortably.",
-                "emotion": "netural"
+                "emotion": "neutral"
             },
             {
                 "speaker": "Yohan",
@@ -146,7 +146,7 @@ forest_bell_scene = [
             {
                 "speaker": "Narration",
                 "text": "Rio and Yohan continue ahead before noticing Carmen had disappeared from their side.",
-                "emotion": "netural"
+                "emotion": "neutral"
             },
             {
                 "speaker": "Rio",
@@ -248,7 +248,7 @@ forest_bell_scene = [
                     {
                         "speaker": "Narration",
                         "text": "Carmen shakes her head and takes her bell, and shakes it a little bit. No sound came out.",
-                        "emotion": "netural"
+                        "emotion": "neutral"
                     },
                     {
                         "speaker": "Carmen",
@@ -313,7 +313,7 @@ forest_bell_scene = [
                     {
                         "speaker": "Narration",
                         "text": "Carmen shakes her head and takes her bell, and shakes it a little bit. No sound came out.",
-                        "emotion": "netural"
+                        "emotion": "neutral"
                     },
                     {
                         "speaker": "Carmen",

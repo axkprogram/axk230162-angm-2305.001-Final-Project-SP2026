@@ -22,7 +22,7 @@ cave_fall_scene = [
             {
                 "speaker": "Narration",
                 "text": "Dust erupts around them, swallowing the cave floor in a thick haze.",
-                "emotion": "netural"
+                "emotion": "neutral"
             },
             {
                 "speaker": "Narration", 
@@ -172,11 +172,11 @@ cave_fall_scene = [
            {
                "speaker": "Narration",
                "text": "Loose stone shifts above Carmen and Rio.",
-               "emotion": "netural"
+               "emotion": "neutral"
            },
            {
                "speaker" :"Narration",
-               "text": "Yohan carefully slides down the slope after them with considerably less grace than his dignity would like. Carmen goes over to offer Yohan a ahnd, but he refuses. Rio stifles a laugh.",
+               "text": "Yohan carefully slides down the slope after them with considerably less grace than his dignity would like. Carmen goes over to offer Yohan a hand, but he refuses. Rio stifles a laugh.",
                "emotion": "neutral"
            },
            {
@@ -197,7 +197,7 @@ cave_fall_scene = [
            {
                "speaker": "Rio",
                "text": "Not even a 'Carmen, thank goodness you're safe?'. What about me?",
-               "emotions": "teasing"
+               "emotion": "teasing"
            },
            {
                "speaker": "Yohan",
@@ -317,7 +317,7 @@ cave_fall_scene = [
    {
        "type": "conditional",
        "if": {
-           "cave_argument": "carmne"
+           "cave_argument": "carmen"
        },
        "true": [
            {
@@ -462,7 +462,7 @@ cave_fall_scene = [
    # Transition to next Scene
    {
        "type": "transition",
-       "target_scene": "deep_tunnel_scene"
+       "target_scene": "deep_tunnel"
    }
 
 ]
