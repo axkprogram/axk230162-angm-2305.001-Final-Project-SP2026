@@ -107,13 +107,15 @@ class GameLoop:
 
         # Dialogue mode
         if ui["mode"] == "dialogue":
-            speaker = font.render(f"{ui['speaker']}:", True, (255, 220, 120))
+            speaker = font.render(f"{ui.get('speaker','')}:", True, (255, 220, 120))
             self.screen.blit(speaker, (50, y))
             y += 30
 
-            for line in ui["text"].splite("\n"):
-                text = font.render(line, True, (230, 230, 230))
-                self.screen.blit(text, (50, y))
+            text = ui.get("text") or ""
+
+            for line in ui["text"].split("\n"):
+                rendered = font.render(line, True, (230, 230, 230))
+                self.screen.blit(rendered, (50, y))
                 y += 25
 
         # Choice Mode
