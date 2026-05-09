@@ -75,7 +75,7 @@ class GameLoop:
                 True,
                 (255, 220, 100)
             )
-            text = self.small_font.rander(
+            text = self.small_font.render(
                 ui["text"],
                 True,
                 (255, 255, 255)
