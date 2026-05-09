@@ -152,4 +152,5 @@ class SceneManager:
             return game_state.has_item(condition["has_item"])
         
         # flag check
-        
+        if "flag" in condition:
+            return game_state.get_flag(condition["flag"])
