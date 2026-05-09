@@ -251,6 +251,6 @@ bell_anomaly_scene = [
     # Transition
     {
         "type": "transition",
-        "target_scene" : "fork_scene"
+        "target_scene" : "fork_in_tunnel"
     }
 ]
