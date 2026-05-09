@@ -141,7 +141,7 @@ class GameLoop:
         # choice
         elif ui["mode"] == "choice":
 
-            y = 440
+            y = 540
 
             for i, choice in enumerate(ui["choices"]):
                 label = f"{i+1}. {choice['text']}"
@@ -149,7 +149,7 @@ class GameLoop:
                 wrapped_choices = self.wrap_text(
                     label,
                     self.small_font,
-                    700
+                    1100
                 )
 
                 for line in wrapped_choices:
@@ -166,7 +166,7 @@ class GameLoop:
 
                     y += 30 # line spacing
 
-                y += 10 # extra spacing between choices
+                y += 15 # extra spacing between choices
 
         pygame.display.flip()
 
