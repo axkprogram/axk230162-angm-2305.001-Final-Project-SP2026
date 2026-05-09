@@ -30,6 +30,7 @@ class GameLoop:
         self.scene_manager.load_scene(
             SCENE_REGISTRY["forest_intro"]
         )
+        self.controller.update({})
 
         self.controller = EngineController(
             self.game_state
