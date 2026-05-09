@@ -84,17 +84,29 @@ class SceneManager:
         
         # State Change
         elif node_type == "state":
-            self.node_index += 1
+          self.node_index += 1
 
-            changes = node.get("set", {})
+          changes = node.get("set",{})
 
-            for key, value in changes.items():
-                setattr(game_state, key, value)
+          for key, value in changes.items():
+              
+              #if field exists and value is numeric
+              if hasattr(game_state, key) and isinstance(value, int):
+                  current = getattr(game_state, key)
 
-            return {
-                "action": "state_change",
-                "changes": changes
-            }
+                  # negative numbers = damage                 
+                  if value < 0:
+                      setattr(game_state, key, current + value)
+                  else:
+                      setattr(game_state, key, value)
+
+              else:
+                  setattr(game_state, key, value)       
+
+          return {
+              "action": "state_change",
+              "changes": changes
+          }   
         
         # Conditional
         elif node_type == "conditional":
