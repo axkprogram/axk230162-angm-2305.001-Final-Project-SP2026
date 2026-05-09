@@ -473,7 +473,7 @@ deep_tunnel_scene = [
            {
                "speaker": "Narration",
                "text": "The tunnel stretches forward in a way that makes distance feel uncertain.",
-               "emotion": "unease"
+               "emotion": "uneasy"
            },
            {
                "speaker": "Narration",
@@ -516,6 +516,6 @@ deep_tunnel_scene = [
    # Transition
    {
        "type": "transition",
-       "target_scene": "bell_chamber_scene"
+       "target_scene": "bell_anomaly"
    }
 ]

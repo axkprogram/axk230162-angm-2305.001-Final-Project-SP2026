@@ -98,6 +98,14 @@ class GameLoop:
 
                 self.screen.blit(text, (70, y))
                 y += 40
+        
+        hp_text = self.small_font.render(
+            f"HP: {self.game_state.player_hp}",
+            True,
+            (255,255,255)
+        )
+
+        self.screen.blit(hp_text, (20, 20))
 
         pygame.display.flip()
 
