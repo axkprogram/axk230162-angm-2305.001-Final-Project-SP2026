@@ -187,7 +187,7 @@ forest_bell_scene = [
                 "text": "I...thought I heard something behind us.",
                 "result": {
                     "set": {
-                        "bell response": "lie"
+                        "bell_response": "lie"
                     }
                 }
             },
@@ -197,7 +197,7 @@ forest_bell_scene = [
                 "text": "It... it's nothing. Don't worry about it. I'll catch up.",
                 "result": {
                     "set": {
-                        "bell response": "silent"
+                        "bell_response": "silent"
                     }
                 }
             }
@@ -263,7 +263,7 @@ forest_bell_scene = [
     {
         "type": "conditional",
         "if": {
-            "bell_reponse": "lie"
+            "bell_response": "lie"
         },
 
         "true" : [
@@ -383,41 +383,39 @@ forest_bell_scene = [
 
     # Creature Reaction Choice
     {
-        {
-            "type": "choice",
-            "options": [
+        "type": "choice",
+        "options": [
 
-                # Punch
-                {
-                    "text": "Punch the creature",
-                    "result": {
-                        "set": {
-                            "creature_reaction": "punch"
-                        }
-                    }
-                },
-
-                # Scream
-                {
-                    "text": "Scream.",
-                    "result": {
-                        "set": {
-                            "creature_reaction": "scream"
-                        }
-                    }
-                },
-
-                # Stay Silent
-                {
-                    "text": "Stay silent.",
-                    "result": {
-                        "set":{
-                            "creature_reaction": "silent"
-                        }
+            # Punch
+            {
+                "text": "Punch the creature",
+                "result": {
+                    "set": {
+                        "creature_reaction": "punch"
                     }
                 }
-            ]
-        }
+            },
+
+            # Scream
+            {
+                "text": "Scream.",
+                "result": {
+                    "set": {
+                        "creature_reaction": "scream"
+                    }
+                }
+            },
+
+            # Stay Silent
+            {
+                "text": "Stay silent.",
+                "result": {
+                    "set":{
+                        "creature_reaction": "silent"
+                    }
+                }
+            }
+        ]
     },
 
     # Punch Result
@@ -570,6 +568,6 @@ forest_bell_scene = [
     # Transition
     {
         "type": "transition",
-        "target_scene" : "cave_fall_scene"
+        "target_scene" : "cave_fall"
     }
 ]
