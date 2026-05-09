@@ -60,4 +60,12 @@ class EngineController:
             # clear dialogue while choosing
             self.ui_state["speaker"] = ""
             self.ui_state["text"] = ""
-            
+
+        # State Change
+        elif action == "state_change":
+            changes = result.get("changes", {})
+
+            for key, value in changes.items():
+                setattr(self.game_state, key, value)
+
+        
