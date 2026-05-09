@@ -52,4 +52,9 @@ class EngineController:
             self.ui_state["text"] = result.get("text", "")
             self.ui_state["choices"] = []
 
-        
+        # Choice
+        elif action == "choice":
+            self.ui_state["mode"] = "choice"
+            self.ui_state["choices"] = result.get("choices", [])
+
+            
