@@ -36,7 +36,7 @@ class EngineController:
             return
         
         # keep processing untiil visible ui
-        while self.controller.running:
+        while self.running:
 
             result = self.scene_system.update(
                 input_data,

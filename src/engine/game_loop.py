@@ -19,6 +19,8 @@ class GameLoop:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("VN MVP")
 
+        FPS = 60
+
         self.clock = pygame.time.Clock()
 
         self.font = pygame.font.SysFont("arial", 28)
@@ -136,6 +138,7 @@ class GameLoop:
 
     # Main Loop
     def run(self):
+
         while self.controller.running:
             input_data = self.handle_input()
 
