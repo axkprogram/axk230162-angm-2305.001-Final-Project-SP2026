@@ -145,4 +145,11 @@ class SceneManager:
         return None
     
     # Condition
-    
+    def _evaluate_condition(self, condition, game_state):
+
+        # has_item check
+        if "has_item" in condition:
+            return game_state.has_item(condition["has_item"])
+        
+        # flag check
+        
