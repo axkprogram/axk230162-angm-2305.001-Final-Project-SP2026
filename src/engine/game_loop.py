@@ -1,6 +1,6 @@
 import pygame
 
-from engine.controller import EngineController
+from controller import EngineController
 from state.game_state import GameState
 from scene.scene_manager import SceneManager
 from data.scenes.forest_intro import forest_intro_scene
