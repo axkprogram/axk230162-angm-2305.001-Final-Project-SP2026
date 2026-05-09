@@ -6,8 +6,8 @@ from scene.scene_manager import SceneManager
 from data.scenes.registry import SCENE_REGISTRY
 
 # screen constants
-WIDTH = 800
-HEIGHT = 600
+WIDTH = 1280
+HEIGHT = 720
 FPS = 60
 
 class GameLoop:
