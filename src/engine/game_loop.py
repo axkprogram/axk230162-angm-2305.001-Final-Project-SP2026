@@ -27,19 +27,19 @@ class GameLoop:
         self.game_state = GameState()
 
         self.scene_manager = SceneManager()
-        self.scene_manager.load_scene(
-            SCENE_REGISTRY["forest_intro"]
-        )
-        self.controller.update({})
 
         self.controller = EngineController(
             self.game_state
-        )
+            )
 
         self.controller.register_scene_system(
             self.scene_manager
-        )
+            )
 
+        self.scene_manager.load_scene(
+            SCENE_REGISTRY["forest_intro"]
+            )
+       
         # load first dialogue immediately
         self.controller.update({})
 
