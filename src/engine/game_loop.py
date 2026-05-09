@@ -113,18 +113,18 @@ class GameLoop:
             self.screen.blit(text, (70, 470))
 
         elif ui["mode"] == "choice":
-            y = 40
+            y = 350
 
-            for i, choice in enumerate(ui["choices"]):
-                label = f"{i+1}, {choice['text']}"
+            for i, choice in enumerate(choice):
+                label = f"{i+1}, {choice}"
 
-                text = self.small_font.render(
+                text_surface = self.small_font.render(
                     label,
                     True,
-                    (200, 255, 200)
+                    (255, 255, 255)
                 )
 
-                self.screen.blit(text, (70, y))
+                self.screen.blit(text, (50, y))
                 y += 40
         
         hp_text = self.small_font.render(
