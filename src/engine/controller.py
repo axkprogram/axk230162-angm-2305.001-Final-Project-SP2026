@@ -81,7 +81,7 @@ class EngineController:
         elif result.get("end_scene"):
             self.running = False
 
-        # fix choices
+        # fix
         elif "set" in result:
             for k, v in result["set"].item():
                 setattr(self.game_state, k, v)
