@@ -305,5 +305,10 @@ forest_intro_scene = [
                 "emotion": "neutral"
             }
         ]
+    },
+
+    {
+        "type": "transition",
+        "target_scene": "forest_bell"
     }
 ]
