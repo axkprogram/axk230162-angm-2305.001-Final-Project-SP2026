@@ -33,4 +33,5 @@ class GameLoop:
         self.controller = EngineController(self.game_state)
         self.controller.register_scene_system(self.scene_manager)
 
-        
+        # boot first line
+        self.controller.update({})
