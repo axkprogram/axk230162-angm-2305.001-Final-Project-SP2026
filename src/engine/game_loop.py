@@ -100,3 +100,19 @@ class GameLoop:
                 y += 40
 
         pygame.display.flip()
+
+    # Main Loop
+    def run(self):
+        while self.controller.running:
+            input_data = self.handle_input()
+
+            self.controller.update(input_data)
+
+            self.render()
+
+            self.clock.tick(FPS)
+
+        pygame.quit()
+
+if __name__ == "__main__":
+    GameLoop().run()
