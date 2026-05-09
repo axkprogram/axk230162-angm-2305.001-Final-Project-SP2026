@@ -60,3 +60,6 @@ MONSTER = {
         {"name": "Annihilate", "damage": 999}
     ]
 }
+
+
+# Special casing later
