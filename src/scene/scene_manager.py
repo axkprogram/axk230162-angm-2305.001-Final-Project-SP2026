@@ -45,18 +45,16 @@ class SceneManager:
         if node_type == "dialogue":
             lines = node["lines"]
 
+            current_line = lines[self.dialogue_index]
+
             #only advance on click / space
             if input_data.get("advance"):
                 self.dialogue_index += 1
 
-            #move to next node when dialogue block ends
-            if self.dialogue_index >= len(lines):
-                self.dialogue_index = 0
-                self.node_index += 1
-                return self.update({}, game_state)
+                if self.dialogue_index >= len(lines):
+                    self.dialogue_index = 0
+                    self.node_index += 1
             
-            current_line = lines[self.dialogue_index]
-
             return {
                 "action": "dialogue",
                 "speaker": current_line["speaker"],

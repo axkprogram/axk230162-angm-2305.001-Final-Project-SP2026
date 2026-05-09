@@ -124,7 +124,7 @@ class GameLoop:
         elif ui["mode"] == "choice":
             y = 350
 
-            for i, choice in enumerate(choice):
+            for i, choice in enumerate(ui["choice"]):
                 label = f"{i+1}, {choice}"
 
                 text_surface = self.small_font.render(
@@ -145,9 +145,9 @@ class GameLoop:
         self.screen.blit(hp_text, (20, 20))
 
         wrapped = self.wrap_text(
-            self.controller.ui_state["text"],
+            ui["text"],
             self.small_font,
-            760
+            700
         ) or []
 
         y = 450
