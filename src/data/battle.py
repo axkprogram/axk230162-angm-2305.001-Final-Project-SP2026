@@ -30,3 +30,33 @@ YOHAN = {
         {"name": "Lightning Bolt", "damage": 8, "enemy_skip": True}
     ]
 }
+
+SPECTER = {
+    "name": "Specter",
+    "hp": 75,
+    "moves": [
+        {"name": "Banish", "damage": 0},
+        {"name": "Pellet", "damage": 10},
+        {"name": "Screech", "damage": 12, "player_skip": True}
+    ]
+}
+
+
+# Dark path
+CARMEN = {
+    "name": "Carmen",
+    "hp": 100,
+    "moves": [
+        {"name": "Dagger", "damage": 0},
+        {"name": "Spell", "damage": 0},
+        {"name": "Unnamed", "damage": 999}
+    ]
+}
+
+MONSTER = {
+    "name": "Unknown Monster",
+    "hp": 999,
+    "moves": [
+        {"name": "Annihilate", "damage": 999}
+    ]
+}
