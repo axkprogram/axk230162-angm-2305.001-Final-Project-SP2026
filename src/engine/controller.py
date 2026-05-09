@@ -57,4 +57,7 @@ class EngineController:
             self.ui_state["mode"] = "choice"
             self.ui_state["choices"] = result.get("choices", [])
 
+            # clear dialogue while choosing
+            self.ui_state["speaker"] = ""
+            self.ui_state["text"] = ""
             
