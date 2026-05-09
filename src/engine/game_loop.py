@@ -120,6 +120,18 @@ class GameLoop:
 
         self.screen.blit(hp_text, (20, 20))
 
+        wrapped = self.wrap_text(
+            self.controller.ui_state["text"],
+            self.small_font,
+            760
+        )
+
+        y = 420
+        for line in wrapped:
+            text_surface = self.small_font.render(line, True, (255,255,255))
+            self.screen.blit(text_surface, (20, y))
+            y += 30
+
         pygame.display.flip()
 
     # Main Loop
