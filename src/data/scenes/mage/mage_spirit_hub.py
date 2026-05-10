@@ -1,4 +1,4 @@
-mage_spirit__hub_scene = [
+mage_spirit_hub_scene = [
     # arrival
     {
         "type": "dialogue",
