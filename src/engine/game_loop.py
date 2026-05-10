@@ -92,6 +92,7 @@ class GameLoop:
                     # battle over resume VN
                     if not self.battle.active:
                         self.controller.ui_state["mode"] = "dialogue"
+                        self.controller.update({})
 
                 #advance dialogue
                 elif ui ["mode"] == "dialogue":
@@ -243,13 +244,12 @@ class GameLoop:
 
             y = 550
             for i, move in enumerate(battle.player["moves"]):
-                text = self.small_font.render(
+                txt = self.small_font.render(
                     f"{i+1}. {move['name']}",
                     True,
                     (255,255,255)
                 )
-                self.screen.blit(text, (40,y))
-                y += 30
+                self.screen.blit(txt, (50, 550 + i*30))
 
         pygame.display.flip()
 
