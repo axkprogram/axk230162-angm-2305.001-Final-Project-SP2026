@@ -48,7 +48,7 @@ fighter_sight_door_scene = [
                         "text": "Leave the door alone",
                         "result": {
                             "action": "change_scene",
-                            "target": "fighter_sight_hub"
+                            "target": "fighter_sight_hub_menu"
                         }
                     }
                 ]
@@ -73,6 +73,6 @@ fighter_sight_door_scene = [
 
     {
         "type": "transition",
-        "target_scene": "fighter_sight_hub"
+        "target_scene": "fighter_sight_hub_menu"
     }
 ]

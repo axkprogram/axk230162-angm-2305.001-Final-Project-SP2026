@@ -16,6 +16,7 @@ from data.scenes.intro_to_fork.fork_in_tunnel import fork_in_tunnel_scene
 # fighter/temple of sight
 from data.scenes.fighter.fighter_intro import fighter_intro_scene
 from data.scenes.fighter.fighter_sight_hub import fighter_sight_hub_scene
+from data.scenes.fighter.fighter_sight_hub_menu import fighter_sight_hub_menu_scene
 from data.scenes.fighter.fighter_sight_pedestal import fighter_sight_pedestal_scene
 from data.scenes.fighter.fighter_sight_door import fighter_sight_door_scene
 from data.scenes.fighter.fighter_sight_bell import fighter_sight_bell_scene
@@ -40,6 +41,7 @@ SCENE_REGISTRY = {
     # fighter path
     "fighter_intro": fighter_intro_scene,
     "fighter_sight_hub": fighter_sight_hub_scene,
+    "fighter_sight_hub_menu": fighter_sight_hub_menu_scene,
     "fighter_sight_pedestal": fighter_sight_pedestal_scene,
     "fighter_sight_door": fighter_sight_door_scene,
     "fighter_sight_bell": fighter_sight_bell_scene,
