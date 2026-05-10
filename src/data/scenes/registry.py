@@ -19,6 +19,7 @@ from data.scenes.fighter.fighter_sight_hub import fighter_sight_hub_scene
 from data.scenes.fighter.fighter_sight_pedestal import fighter_sight_pedestal_scene
 from data.scenes.fighter.fighter_sight_door import fighter_sight_door_scene
 from data.scenes.fighter.fighter_sight_bell import fighter_sight_bell_scene
+from data.scenes.fighter.fighter_sight_open import fighter_sight_open_scene
 from data.scenes.fighter.fighter_sight_leave import fighter_sight_leave_scene
 
 # mage/ temple of spirit
@@ -42,6 +43,7 @@ SCENE_REGISTRY = {
     "fighter_sight_pedestal": fighter_sight_pedestal_scene,
     "fighter_sight_door": fighter_sight_door_scene,
     "fighter_sight_bell": fighter_sight_bell_scene,
+    "fighter_sight_open": fighter_sight_open_scene,
     "fighter_sight_leave": fighter_sight_leave_scene,
 
     # mage path

@@ -1,0 +1,1 @@
+fighter_sight_open_scene = []
