@@ -55,7 +55,7 @@ class GameLoop:
         for event in pygame.event.get():
 
             if event.type == pygame.QUIT:
-                self.controler.running = False
+                self.controller.running = False
 
             elif event.type == pygame.KEYDOWN:
 
@@ -94,7 +94,7 @@ class GameLoop:
                         self.controller.ui_state["mode"] = "dialogue"
 
                 #advance dialogue
-                elif ui ["moded"] == "dialogue":
+                elif ui ["mode"] == "dialogue":
 
                     if event.key == pygame.K_SPACE:
                         input_data["advance"] = True
@@ -115,7 +115,8 @@ class GameLoop:
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
-                    input_data["advance"] = True
+                    if self.controller.ui_state["mode"] == "dialogue":
+                        input_data["advance"] = True
 
         return input_data
     
@@ -227,7 +228,7 @@ class GameLoop:
             self.screen.blit(player, (50,50))
 
             enemy = self.font.render(
-                f"{battle.enemy['name']}",
+                f"{battle.enemy['name']} HP: {battle.enemy['hp']}",
                 True,
                 (255,255,255)
             )
@@ -239,6 +240,16 @@ class GameLoop:
                 (255,255,0)
             )
             self.screen.blit(msg, (50, 10))
+
+            y = 550
+            for i, move in enumerate(battle.player["moves"]):
+                text = self.small_font.render(
+                    f"{i+1}. {move['name']}",
+                    True,
+                    (255,255,255)
+                )
+                self.screen.blit(text, (40,y))
+                y += 30
 
         pygame.display.flip()
 

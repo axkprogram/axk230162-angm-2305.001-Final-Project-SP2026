@@ -29,7 +29,9 @@ class SceneManager:
     def update(self, input_data, game_state):
 
         if self.scene_data is None:
-            return None        
+            raise ValueError(
+                f"Unknown node type: {node_type}"
+            )        
         
         #end of scene protection
         if self.node_index >= len(self.scene_data):
@@ -72,7 +74,7 @@ class SceneManager:
 
             return {
                 "action": "choice",
-                "choices": node ["options"]
+                "choices": node["options"]
             }
         
         # conditional

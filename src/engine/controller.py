@@ -37,6 +37,9 @@ class EngineController:
     #Main update
     def update(self, input_data):
 
+        if self.battle_system and self.battle_system.active:
+            return
+
         if not self.scene_system:
             return
         
@@ -56,7 +59,8 @@ class EngineController:
             if result.get("action") in (
                 "dialogue", 
                 "choice",
-                "change_scene"
+                "change_scene",
+                "start_battle"
             ):
                 break
 
@@ -119,6 +123,8 @@ class EngineController:
         # Start battle
         elif action == "start_battle":
 
+            print("STARTING BATTLE")
+
             players = {
                 "RIO": RIO,
                 "YOHAN": YOHAN,
@@ -169,7 +175,7 @@ class EngineController:
         elif result.get("end_scene"):
             self.ui_state["mode"] = "dialogue"
             self.ui_state["speaker"] = "System"
-            self.ui_state["text"] = "End of current playable build. Pres ESC to quit"
+            self.ui_state["text"] = "End of current playable build. Press ESC to quit"
 
 
     # Stop Engine
