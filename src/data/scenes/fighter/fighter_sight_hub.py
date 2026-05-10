@@ -26,4 +26,10 @@ fighter_sight_hub_scene = [
             }
         ]
     },
+
+    #transition to hub menu scene
+    {
+        "type": "transition",
+        "target_scene": "fighter_scene_hub_menu"
+    }
 ]
