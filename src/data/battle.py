@@ -35,7 +35,7 @@ SPECTER = {
     "name": "Specter",
     "hp": 75,
     "moves": [
-        {"name": "Banish", "damage": 0},
+        {"name": "Banish", "damage": 0}, # only one spell can get banished at a time
         {"name": "Pellet", "damage": 10}, #less attack, but can attack multiple times in one turn 2-4 times
         {"name": "Screech", "damage": 12, "player_skip": True} # chance to cause player to lose a turn
     ]
