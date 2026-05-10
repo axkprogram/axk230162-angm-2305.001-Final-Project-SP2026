@@ -47,9 +47,9 @@ CARMEN = {
     "name": "Carmen",
     "hp": 100,
     "moves": [
-        {"name": "Dagger", "damage": 0},
-        {"name": "Spell", "damage": 0},
-        {"name": "Unnamed", "damage": 999} # unlocks after using both dagger and spell once
+        {"name": "Dagger", "damage": 0, "special": "used_dagger"},
+        {"name": "Spell", "damage": 0, "special": "used_spell"},
+        {"name": "Unnamed", "damage": 999, "locked": True, "special": "dark_special_ready"} # unlocks after using both dagger and spell once
     ]
 }
 
@@ -57,7 +57,7 @@ MONSTER = {
     "name": "Unknown Monster",
     "hp": 999,
     "moves": [
-        {"name": "Annihilate", "damage": 999} # takes four turns to charge up to use
+        {"name": "Annihilate", "damage": 999, "charge_turns": 4} # takes four turns to charge up to use
     ]
 }
 

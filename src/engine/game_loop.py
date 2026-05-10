@@ -66,35 +66,39 @@ class GameLoop:
                     self.controller.running = False
 
                 # Battle
-                elif ui ["mode"] == "battle":
-                    if event.key == pygame.K_1:
-                        self.battle.use_player_move(
-                            self.battle.player["moves"][0]
-                        )
+                elif ui["mode"] == "battle":
 
-                    elif event.key == pygame.K_2:
-                        self.battle.use_player_move(
-                            self.battle.player["moves"][1]
-                        )
+                    available_moves = []
 
-                    elif event.key == pygame.K_3:
-                        self.battle.use_player_move(
-                            self.battle.player["moves"][2]
-                        )
+                    for move in self.battle.player["moves"]:
+                        if move.get("locked") and not self.battle.dark_special_ready:
+                            continue
+                        available_moves.append(move)
 
-                    #enemy takes turn
-                    if (
-                        self.battle.active
-                        and self.battle.turn == "enemy"
-                    ):
+                    if event.key == pygame.K_1 and len(available_moves) >= 1:
+                        self.battle.use_player_move(available_moves[0])
+
+                    elif event.key == pygame.K_2 and len(available_moves) >= 2:
+                        self.battle.use_player_move(available_moves[1])
+
+                    elif event.key == pygame.K_3 and len(available_moves) >= 3:
+                        self.battle.use_player_move(available_moves[2])
+
+                    #enemy turn
+                    if self.battle.active and self.battle.turn == "enemy":
                         self.battle.enemy_turn()
 
-                    # battle over resume VN
-                    if not self.battle.active:
+                    #dark path scene trigger
+                    if self.battle.trigger_dark_scene:
+                        self.controller.change.scene("dark_bell_scene")
+                        self.battle.trigger_dark_scene = False
+
+                    #normal battle end
+                    elif not self.battle.active:
                         self.controller.ui_state["mode"] = "dialogue"
                         self.controller.update({})
 
-                #advance dialogue
+                 #advance dialogue
                 elif ui ["mode"] == "dialogue":
 
                     if event.key == pygame.K_SPACE:
@@ -243,7 +247,16 @@ class GameLoop:
             self.screen.blit(msg, (50, 10))
 
             y = 550
-            for i, move in enumerate(battle.player["moves"]):
+
+            #new
+            available_moves = []
+            
+            for move in battle.player["moves"]:
+                if move.get("locked") and not battle.dark_special_ready:
+                    continue
+                available_moves.append(move)
+            
+            for i, move in enumerate(available_moves):
                 txt = self.small_font.render(
                     f"{i+1}. {move['name']}",
                     True,
