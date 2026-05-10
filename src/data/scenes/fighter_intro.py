@@ -260,7 +260,11 @@ fighter_intro_scene = [
                     },
                     {
                         "speaker": "Rio",
-                        "text": "That feels unsafe."
+                        "text": "That feels unsafe. It's safe, right?"
+                    },
+                    {
+                        "speaker": "Yohan",
+                        "text": "That depends on Carmen."
                     },
                     {
                         "speaker": "Carmen",
