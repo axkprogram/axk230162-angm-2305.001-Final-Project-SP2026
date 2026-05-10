@@ -171,6 +171,8 @@ class EngineController:
 
                 #stop and let next frame render new scene
                 return
+            else:
+                print("SCENE NOT FOUND", target)
 
         # Scene End
         elif result.get("end_scene"):
