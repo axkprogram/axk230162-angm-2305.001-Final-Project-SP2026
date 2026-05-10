@@ -169,6 +169,8 @@ class EngineController:
 
                 self.game_state.current_scene_id = target
 
+                self.update({})
+
                 #stop and let next frame render new scene
                 return
             else:
