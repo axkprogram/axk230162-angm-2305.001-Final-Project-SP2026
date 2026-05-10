@@ -133,7 +133,7 @@ fighter_intro_scene = [
                 "result": {
                     "action": "state_change",
                     "changes": {
-                        "has_talisman": True
+                        "has_talisman_of_sight": True
                     }
                 }
             },
@@ -144,7 +144,7 @@ fighter_intro_scene = [
                 "result": {
                     "action": "state_change",
                     "changes": {
-                        "has_gem": True
+                        "has_hound_gem": True
                     }
                 }
             },
@@ -155,7 +155,7 @@ fighter_intro_scene = [
                 "result": {
                     "action": "state_change",
                     "changes": {
-                        "has_bell": True
+                        "has_hound_bell": True
                     }
                 }
             }
@@ -166,7 +166,7 @@ fighter_intro_scene = [
     {
         "type": "conditional",
         "if": {
-            "has_talisman": True
+            "has_talisman_of_sight": True
         },
         "true": [
             {
@@ -197,7 +197,7 @@ fighter_intro_scene = [
     {
         "type": "conditional",
         "if": {
-            "has_gem": True
+            "has_hound_gem": True
         },
         "true": [
             {
@@ -228,7 +228,7 @@ fighter_intro_scene = [
     {
         "type": "conditional",
         "if": {
-            "has_bell": True
+            "has_hound_bell": True
         },
         "true": [
             {

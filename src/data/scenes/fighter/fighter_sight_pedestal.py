@@ -27,7 +27,7 @@ fighter_sight_pedestal_scene = [
     {
         "type": "conditional",
         "if": {
-            "has_talisman_sight": True
+            "has_talisman_of_sight": True
         },
         "true": [
             {
