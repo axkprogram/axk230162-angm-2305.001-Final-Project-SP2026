@@ -71,7 +71,8 @@ dark_bell_scene = [
                 "text": "Neither did Donovan"
             },
             {
-                "speaker": "But the bell knew Carmen."
+                "speaker": "Narration",
+                "text": "But the bell knew Carmen."
             }
         ]
     },
