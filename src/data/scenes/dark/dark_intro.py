@@ -29,7 +29,7 @@ dark_intro_scene = [
 
     #darkness conversation
     {
-        "types": "dialogue",
+        "type": "dialogue",
         "lines": [
             {
                 "speaker": "Yohan",
@@ -44,7 +44,8 @@ dark_intro_scene = [
                 "text": "I don't trust this place."
             },
             {
-                "speaker": "What if this cave is the temple?"
+                "speaker": "Carmen",
+                "text": "What if this cave is the temple?"
             },
             {
                 "speaker": "Narration",
