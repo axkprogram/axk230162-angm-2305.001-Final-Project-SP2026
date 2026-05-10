@@ -99,6 +99,7 @@ class EngineController:
 
         # State Change
         elif action == "state_change":
+            print(result)
 
             changes = result.get(
                 "changes", {}
