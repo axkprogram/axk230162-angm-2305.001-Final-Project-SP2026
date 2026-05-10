@@ -1,0 +1,1 @@
+mage_spirit_door_scene = []

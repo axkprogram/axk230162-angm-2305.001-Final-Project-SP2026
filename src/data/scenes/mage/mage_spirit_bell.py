@@ -1,0 +1,1 @@
+mage_spirit_bell_scene = []
