@@ -43,6 +43,7 @@ from data.scenes.dark.dark_pedestal import dark_pedestal_scene
 from data.scenes.dark.dark_pedestal_locked import dark_pedestal_locked_scene
 from data.scenes.dark.dark_door import dark_door_scene
 from data.scenes.dark.dark_bell_hub import dark_bell_hub_scene
+from data.scenes.dark.dark_leave import dark_leave_scene
 
 SCENE_REGISTRY = {
     # intro to fork
@@ -82,5 +83,6 @@ SCENE_REGISTRY = {
     "dark_pedestal": dark_pedestal_scene,
     "dark_locked_pedestal": dark_pedestal_locked_scene,
     "dark_door": dark_door_scene,
-    "dark_bell_hub": dark_bell_hub_scene
+    "dark_bell_hub": dark_bell_hub_scene,
+    "dark_leave": dark_leave_scene
 }
