@@ -278,6 +278,6 @@ fighter_intro_scene = [
     #  move to temple wing
     {
         "type": "transition",
-        "target_scene": "fighter_temple"
+        "target_scene": "fighter_sight_hub"
     }
 ]
