@@ -15,8 +15,8 @@ HOUND = {
     "hp": 80,
     "moves": [
         {"name": "Claw", "damage": 12},
-        {"name": "Bite", "damage": 15},
-        {"name": "Glare", "damage": 0, "player_skip": True}
+        {"name": "Bite", "damage": 15}, # chance to cause extra damage
+        {"name": "Glare", "damage": 0, "player_skip": True} # chance to cause player to skip turn
     ]
 }
 
@@ -25,9 +25,9 @@ YOHAN = {
     "name": "Yohan",
     "hp": 90,
     "moves": [
-        {"name": "Frost Spear", "damage": 15},
-        {"name": "Firebolt", "damage": 14},
-        {"name": "Lightning Bolt", "damage": 8, "enemy_skip": True}
+        {"name": "Frost Spear", "damage": 15}, # basic damage
+        {"name": "Firebolt", "damage": 14}, # change to cause extra enemy damage next turn
+        {"name": "Lightning Bolt", "damage": 8, "enemy_skip": True} # chance to stun the enemy causing to skip turn
     ]
 }
 
@@ -36,8 +36,8 @@ SPECTER = {
     "hp": 75,
     "moves": [
         {"name": "Banish", "damage": 0},
-        {"name": "Pellet", "damage": 10},
-        {"name": "Screech", "damage": 12, "player_skip": True}
+        {"name": "Pellet", "damage": 10}, #less attack, but can attack multiple times in one turn 2-4 times
+        {"name": "Screech", "damage": 12, "player_skip": True} # chance to cause player to lose a turn
     ]
 }
 
@@ -57,7 +57,7 @@ MONSTER = {
     "name": "Unknown Monster",
     "hp": 999,
     "moves": [
-        {"name": "Annihilate", "damage": 999}
+        {"name": "Annihilate", "damage": 999} # takes four turns to charge
     ]
 }
 
