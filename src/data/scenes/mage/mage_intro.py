@@ -46,7 +46,7 @@ mage_intro_scene = [
         "type": "dialogue",
         "lines": [
             {
-                "spekaer": "Narration",
+                "speaker": "Narration",
                 "text": "Carmen isn't convinced this is the temple itself."
             },
             {
@@ -93,11 +93,9 @@ mage_intro_scene = [
 
     # battle
     {
-        {
-            "type": "battle",
-            "player": "YOHAN",
-            "enemy": "SPECTER"
-        }
+        "type": "battle",
+        "player": "YOHAN",
+        "enemy": "SPECTER"
     },
 
     # after battle
@@ -166,7 +164,7 @@ mage_intro_scene = [
     {
         "type": "conditional",
         "if": {
-            "has_talisman_of_spirit"
+            "has_talisman_of_spirit": True
         },
         "true": [
             {
@@ -201,7 +199,7 @@ mage_intro_scene = [
         },
         "true": [
             {
-                "types": "dialogue",
+                "type": "dialogue",
                 "lines": [
                     {
                         "speaker": "Narration",

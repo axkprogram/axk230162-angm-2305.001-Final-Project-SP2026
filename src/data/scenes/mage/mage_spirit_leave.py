@@ -39,7 +39,7 @@ mage_spirit_leave_scene = [
             },
             {
                 "speaker": "Narration",
-                "text": "Thye wonder what-- or who-- might be waiting beyond it."
+                "text": "They wonder what-- or who-- might be waiting beyond it."
             }
         ]
     },
