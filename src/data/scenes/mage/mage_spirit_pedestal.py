@@ -27,7 +27,7 @@ mage_spirit_pedestal_scene = [
     {
         "type": "conditional",
         "if": {
-            "has_spirit_talisman": True
+            "has_talisman_of_spirit": True
         },
         "true": [
             {
