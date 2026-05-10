@@ -55,27 +55,63 @@ class GameLoop:
         for event in pygame.event.get():
 
             if event.type == pygame.QUIT:
-                self. controller.stop()
+                self.controler.running = False
 
             elif event.type == pygame.KEYDOWN:
 
-                #advance dialogue
-                if event.key == pygame.K_SPACE:
-                    input_data["advance"] = True
+                ui = self.controller.ui_state
 
-                #esc key
-                elif event.key == pygame.K_ESCAPE:
-                    self.controller.stop()
+                # always allow quit
+                if event.key == pygame.K_ESCAPE:
+                    self.controller.running = False
+
+                # Battle
+                elif ui ["mode"] == "battle":
+                    if event.key == pygame.K_1:
+                        self.battle.use_player_move(
+                            self.battle.player["moves"][0]
+                        )
+
+                    elif event.key == pygame.K_2:
+                        self.battle.use_player_move(
+                            self.battle.player["moves"][1]
+                        )
+
+                    elif event.key == pygame.K_3:
+                        self.battle.use_player_move(
+                            self.battle.player["moves"][2]
+                        )
+
+                    #enemy takes turn
+                    if (
+                        self.battle.active
+                        and self.battle.turn == "enemy"
+                    ):
+                        self.battle.enemy_turn()
+
+                    # battle over resume VN
+                    if not self.battle.active:
+                        self.controller.ui_state["mode"] = "dialogue"
+
+                #advance dialogue
+                elif ui ["moded"] == "dialogue":
+
+                    if event.key == pygame.K_SPACE:
+                        input_data["advance"] = True
 
                 #choices 1/2/3
-                elif event.key == pygame.K_1:
-                    input_data["choice_select"] = 0
+                elif ui["mode"] == "choice":
+                    if event.key == pygame.K_1:
+                        input_data["choice_select"] = 0
 
-                elif event.key == pygame.K_2:
-                    input_data["choice_select"] = 1
+                    elif event.key == pygame.K_2:
+                        input_data["choice_select"] = 1
 
-                elif event.key == pygame.K_3:
-                    input_data["choice_select"] = 2
+                    elif event.key == pygame.K_3:
+                        input_data["choice_select"] = 2
+
+                    elif event.key == pygame.K_4:
+                        input_data["choice_select"] = 3
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
@@ -177,6 +213,32 @@ class GameLoop:
                     y += 30 # line spacing
 
                 y += 15 # extra spacing between choices
+
+            # battle
+        elif ui["mode"] == "battle":
+
+            battle = self.controller.battle_system
+
+            player = self.font.render(
+                f"{battle.player['name']} HP: {battle.player['hp']}",
+                True,
+                (255,255,255)
+            )
+            self.screen.blit(player, (50,50))
+
+            enemy = self.font.render(
+                f"{battle.enemy['name']}",
+                True,
+                (255,255,255)
+            )
+            self.screen.blit(enemy, (50,100))
+
+            msg = self.font.render(
+                battle.message, 
+                True, 
+                (255,255,0)
+            )
+            self.screen.blit(msg, (50, 10))
 
         pygame.display.flip()
 
