@@ -48,7 +48,7 @@ mage_spirit_door_scene = [
                         "text": "Leave the door alone",
                         "result": {
                             "action": "change_scene",
-                            "target": "mage_spirit_hub_scene"
+                            "target": "mage_spirit_hub_menu"
                         }
                     }
                 ]
