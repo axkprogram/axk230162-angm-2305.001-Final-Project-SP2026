@@ -24,7 +24,7 @@ from data.scenes.fighter.fighter_sight_open import fighter_sight_open_scene
 from data.scenes.fighter.fighter_sight_leave import fighter_sight_leave_scene
 
 # mage/ temple of spirit
-from data.scenes.mage_intro import mage_intro_scene
+from data.scenes.mage.mage_intro import mage_intro_scene
 
 # dark/temple of Dark
 from data.scenes.dark_intro import dark_intro_scene
