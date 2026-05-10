@@ -166,6 +166,7 @@ class SceneManager:
     def _evaluate_condition(self, condition, game_state):
 
         for key, value in condition.items():
+            print("checking", key, getattr(game_state, key, None), "==", value)
             return getattr(game_state, key, None) == value
         
         return False
