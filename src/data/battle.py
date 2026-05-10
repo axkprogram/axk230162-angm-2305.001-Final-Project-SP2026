@@ -4,9 +4,9 @@ RIO = {
     "name": "Rio",
     "hp": 100,
     "moves": [
-        {"name": "Slash", "damage": 15},
-        {"name": "Drawing Cut", "damage": 30, "player_skip": True},
-        {"name": "Thrust", "damage":8}
+        {"name": "Slash", "damage": 15}, # basic damage
+        {"name": "Drawing Cut", "damage": 30, "player_skip": True}, # skip the player turn
+        {"name": "Thrust", "damage":8} # lower damage, temporary 2 turns defense buff
     ]
 }
 
