@@ -35,6 +35,7 @@ from data.scenes.mage.mage_spirit_leave import mage_spirit_leave_scene
 
 # dark/temple of Dark
 from data.scenes.dark.dark_intro import dark_intro_scene
+from data.scenes.dark.dark_bell import dark_bell_scene
 
 SCENE_REGISTRY = {
     # intro to fork
@@ -66,5 +67,6 @@ SCENE_REGISTRY = {
     "mage_spirit_leave": mage_spirit_leave_scene,
 
     # dark path
-    "dark_intro": dark_intro_scene
+    "dark_intro": dark_intro_scene,
+    "dark_bell": dark_bell_scene
 }
