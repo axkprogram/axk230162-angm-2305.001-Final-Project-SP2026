@@ -40,6 +40,7 @@ from data.scenes.dark.dark_choice import dark_choice_scene
 from data.scenes.dark.dark_hub import dark_hub_scene
 from data.scenes.dark.dark_hub_menu import dark_hub_menu_scene
 from data.scenes.dark.dark_pedestal import dark_pedestal_scene
+from data.scenes.dark.dark_pedestal_locked import dark_pedestal_locked_scene
 
 SCENE_REGISTRY = {
     # intro to fork
@@ -76,5 +77,6 @@ SCENE_REGISTRY = {
     "dark_choice": dark_choice_scene,
     "dark_hub": dark_hub_scene,
     "dark_hub_menu": dark_hub_menu_scene,
-    "dark_pedestal": dark_pedestal_scene
+    "dark_pedestal": dark_pedestal_scene,
+    "dark_locked_pedestal": dark_pedestal_locked_scene
 }
