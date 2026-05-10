@@ -69,5 +69,33 @@ fighter_sight_hub_scene = [
                 ]
             }
         ]
+    },
+
+    # default no bell
+    {
+        "type": "choice",
+        "options": [
+            {
+                "text": "Investigate the pedestal",
+                "result": {
+                    "action": "change_scene",
+                    "target": "fighter_sight_pedestal"
+                }
+            },
+            {
+                "text": "Investigate the door",
+                "result": {
+                    "action": "change_scene",
+                    "target": "fighter_sight_door"
+                }
+            },
+            {
+                "text": "Leave up the stairs",
+                "result": {
+                    "action": "change_scene",
+                    "target": "fighter_sight_leave"
+                }
+            }
+        ]
     }
 ]
