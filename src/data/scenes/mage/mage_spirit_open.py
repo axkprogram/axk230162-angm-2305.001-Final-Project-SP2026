@@ -53,7 +53,11 @@ mage_spirit_open_scene = [
         "lines": [
             {
                 "speaker": "System",
-                "text": "Chapter complete: The Spirit Wing"
+                "text": "Chapter complete: The Spirit Wing."
+            },
+            {
+                "speaker": "System",
+                "text": "Press ESC to exit the window"
             }
         ]
     }

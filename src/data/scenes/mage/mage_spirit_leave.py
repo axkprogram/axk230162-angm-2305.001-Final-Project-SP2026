@@ -70,6 +70,10 @@ mage_spirit_leave_scene = [
             {
                 "speaker": "System",
                 "text": "Chapter Complete: The Spirit Wing"
+            },
+            {
+                "speaker": "System",
+                "text": "Press ESC to exit the window"
             }
         ]
     }
