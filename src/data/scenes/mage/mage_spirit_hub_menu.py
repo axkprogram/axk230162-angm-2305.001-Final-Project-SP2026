@@ -9,7 +9,7 @@ mage_spirit_hub_menu_scene = [
         "true": [
             {
                 "type": "choice",
-                "option": [
+                "options": [
                     {
                         "text": "Investigate the pedestal",
                         "result": {
@@ -45,37 +45,29 @@ mage_spirit_hub_menu_scene = [
 
     # default if no bell
     {
-        "type": "conditional",
-        "if": {
-            "has_spirit_bell": True
-        },
-        "true": [
+        "type": "choice",
+        "option": [
             {
-                "type": "choice",
-                "option": [
-                    {
-                        "text": "Investigate the pedestal",
-                        "result": {
-                            "action": "change_scene",
-                            "target": "mage_spirit_pedestal"
-                        }
-                    },
-                    {
-                        "text": "Investigate the door",
-                        "result": {
-                            "action": "change_scene",
-                            "target": "mage_spirit_door"
-                        }
-                    },
-                    {
-                        "text": "Leave up the stairs",
-                        "result": {
-                            "action": "change_scene",
-                            "target": "mage_spirit_leave"
-                        }
+                "text": "Investigate the pedestal",
+                "result": {
+                    "action": "change_scene",
+                    "target": "mage_spirit_pedestal"
                     }
-                ]
-            }
-        ]
+            },
+            {
+                "text": "Investigate the door",
+                "result": {
+                    "action": "change_scene",
+                    "target": "mage_spirit_door"
+                    }
+            },
+            {
+                "text": "Leave up the stairs",
+                "result": {
+                        "action": "change_scene",
+                        "target": "mage_spirit_leave"
+                    }
+                }
+            ]
     }
 ]
