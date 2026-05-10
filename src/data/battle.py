@@ -49,7 +49,7 @@ CARMEN = {
     "moves": [
         {"name": "Dagger", "damage": 0},
         {"name": "Spell", "damage": 0},
-        {"name": "Unnamed", "damage": 999}
+        {"name": "Unnamed", "damage": 999} # unlocks after using both dagger and spell once
     ]
 }
 
@@ -57,7 +57,7 @@ MONSTER = {
     "name": "Unknown Monster",
     "hp": 999,
     "moves": [
-        {"name": "Annihilate", "damage": 999} # takes four turns to charge
+        {"name": "Annihilate", "damage": 999} # takes four turns to charge up to use
     ]
 }
 
