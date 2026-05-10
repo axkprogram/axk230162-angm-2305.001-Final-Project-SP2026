@@ -46,7 +46,7 @@ mage_spirit_hub_menu_scene = [
     # default if no bell
     {
         "type": "choice",
-        "option": [
+        "options": [
             {
                 "text": "Investigate the pedestal",
                 "result": {
