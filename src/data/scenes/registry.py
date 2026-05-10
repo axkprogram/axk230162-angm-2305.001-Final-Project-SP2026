@@ -25,6 +25,13 @@ from data.scenes.fighter.fighter_sight_leave import fighter_sight_leave_scene
 
 # mage/ temple of spirit
 from data.scenes.mage.mage_intro import mage_intro_scene
+from data.scenes.mage.mage_spirit_hub import mage_spirit__hub_scene
+from data.scenes.mage.mage_spirit_hub_menu import mage_spirit_hub_menu_scene
+from data.scenes.mage.mage_spirit_pedestal import mage_spirit_pedestal_scene
+from data.scenes.mage.mage_spirit_door import mage_spirit_door_scene
+from data.scenes.mage.mage_spirit_bell import mage_spirit_bell_scene
+from data.scenes.mage.mage_spirit_open import mage_spirit_open_scene
+from data.scenes.mage.mage_spirit_leave import mage_spirit_leave_scene
 
 # dark/temple of Dark
 from data.scenes.dark_intro import dark_intro_scene
@@ -50,6 +57,13 @@ SCENE_REGISTRY = {
 
     # mage path
     "mage_intro": mage_intro_scene,
+    "mage_spirit_hub": mage_spirit__hub_scene,
+    "mage_spirit_hub_menu": mage_spirit_hub_menu_scene,
+    "mage_spirit_pedestal": mage_spirit_pedestal_scene,
+    "mage_spirit_door": mage_spirit_door_scene,
+    "mage_spirit_bell": mage_spirit_bell_scene,
+    "mage_spirit_open": mage_spirit_open_scene,
+    "mage_spirit_leave": mage_spirit_leave_scene,
 
     # dark path
     "dark_intro": dark_intro_scene
