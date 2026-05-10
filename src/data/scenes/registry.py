@@ -38,6 +38,7 @@ from data.scenes.dark.dark_intro import dark_intro_scene
 from data.scenes.dark.dark_bell import dark_bell_scene
 from data.scenes.dark.dark_choice import dark_choice_scene
 from data.scenes.dark.dark_hub import dark_hub_scene
+from data.scenes.dark.dark_hub_menu import dark_hub_menu_scene
 
 SCENE_REGISTRY = {
     # intro to fork
@@ -72,5 +73,6 @@ SCENE_REGISTRY = {
     "dark_intro": dark_intro_scene,
     "dark_bell": dark_bell_scene,
     "dark_choice": dark_choice_scene,
-    "dark_hub": dark_hub_scene
+    "dark_hub": dark_hub_scene,
+    "dark_hub_menu": dark_hub_menu_scene
 }
