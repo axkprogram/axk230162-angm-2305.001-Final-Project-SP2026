@@ -1,0 +1,1 @@
+fighter_sight_bell_scene = []
