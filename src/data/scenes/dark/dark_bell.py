@@ -1,5 +1,10 @@
 dark_bell_scene = [
 
+     {
+        "type": "background",
+        "image": "cave_tunnel.jpg"
+    },
+
     #monster destabilizes
     {
         "type": "dialogue",

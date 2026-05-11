@@ -1,4 +1,8 @@
 dark_intro_scene = [
+     {
+        "type": "background",
+        "image": "cave_tunnel.jpg"
+    },
 
     # opening dialogue
     {

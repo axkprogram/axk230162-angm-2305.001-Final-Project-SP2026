@@ -1,4 +1,8 @@
 dark_choice_scene = [
+     {
+        "type": "background",
+        "image": "cave_tunnel.jpg"
+    },
 
     #introduce the object
     {

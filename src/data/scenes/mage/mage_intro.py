@@ -1,4 +1,9 @@
 mage_intro_scene = [
+
+     {
+        "type": "background",
+        "image": "cave_tunnel.jpg"
+    },
     {
         "type": "dialogue",
         "lines": [

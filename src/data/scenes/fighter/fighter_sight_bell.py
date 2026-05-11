@@ -1,5 +1,6 @@
 fighter_sight_bell_scene = [
     # ring the bell
+   
     {
         "type": "dialogue",
         "lines": [
