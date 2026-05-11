@@ -31,6 +31,11 @@ class GameLoop:
         self.left_portrait = None
         self.right_portrait = None
 
+        #portrait debug
+        print("BG:", self.background)
+        print("LEFT:", self.left_portrait)
+        print("RIGHT:", self.right_portrait)
+
         # systems
         self.game_state = GameState()
 
