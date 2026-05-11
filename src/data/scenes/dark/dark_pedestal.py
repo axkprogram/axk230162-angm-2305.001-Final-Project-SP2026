@@ -34,6 +34,15 @@ dark_pedestal_scene = [
                 "type": "choice",
                 "options": [
                     {
+                        "text": "Place the object on the pedestal",
+                        "result": {
+                            "action": "state_change",
+                            "changes": {
+                                "dark_pedestal_complete": True
+                            }
+                        }
+                    },
+                    {
                         "text": "Leave the pedestal alone",
                         "result": {
                             "action": "change_scene",

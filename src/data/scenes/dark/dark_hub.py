@@ -40,7 +40,8 @@ dark_hub_scene = [
                 "text": "At the center stands a pedestal with a small carved compartment."
             },
             {
-                "speaker": "Across the room is grand stone door."
+                "speaker": "Narration",
+                "text": "Across the room is grand stone door."
             },
             {
                 "speaker": "Narration",

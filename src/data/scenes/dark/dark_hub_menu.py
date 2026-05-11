@@ -13,7 +13,7 @@ dark_hub_menu_scene = [
                 "text": "Investigate the door",
                 "result": {
                     "action": "change_scene",
-                    "target": "dark_pedestal"
+                    "target": "dark_door"
                 }
             },
             {
