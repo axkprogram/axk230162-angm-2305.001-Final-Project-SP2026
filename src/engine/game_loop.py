@@ -33,15 +33,19 @@ class GameLoop:
             "temple.jpg": self.load_image("assets/bg/temple.jpg", (WIDTH, HEIGHT))
         }
 
-        self.left_portrait = self.load_image(
-            "assets/chars/yohan.jpg",
-            (400, 600)
-        )
-
-        self.right_portrait = self.load_image(
-            "assets/chars/rio.jpg",
-            (400, 600)
-        )
+        self.left_portrait = {
+            "yohan.jpg": self.load_image(
+                "assets/chars/yohan.jpg",
+                (400, 600)
+            )
+        }
+        self.right_portrait = {
+            "rio.jpg": self.load_image(
+                "assets/chars/rio.jpg",
+                (400, 600)
+            )
+        }
+        
         #portrait debug
         print("BG:", self.backgrounds)
         print("LEFT:", self.left_portrait)
@@ -176,14 +180,6 @@ class GameLoop:
 
         bg_name = self.controller.ui_state["background"]
         bg = self.backgrounds.get(bg_name)
-        left_name = self.controller.ui_state.get("left_portrait")
-        right_name = self.controller.ui_state.get("right_portrait")
-
-        if left_name:
-            self.screen.blit(self.left_portrait[left_name], (50,100))
-
-        if right_name:
-            self.screen.blit(self.right_portrait[right_name], (830,100))
 
         if bg:
             self.screen.blit(bg,(0,0))
