@@ -4,7 +4,7 @@
 Demo Video: <URL>
 
 ## GitHub Repository
-GitHub Repo: <URL>
+GitHub Repo: <https://github.com/axkprogram/axk230162-angm-2305.001-Final-Project-SP2026.git>
 
 ## Description
 
@@ -54,6 +54,7 @@ WHAT CAN BE IMPROVED:
 - A prototype that leaves room for improvement.
 - I didn't have time to make character portraits,  for this so these need to be improved on
 - Ui right now is clear, but the Ui can also definitely improved.
+- Battle UI needs to be improved
 - The dark path's scripted rpg battle is not working how I would like, but it is functional and doesn't hurt the story.
 
 THE SRC:
