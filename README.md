@@ -4,7 +4,7 @@
 Demo Video: <URL>
 
 ## GitHub Repository
-GitHub Repo: <URL>
+GitHub Repo: <https://github.com/axkprogram/axk230162-angm-2305.001-Final-Project-SP2026.git>
 
 ## Description
 
@@ -45,6 +45,7 @@ RPG BATTLE:
 UI: 
 - This was mentioned before but the UI is clear with no overlapping text.
 - Choices are readable and labeled.
+- Battle ui needs to be improved, after character overlay
 
 DICE MECHANIC SCRAPPED:
 - This was scrapped because it would not progress any further than just the choice.

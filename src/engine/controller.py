@@ -24,7 +24,9 @@ class EngineController:
             "speaker": "",
             "text": "",
             "choices": [],
-            "background": "forest.jpg"
+            "background": "forest.jpg",
+            "left_portrait": "yohan.jpg",
+            "right_portrait": "rio.jpg"
         }
 
     #Register Scene Manager
