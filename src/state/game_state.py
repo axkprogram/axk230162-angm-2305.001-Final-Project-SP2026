@@ -23,6 +23,7 @@ class GameState:
         self.cave_argument = None
         self.tunnel_alignment = None
         self.wall_response = None
+        self.dark_pedestal_complete = False
 
         # Inventory
         self.inventory = []
