@@ -25,7 +25,17 @@ class GameLoop:
         self.small_font = pygame.font.SysFont(None, 28)
 
         #backgrounds
-        self.background = None
+        self.background = {
+            "forest.jpg": self.load_image(
+                "assets/bg/forest.jpg",
+                (WIDTH, HEIGHT)
+            ),
+            
+            "cave_fall.jpg": self.load_image(
+                "assets/bg/cave_fall.jpg",
+                (WIDTH, HEIGHT)
+            )
+        }
 
         #portraits
         self.left_portrait = None
