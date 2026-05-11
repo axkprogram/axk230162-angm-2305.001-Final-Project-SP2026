@@ -58,12 +58,12 @@ class GameLoop:
         )
 
         self.left_portrait = self.load_image(
-            "assets/chars/yohan.png",
+            "assets/chars/yohan.jpg",
             (400, 600)
         )
 
         self.right_portrait = self.load_image(
-            "assets/chars/rio.png",
+            "assets/chars/rio.jpg",
             (400, 600)
         )
 
