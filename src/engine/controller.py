@@ -132,6 +132,8 @@ class EngineController:
 
             print("STARTING BATTLE")
 
+            self.ui_state["background"] = None
+
             players = {
                 "RIO": RIO,
                 "YOHAN": YOHAN,
