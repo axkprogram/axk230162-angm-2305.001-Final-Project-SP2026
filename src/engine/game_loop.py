@@ -24,6 +24,13 @@ class GameLoop:
         self.font = pygame.font.SysFont(None, 36)
         self.small_font = pygame.font.SysFont(None, 28)
 
+        #backgrounds
+        self.background = None
+
+        #portraits
+        self.left_portrait = None
+        self.right_portrait = None
+
         # systems
         self.game_state = GameState()
 
@@ -43,6 +50,22 @@ class GameLoop:
        
         # load first dialogue immediately
         self.controller.update({})
+
+        #place holder assests
+        self.background = self.load_image(
+            "assets/bg/forest.jpg",
+            (WIDTH, HEIGHT)
+        )
+
+        self.left_portrait = self.load_image(
+            "assets/chars/yohan.png",
+            (400, 600)
+        )
+
+        self.right_portrait = self.load_image(
+            "assets/chars/rio.png",
+            (400, 600)
+        )
 
         #battle registration
         self.battle = BattleManager()
@@ -148,10 +171,26 @@ class GameLoop:
     
     #render
     def render(self):
-        
-        self.screen.fill((20, 20, 30))
+
+        if self.background:
+            self.screen.blit(self.background, (0,0))
+        else:
+            self.screen.fill((20, 20, 30))
 
         ui = self.controller.ui_state
+
+        # character portraits
+        if self.left_portrait:
+            self.screen.blit(
+                self.left_portrait,
+                (50, 100)
+            )
+
+        if self.right_portrait:
+            self.screen.blit(
+                self.right_portrait,
+                (830, 100)
+            )
 
         #dialogue box
         pygame.draw.rect(
@@ -250,7 +289,7 @@ class GameLoop:
 
             #new
             available_moves = []
-            
+
             for move in battle.player["moves"]:
                 if move.get("locked") and not battle.dark_special_ready:
                     continue
@@ -265,6 +304,20 @@ class GameLoop:
                 self.screen.blit(txt, (50, 550 + i*30))
 
         pygame.display.flip()
+
+    # load image
+    def load_image(self, path, size=None):
+        try:
+            img = pygame.image.load(path).convert_alpha()
+
+            if size:
+                img = pygame.transform.scale(img, size)
+
+            return img
+        
+        except:
+            print("Missing image:", path)
+            return None
 
     # Main Loop
     def run(self):
