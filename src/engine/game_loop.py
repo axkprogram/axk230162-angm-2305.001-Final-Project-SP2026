@@ -25,7 +25,7 @@ class GameLoop:
         self.small_font = pygame.font.SysFont(None, 28)
 
        #place holder assests
-        self.background = {
+        self.backgrounds = {
             "forest.jpg": self.load_image("assets/bg/forest.jpg", (WIDTH, HEIGHT)),
             "cave_fall.jpg": self.load_image("assets/bg/cave_fall.jpg", (WIDTH, HEIGHT)),
             "cave_tunnel.jpg": self.load_image("assets/bg/cave_tunnel.jpg", (WIDTH, HEIGHT)),
