@@ -1,4 +1,8 @@
 dark_door_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     #inspect door
     {

@@ -1,4 +1,8 @@
 fighter_sight_open_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     # door opens
     {

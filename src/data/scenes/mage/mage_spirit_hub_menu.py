@@ -1,4 +1,8 @@
 mage_spirit_hub_menu_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     #if player has the spirit bell show all four choices
     {

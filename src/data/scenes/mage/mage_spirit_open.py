@@ -1,4 +1,8 @@
 mage_spirit_open_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     {
         "type": "dialogue",

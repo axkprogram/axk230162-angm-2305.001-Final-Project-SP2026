@@ -1,4 +1,8 @@
 dark_hub_menu_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
     {
         "type": "choice",
         "options": [

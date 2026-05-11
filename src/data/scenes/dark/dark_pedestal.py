@@ -1,4 +1,8 @@
 dark_pedestal_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     #pedestal description
     {

@@ -1,4 +1,8 @@
 dark_hub_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     #Carmen rushes forward
     {

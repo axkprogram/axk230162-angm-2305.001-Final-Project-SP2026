@@ -1,5 +1,11 @@
 dark_bell_hub_scene = [
 
+      {
+        "type": "background",
+        "image": "temple.jpg"
+    },
+
+
     #Carmen rings the bell
     {
         "type": "dialogue",

@@ -1,5 +1,10 @@
 mage_spirit_door_scene = [
 
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
+
     # door desc
     {
         "type": "dialogue",

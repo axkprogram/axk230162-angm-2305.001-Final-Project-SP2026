@@ -1,4 +1,8 @@
 dark_pedestal_locked_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     {
         "type": "dialogue",

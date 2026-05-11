@@ -1,5 +1,10 @@
 fighter_sight_hub_menu_scene = [
     # Conditional Hub options
+
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
     {
         "type": "conditional",
         "if": {

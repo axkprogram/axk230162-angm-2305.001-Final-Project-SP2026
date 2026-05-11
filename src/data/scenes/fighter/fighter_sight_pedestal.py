@@ -1,5 +1,8 @@
 fighter_sight_pedestal_scene = [
-    
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
     #pedestal  desc
     {
         "type": "dialogue",

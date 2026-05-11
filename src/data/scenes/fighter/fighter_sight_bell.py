@@ -1,4 +1,9 @@
 fighter_sight_bell_scene = [
+
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
     # ring the bell
    
     {

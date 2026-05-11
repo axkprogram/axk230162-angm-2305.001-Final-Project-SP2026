@@ -1,4 +1,8 @@
 fighter_sight_hub_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     # arrival
     {

@@ -1,4 +1,8 @@
 mage_spirit_leave_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     {
         "type": "dialogue",

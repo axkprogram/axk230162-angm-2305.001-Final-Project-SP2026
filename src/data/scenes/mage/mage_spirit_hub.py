@@ -1,4 +1,8 @@
 mage_spirit_hub_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
     # arrival
     {
         "type": "dialogue",

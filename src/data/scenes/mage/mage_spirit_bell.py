@@ -1,4 +1,8 @@
 mage_spirit_bell_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     #ring bell
     {

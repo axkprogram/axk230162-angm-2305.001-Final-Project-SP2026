@@ -1,4 +1,8 @@
 fighter_sight_leave_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
     
     #decision to leave
     {

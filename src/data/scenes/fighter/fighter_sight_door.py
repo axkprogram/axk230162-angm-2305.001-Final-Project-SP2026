@@ -1,4 +1,8 @@
 fighter_sight_door_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     # inspect the door
     {

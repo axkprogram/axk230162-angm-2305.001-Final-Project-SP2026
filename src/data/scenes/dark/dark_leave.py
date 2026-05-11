@@ -1,4 +1,8 @@
 dark_leave_scene = [
+       {
+        "type": "background",
+        "image": "temple.jpg"
+    },
 
     # if object was placed but bell not rung
     {
