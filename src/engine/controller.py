@@ -24,9 +24,7 @@ class EngineController:
             "speaker": "",
             "text": "",
             "choices": [],
-            "background": "forest.jpg",
-            "left_portrait": "yohan.jpg",
-            "right_portrait": "rio.jpg"
+            "background": "forest.jpg"
         }
 
     #Register Scene Manager
@@ -135,8 +133,6 @@ class EngineController:
             print("STARTING BATTLE")
 
             self.ui_state["background"] = None
-            self.ui_state["left_portrait"] = None
-            self.ui_state["right_portrait"] = None
 
             players = {
                 "RIO": RIO,
