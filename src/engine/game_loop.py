@@ -57,10 +57,13 @@ class GameLoop:
         self.controller.update({})
 
         #place holder assests
-        self.background = self.load_image(
-            "assets/bg/forest.jpg",
-            (WIDTH, HEIGHT)
-        )
+        self.background = {
+            "forest.jpg": self.load_image("assets/bg/forest.jpg", (WIDTH, HEIGHT)),
+            "cave_fall.jpg": self.load_image("assets/bg/cave_fall.jpg", (WIDTH, HEIGHT)),
+            "cave_tunnel.jpg": self.load_image("assets/bg/cave_tunnel.jpg", (WIDTH, HEIGHT)),
+            "fork_in_tunnel.jpg": self.load_image("assets/bg/fork_in_tunnel.jpg", (WIDTH, HEIGHT)),
+            "temple.jpg": self.load_image("assets/bg/temple.jpg", (WIDTH, HEIGHT))
+        }
 
         self.left_portrait = self.load_image(
             "assets/chars/yohan.jpg",
@@ -177,7 +180,8 @@ class GameLoop:
     #render
     def render(self):
 
-        bg_name = self.controller.ui_state.get("background")
+        bg_name = self.controller.ui_state["background"]
+        bg = self.backgrounds.get(bg_name)
 
         if bg_name:
             bg = self.load_image(

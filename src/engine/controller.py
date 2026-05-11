@@ -74,8 +74,13 @@ class EngineController:
 
         action = result.get("action")
 
+        #background
+        if action == "background":
+            print("SETTING BG:", result["image"])
+            self.ui_state["background"] = result["image"]
+
         # dialogue
-        if action == "dialogue":
+        elif action == "dialogue":
 
             self.ui_state["mode"] = "dialogue"
             self.ui_state["speaker"] = result.get(
