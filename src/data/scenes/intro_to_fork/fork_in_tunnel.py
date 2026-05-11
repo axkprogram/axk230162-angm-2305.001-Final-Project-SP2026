@@ -1,4 +1,10 @@
 fork_in_tunnel_scene = [
+
+     {
+        "type": "background",
+        "image": "fork_in_tunnel.jpg"
+    },
+
     
     #arrival at the fork
     {

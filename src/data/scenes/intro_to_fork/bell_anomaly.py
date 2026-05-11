@@ -1,4 +1,10 @@
 bell_anomaly_scene = [
+
+     {
+        "type": "background",
+        "image": "cave_fall.jpg"
+    },
+
     {
         "type": "dialogue",
         "lines": [

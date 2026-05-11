@@ -1,4 +1,9 @@
 forest_intro_scene = [
+    
+    {
+        "type": "background",
+        "image": "forest.jpg"
+    },
 
     # Environment
     {

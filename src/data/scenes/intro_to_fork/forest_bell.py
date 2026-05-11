@@ -1,4 +1,8 @@
 forest_bell_scene = [
+    {
+        "type": "background",
+        "image": "forest.jpg"
+    },
 
     # Continue through the Forest
     {

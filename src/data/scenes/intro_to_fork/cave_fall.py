@@ -1,4 +1,8 @@
 cave_fall_scene = [
+    {
+        "type": "background",
+        "image": "cave_fall.jpg"
+    },
 
     # Fall Stops
     {

@@ -1,4 +1,8 @@
 deep_tunnel_scene = [
+    {
+        "type": "background",
+        "image": "cave_fall.jpg"
+    },
        # Moving through the Tunnel
     {
         "type": "dialogue",
