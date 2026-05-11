@@ -1,7 +1,7 @@
 # Visual Novel Prototype
 
 ## Demo
-Demo Video: <URL>
+Demo Video: <https://youtu.be/dLFKJ0A4qlU>
 
 ## GitHub Repository
 GitHub Repo: <https://github.com/axkprogram/axk230162-angm-2305.001-Final-Project-SP2026.git>
