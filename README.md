@@ -46,13 +46,13 @@ UI:
 - This was mentioned before but the UI is clear with no overlapping text.
 - Choices are readable and labeled.
 
-DICE MECHANIC:
+DICE MECHANIC SCRAPPED:
 - This was scrapped because it would not progress any further than just the choice.
 - If I have the chance I'll implement it another day.
 
 WHAT CAN BE IMPROVED:
 - A prototype that leaves room for improvement.
-- I didn't have time to make character portraits for this, and there is no code that can implement them so that is a needs improvement area.
+- I didn't have time to make character portraits,  for this so these need to be improved on
 - Ui right now is clear, but the Ui can also definitely improved.
 - The dark path's scripted rpg battle is not working how I would like, but it is functional and doesn't hurt the story.
 
