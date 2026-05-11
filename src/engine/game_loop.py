@@ -33,6 +33,8 @@ class GameLoop:
             "temple.jpg": self.load_image("assets/bg/temple.jpg", (WIDTH, HEIGHT))
         }
 
+        print("BG:", self.backgrounds)
+
         self.left_portrait = self.load_image(
             "assets/chars/yohan.jpg",
             (400, 600)
