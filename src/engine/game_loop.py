@@ -24,23 +24,24 @@ class GameLoop:
         self.font = pygame.font.SysFont(None, 36)
         self.small_font = pygame.font.SysFont(None, 28)
 
-        #backgrounds
+       #place holder assests
         self.background = {
-            "forest.jpg": self.load_image(
-                "assets/bg/forest.jpg",
-                (WIDTH, HEIGHT)
-            ),
-            
-            "cave_fall.jpg": self.load_image(
-                "assets/bg/cave_fall.jpg",
-                (WIDTH, HEIGHT)
-            )
+            "forest.jpg": self.load_image("assets/bg/forest.jpg", (WIDTH, HEIGHT)),
+            "cave_fall.jpg": self.load_image("assets/bg/cave_fall.jpg", (WIDTH, HEIGHT)),
+            "cave_tunnel.jpg": self.load_image("assets/bg/cave_tunnel.jpg", (WIDTH, HEIGHT)),
+            "fork_in_tunnel.jpg": self.load_image("assets/bg/fork_in_tunnel.jpg", (WIDTH, HEIGHT)),
+            "temple.jpg": self.load_image("assets/bg/temple.jpg", (WIDTH, HEIGHT))
         }
 
-        #portraits
-        self.left_portrait = None
-        self.right_portrait = None
+        self.left_portrait = self.load_image(
+            "assets/chars/yohan.jpg",
+            (400, 600)
+        )
 
+        self.right_portrait = self.load_image(
+            "assets/chars/rio.jpg",
+            (400, 600)
+        )
         #portrait debug
         print("BG:", self.background)
         print("LEFT:", self.left_portrait)
@@ -66,24 +67,7 @@ class GameLoop:
         # load first dialogue immediately
         self.controller.update({})
 
-        #place holder assests
-        self.background = {
-            "forest.jpg": self.load_image("assets/bg/forest.jpg", (WIDTH, HEIGHT)),
-            "cave_fall.jpg": self.load_image("assets/bg/cave_fall.jpg", (WIDTH, HEIGHT)),
-            "cave_tunnel.jpg": self.load_image("assets/bg/cave_tunnel.jpg", (WIDTH, HEIGHT)),
-            "fork_in_tunnel.jpg": self.load_image("assets/bg/fork_in_tunnel.jpg", (WIDTH, HEIGHT)),
-            "temple.jpg": self.load_image("assets/bg/temple.jpg", (WIDTH, HEIGHT))
-        }
-
-        self.left_portrait = self.load_image(
-            "assets/chars/yohan.jpg",
-            (400, 600)
-        )
-
-        self.right_portrait = self.load_image(
-            "assets/chars/rio.jpg",
-            (400, 600)
-        )
+        
 
         #battle registration
         self.battle = BattleManager()
@@ -193,11 +177,7 @@ class GameLoop:
         bg_name = self.controller.ui_state["background"]
         bg = self.backgrounds.get(bg_name)
 
-        if bg_name:
-            bg = self.load_image(
-                f"assets/bg/{bg_name}",
-                (WIDTH, HEIGHT)
-            )
+        if bg:
             self.screen.blit(bg,(0,0))
         else:
             self.screen.fill((20, 20, 30))
