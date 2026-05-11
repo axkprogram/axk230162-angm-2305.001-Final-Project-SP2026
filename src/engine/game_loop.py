@@ -177,8 +177,14 @@ class GameLoop:
     #render
     def render(self):
 
-        if self.background:
-            self.screen.blit(self.background, (0,0))
+        bg_name = self.controller.ui_state.get("background")
+
+        if bg_name:
+            bg = self.load_image(
+                f"assets/bg/{bg_name}",
+                (WIDTH, HEIGHT)
+            )
+            self.screen.blit(bg,(0,0))
         else:
             self.screen.fill((20, 20, 30))
 
