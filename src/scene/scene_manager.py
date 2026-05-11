@@ -133,6 +133,16 @@ class SceneManager:
                 "player": node["player"],
                 "enemy": node["enemy"]
             }
+        
+        elif node_type == "background":
+            self.node_index += 1
+
+            return {
+                "action": "background",
+                "image": node["image"]
+            }
+
+
         return None
     
     # choice handler

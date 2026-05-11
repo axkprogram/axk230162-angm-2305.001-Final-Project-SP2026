@@ -23,7 +23,8 @@ class EngineController:
             "mode": "dialogue",
             "speaker": "",
             "text": "",
-            "choices": []
+            "choices": [],
+            "background": "forest.jpg"
         }
 
     #Register Scene Manager
