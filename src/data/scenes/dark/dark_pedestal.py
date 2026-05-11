@@ -85,7 +85,7 @@ dark_pedestal_scene = [
                         "text": "Try to remove the object",
                         "result": {
                             "action": "change_scene",
-                            "target": "dark_pedestal_locked"
+                            "target": "dark_locked_pedestal"
                         }
                     },
                     {
